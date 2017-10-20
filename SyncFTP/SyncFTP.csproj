@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{499A2F13-4BA1-4FE3-A5F8-1CE91FD5E105}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SyncFTP</RootNamespace>
+    <AssemblyName>SyncFTP</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>SyncFTP.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v17.1" />
+    <Reference Include="DevExpress.Data.v17.1" />
+    <Reference Include="DevExpress.Utils.v17.1" />
+    <Reference Include="DevExpress.Sparkline.v17.1.Core" />
+    <Reference Include="DevExpress.XtraEditors.v17.1" />
+    <Reference Include="DevExpress.Printing.v17.1.Core" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\AyudaConexion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AyudaConexion.Designer.cs">
+      <DependentUpon>AyudaConexion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AyudaServidores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AyudaServidores.Designer.cs">
+      <DependentUpon>AyudaServidores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Bienvenido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Bienvenido.Designer.cs">
+      <DependentUpon>Bienvenido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Central.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Central.Designer.cs">
+      <DependentUpon>Central.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Replica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Replica.Designer.cs">
+      <DependentUpon>Replica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Servidores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\.Designer.cs">
+      <DependentUpon>Servidores.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Views\AyudaConexion.resx">
+      <DependentUpon>AyudaConexion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AyudaServidores.resx">
+      <DependentUpon>AyudaServidores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Bienvenido.resx">
+      <DependentUpon>Bienvenido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Central.resx">
+      <DependentUpon>Central.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Replica.resx">
+      <DependentUpon>Replica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Servidores.resx">
+      <DependentUpon>Servidores.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Modo.png" />
+    <None Include="Resources\Users.png" />
+    <None Include="Resources\Server.png" />
+    <None Include="Resources\Puerto.png" />
+    <None Include="Resources\Directory.png" />
+    <None Include="Resources\Ajustes.png" />
+    <None Include="Resources\Test.png" />
+    <None Include="Resources\Question36.png" />
+    <None Include="Resources\Gear36.png" />
+    <None Include="Resources\Next.png" />
+    <None Include="Resources\WebServer.png" />
+    <None Include="Resources\LocalServer.png" />
+    <None Include="Resources\Question.png" />
+    <None Include="Resources\Banner1.png" />
+    <None Include="Resources\No.png" />
+    <None Include="Resources\Si.png" />
+    <None Include="Resources\SyncFTP.png" />
+    <None Include="Resources\LineaDelgada.png" />
+    <None Include="Resources\Linea.png" />
+    <Content Include="SyncFTP.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
