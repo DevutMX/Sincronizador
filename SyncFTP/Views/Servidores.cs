@@ -50,7 +50,7 @@ namespace SyncFTP.Views
 
                         if(_central.ShowDialog() == DialogResult.OK)
                         {
-                            ConfiguracionTerminada _configTerm = new ConfiguracionTerminada();
+                            ConfiguracionTerminada _configTerm = new ConfiguracionTerminada("central", null);
 
                             _configTerm.ShowDialog();
 
@@ -74,7 +74,7 @@ namespace SyncFTP.Views
 
                     if(_replica.ShowDialog() == DialogResult.OK)
                     {
-                        ConfiguracionTerminada _configTerm = new ConfiguracionTerminada();
+                        ConfiguracionTerminada _configTerm = new ConfiguracionTerminada(null, "replica");
 
                         _configTerm.ShowDialog();
 
@@ -103,7 +103,7 @@ namespace SyncFTP.Views
                         {
                             if (_replica.ShowDialog() == DialogResult.OK)
                             {
-                                ConfiguracionTerminada _configTerm = new ConfiguracionTerminada();
+                                ConfiguracionTerminada _configTerm = new ConfiguracionTerminada("central", "replica");
 
                                 _configTerm.ShowDialog();
 
@@ -119,7 +119,7 @@ namespace SyncFTP.Views
                             {
                                 if (_replica.ShowDialog() == DialogResult.OK)
                                 {
-                                    ConfiguracionTerminada _configTerm = new ConfiguracionTerminada();
+                                    ConfiguracionTerminada _configTerm = new ConfiguracionTerminada(null, "replica");
 
                                     _configTerm.ShowDialog();
 

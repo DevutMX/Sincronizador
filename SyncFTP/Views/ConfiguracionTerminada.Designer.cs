@@ -32,7 +32,7 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.pictureEdit2 = new DevExpress.XtraEditors.PictureEdit();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.lblMensaje = new DevExpress.XtraEditors.LabelControl();
             this.btnFinalizar = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
@@ -82,21 +82,20 @@
             this.pictureEdit1.Size = new System.Drawing.Size(560, 2);
             this.pictureEdit1.TabIndex = 6;
             // 
-            // labelControl4
+            // lblMensaje
             // 
-            this.labelControl4.AllowHtmlString = true;
-            this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.labelControl4.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Appearance.Options.UseForeColor = true;
-            this.labelControl4.Appearance.Options.UseTextOptions = true;
-            this.labelControl4.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.labelControl4.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Vertical;
-            this.labelControl4.Location = new System.Drawing.Point(12, 76);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(560, 114);
-            this.labelControl4.TabIndex = 10;
-            this.labelControl4.Text = resources.GetString("labelControl4.Text");
+            this.lblMensaje.AllowHtmlString = true;
+            this.lblMensaje.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.lblMensaje.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.lblMensaje.Appearance.Options.UseFont = true;
+            this.lblMensaje.Appearance.Options.UseForeColor = true;
+            this.lblMensaje.Appearance.Options.UseTextOptions = true;
+            this.lblMensaje.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.lblMensaje.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Vertical;
+            this.lblMensaje.Location = new System.Drawing.Point(12, 76);
+            this.lblMensaje.Name = "lblMensaje";
+            this.lblMensaje.Size = new System.Drawing.Size(560, 0);
+            this.lblMensaje.TabIndex = 10;
             // 
             // btnFinalizar
             // 
@@ -115,7 +114,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 319);
             this.Controls.Add(this.btnFinalizar);
-            this.Controls.Add(this.labelControl4);
+            this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.pictureEdit2);
             this.Controls.Add(this.pictureEdit1);
@@ -137,7 +136,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.PictureEdit pictureEdit2;
         private DevExpress.XtraEditors.PictureEdit pictureEdit1;
-        private DevExpress.XtraEditors.LabelControl labelControl4;
+        private DevExpress.XtraEditors.LabelControl lblMensaje;
         private DevExpress.XtraEditors.SimpleButton btnFinalizar;
     }
 }
