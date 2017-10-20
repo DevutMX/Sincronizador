@@ -22,7 +22,11 @@ namespace SyncFTP.Views
         {
             AyudaServidores _ayudaServidores = new AyudaServidores();
 
+            Hide();
+
             _ayudaServidores.ShowDialog();
+
+            Show();
         }
 
         private void petContinuar_Click(object sender, EventArgs e)

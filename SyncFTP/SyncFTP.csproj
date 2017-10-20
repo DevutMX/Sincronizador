@@ -80,6 +80,12 @@
     <Compile Include="Views\Central.Designer.cs">
       <DependentUpon>Central.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\ConfiguracionTerminada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ConfiguracionTerminada.Designer.cs">
+      <DependentUpon>ConfiguracionTerminada.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Replica.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +121,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Central.resx">
       <DependentUpon>Central.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ConfiguracionTerminada.resx">
+      <DependentUpon>ConfiguracionTerminada.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Replica.resx">
       <DependentUpon>Replica.cs</DependentUpon>
