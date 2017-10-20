@@ -34,6 +34,8 @@ namespace SyncFTP.Views
             if(!chkCentral.Checked && !chkReplica.Checked)
             {
                 XtraMessageBox.Show(UserLookAndFeel.Default, "Por favor, selecciona al menos un servidor a configurar", "Error de selección", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                chkCentral.Focus();
             }
 
             else
@@ -48,12 +50,14 @@ namespace SyncFTP.Views
 
                         if(_central.ShowDialog() == DialogResult.OK)
                         {
-                            MessageBox.Show("Si es valido");
+                            ConfiguracionTerminada _configTerm = new ConfiguracionTerminada();
+
+                            _configTerm.Show();
                         }
 
                         else
                         {
-                            MessageBox.Show("Quien sabe que hizo");
+                            Show();
                         }
                     }
                 }
@@ -64,7 +68,17 @@ namespace SyncFTP.Views
 
                     Replica _replica = new Replica();
 
-                    _replica.ShowDialog();
+                    if(_replica.ShowDialog() == DialogResult.OK)
+                    {
+                        ConfiguracionTerminada _configTerm = new ConfiguracionTerminada();
+
+                        _configTerm.Show();
+                    }
+
+                    else
+                    {
+                        Show();
+                    }
                 }
 
                 else
@@ -75,11 +89,40 @@ namespace SyncFTP.Views
 
                         Central _central = new Central();
 
-                        _central.ShowDialog();
-
                         Replica _replica = new Replica();
 
-                        _replica.ShowDialog();
+                        if (_central.ShowDialog() == DialogResult.OK)
+                        {
+                            if (_replica.ShowDialog() == DialogResult.OK)
+                            {
+                                ConfiguracionTerminada _configTerm = new ConfiguracionTerminada();
+
+                                _configTerm.Show();
+                            }
+                        }
+
+                        else
+                        {
+                            if (DialogResult.Yes == XtraMessageBox.Show(UserLookAndFeel.Default, "Al parecer no se configuro el servidor central.\n\n¿Deseas configurar el servidor replica?", "Continuar configuración", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
+                            {
+                                if (_replica.ShowDialog() == DialogResult.OK)
+                                {
+                                    ConfiguracionTerminada _configTerm = new ConfiguracionTerminada();
+
+                                    _configTerm.Show();
+                                }
+
+                                else
+                                {
+                                    Show();
+                                }
+                            }
+
+                            else
+                            {
+                                Show();
+                            }
+                        }
                     }
                 }
             }

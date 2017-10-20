@@ -33,7 +33,7 @@
             this.pictureEdit2 = new DevExpress.XtraEditors.PictureEdit();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnFinalizar = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             this.SuspendLayout();
@@ -98,22 +98,23 @@
             this.labelControl4.TabIndex = 10;
             this.labelControl4.Text = resources.GetString("labelControl4.Text");
             // 
-            // simpleButton1
+            // btnFinalizar
             // 
-            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.Location = new System.Drawing.Point(477, 284);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(95, 23);
-            this.simpleButton1.TabIndex = 11;
-            this.simpleButton1.Text = "TERMINAR";
+            this.btnFinalizar.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.btnFinalizar.Appearance.Options.UseFont = true;
+            this.btnFinalizar.Location = new System.Drawing.Point(477, 284);
+            this.btnFinalizar.Name = "btnFinalizar";
+            this.btnFinalizar.Size = new System.Drawing.Size(95, 23);
+            this.btnFinalizar.TabIndex = 11;
+            this.btnFinalizar.Text = "TERMINAR";
+            this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
             // 
             // ConfiguracionTerminada
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 319);
-            this.Controls.Add(this.simpleButton1);
+            this.Controls.Add(this.btnFinalizar);
             this.Controls.Add(this.labelControl4);
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.pictureEdit2);
@@ -137,6 +138,6 @@
         private DevExpress.XtraEditors.PictureEdit pictureEdit2;
         private DevExpress.XtraEditors.PictureEdit pictureEdit1;
         private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton btnFinalizar;
     }
 }

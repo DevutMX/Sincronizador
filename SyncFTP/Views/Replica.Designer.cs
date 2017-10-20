@@ -335,6 +335,7 @@
             this.petContinuar.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
             this.petContinuar.Size = new System.Drawing.Size(58, 50);
             this.petContinuar.TabIndex = 52;
+            this.petContinuar.Click += new System.EventHandler(this.petContinuar_Click);
             // 
             // btnAyuda
             // 

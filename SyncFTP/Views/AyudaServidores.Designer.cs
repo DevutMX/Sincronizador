@@ -152,7 +152,7 @@
             this.labelControl4.Size = new System.Drawing.Size(497, 63);
             this.labelControl4.TabIndex = 15;
             this.labelControl4.Text = "Elija <b>\"Central\"</b> si lo que desea es configurar su servidor para poder <b>de" +
-    "scargar</b> información  del sistema y cuentas con acceso a internet.";
+    "scargar</b> información del sistema y <b>cuentas con acceso a internet</b>.";
             // 
             // labelControl5
             // 
@@ -167,10 +167,10 @@
             this.labelControl5.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Vertical;
             this.labelControl5.Location = new System.Drawing.Point(75, 223);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(497, 63);
+            this.labelControl5.Size = new System.Drawing.Size(497, 42);
             this.labelControl5.TabIndex = 16;
             this.labelControl5.Text = "Elija <b>\"Replica\"</b> si lo que desea es configurar su servidor para poder <b>su" +
-    "bir</b> información  del sistema y <b>no cuentas con internet</b>.";
+    "bir</b> información del sistema y <b>no cuentas con internet</b>.";
             // 
             // AyudaServidores
             // 

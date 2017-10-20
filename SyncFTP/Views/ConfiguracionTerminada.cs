@@ -10,11 +10,20 @@ using DevExpress.XtraEditors;
 
 namespace SyncFTP.Views
 {
-    public partial class ConfiguracionTerminada : DevExpress.XtraEditors.XtraForm
+    public partial class ConfiguracionTerminada : XtraForm
     {
         public ConfiguracionTerminada()
         {
             InitializeComponent();
+        }
+
+        private void btnFinalizar_Click(object sender, EventArgs e)
+        {
+            Principal _principal = new Principal();
+
+            Hide();
+
+            _principal.Show();
         }
     }
 }

@@ -23,5 +23,12 @@ namespace SyncFTP.Views
 
             _ayudaConexion.ShowDialog();
         }
+
+        private void petContinuar_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.OK;
+
+            Close();
+        }
     }
 }

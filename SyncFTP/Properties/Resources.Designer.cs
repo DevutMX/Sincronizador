@@ -73,6 +73,16 @@ namespace SyncFTP.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Avanzados {
+            get {
+                object obj = ResourceManager.GetObject("Avanzados", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Banner1 {
             get {
                 object obj = ResourceManager.GetObject("Banner1", resourceCulture);
@@ -96,6 +106,16 @@ namespace SyncFTP.Properties {
         internal static System.Drawing.Bitmap Gear36 {
             get {
                 object obj = ResourceManager.GetObject("Gear36", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Historial {
+            get {
+                object obj = ResourceManager.GetObject("Historial", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
