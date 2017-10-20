@@ -46,9 +46,10 @@
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.chkAutenticar = new DevExpress.XtraEditors.CheckEdit();
             this.chkActivo = new DevExpress.XtraEditors.CheckEdit();
-            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
+            this.lblContinuar = new DevExpress.XtraEditors.LabelControl();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
-            this.pictureEdit3 = new DevExpress.XtraEditors.PictureEdit();
+            this.petVerPassword = new DevExpress.XtraEditors.PictureEdit();
+            this.petProbar = new DevExpress.XtraEditors.PictureEdit();
             this.petContinuar = new DevExpress.XtraEditors.PictureEdit();
             this.btnAyuda = new DevExpress.XtraEditors.SimpleButton();
             this.btnCancelar = new DevExpress.XtraEditors.SimpleButton();
@@ -63,7 +64,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.cbxEncriptacion.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkAutenticar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkActivo.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.petVerPassword.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.petProbar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.petContinuar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
@@ -107,6 +109,7 @@
             this.txtServidor.Properties.NullText = "ftp.server.com";
             this.txtServidor.Size = new System.Drawing.Size(311, 24);
             this.txtServidor.TabIndex = 12;
+            this.txtServidor.TextChanged += new System.EventHandler(this.txtServidor_TextChanged);
             // 
             // labelControl2
             // 
@@ -141,6 +144,7 @@
             this.txtUsuario.Properties.NullText = "usuario";
             this.txtUsuario.Size = new System.Drawing.Size(311, 24);
             this.txtUsuario.TabIndex = 14;
+            this.txtUsuario.TextChanged += new System.EventHandler(this.txtServidor_TextChanged);
             // 
             // labelControl5
             // 
@@ -162,8 +166,9 @@
             this.txtContrasena.Properties.Appearance.Options.UseFont = true;
             this.txtContrasena.Properties.NullText = "password";
             this.txtContrasena.Properties.PasswordChar = '•';
-            this.txtContrasena.Size = new System.Drawing.Size(311, 24);
+            this.txtContrasena.Size = new System.Drawing.Size(288, 24);
             this.txtContrasena.TabIndex = 16;
+            this.txtContrasena.TextChanged += new System.EventHandler(this.txtServidor_TextChanged);
             // 
             // labelControl6
             // 
@@ -202,6 +207,7 @@
             this.txtPuerto.Properties.NullText = "00000";
             this.txtPuerto.Size = new System.Drawing.Size(132, 24);
             this.txtPuerto.TabIndex = 20;
+            this.txtPuerto.TextChanged += new System.EventHandler(this.txtServidor_TextChanged);
             // 
             // txtDirectorio
             // 
@@ -212,6 +218,7 @@
             this.txtDirectorio.Properties.NullText = "/Carpeta1/Carpeta2";
             this.txtDirectorio.Size = new System.Drawing.Size(311, 24);
             this.txtDirectorio.TabIndex = 21;
+            this.txtDirectorio.TextChanged += new System.EventHandler(this.txtServidor_TextChanged);
             // 
             // chkAnonimo
             // 
@@ -224,6 +231,7 @@
             this.chkAnonimo.Properties.Caption = "Anónimo";
             this.chkAnonimo.Size = new System.Drawing.Size(84, 22);
             this.chkAnonimo.TabIndex = 22;
+            this.chkAnonimo.CheckedChanged += new System.EventHandler(this.chkAnonimo_CheckedChanged);
             // 
             // cbxEncriptacion
             // 
@@ -243,6 +251,7 @@
             this.cbxEncriptacion.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cbxEncriptacion.Size = new System.Drawing.Size(132, 24);
             this.cbxEncriptacion.TabIndex = 23;
+            this.cbxEncriptacion.SelectedIndexChanged += new System.EventHandler(this.txtServidor_TextChanged);
             // 
             // labelControl8
             // 
@@ -265,8 +274,9 @@
             this.chkAutenticar.Properties.Appearance.Options.UseFont = true;
             this.chkAutenticar.Properties.Appearance.Options.UseForeColor = true;
             this.chkAutenticar.Properties.Caption = "Requiere Autenticar";
-            this.chkAutenticar.Size = new System.Drawing.Size(173, 22);
+            this.chkAutenticar.Size = new System.Drawing.Size(150, 22);
             this.chkAutenticar.TabIndex = 25;
+            this.chkAutenticar.CheckedChanged += new System.EventHandler(this.txtServidor_TextChanged);
             // 
             // chkActivo
             // 
@@ -279,18 +289,20 @@
             this.chkActivo.Properties.Caption = "Modo Activo";
             this.chkActivo.Size = new System.Drawing.Size(173, 22);
             this.chkActivo.TabIndex = 26;
+            this.chkActivo.CheckedChanged += new System.EventHandler(this.txtServidor_TextChanged);
             // 
-            // labelControl9
+            // lblContinuar
             // 
-            this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.labelControl9.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl9.Appearance.Options.UseFont = true;
-            this.labelControl9.Appearance.Options.UseForeColor = true;
-            this.labelControl9.Location = new System.Drawing.Point(453, 450);
-            this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(58, 14);
-            this.labelControl9.TabIndex = 28;
-            this.labelControl9.Text = "Siguiente";
+            this.lblContinuar.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.lblContinuar.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.lblContinuar.Appearance.Options.UseFont = true;
+            this.lblContinuar.Appearance.Options.UseForeColor = true;
+            this.lblContinuar.Location = new System.Drawing.Point(453, 450);
+            this.lblContinuar.Name = "lblContinuar";
+            this.lblContinuar.Size = new System.Drawing.Size(58, 14);
+            this.lblContinuar.TabIndex = 28;
+            this.lblContinuar.Text = "Siguiente";
+            this.lblContinuar.Visible = false;
             // 
             // labelControl10
             // 
@@ -304,21 +316,40 @@
             this.labelControl10.TabIndex = 30;
             this.labelControl10.Text = "Probar conexión";
             // 
-            // pictureEdit3
+            // petVerPassword
             // 
-            this.pictureEdit3.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureEdit3.EditValue = global::SyncFTP.Properties.Resources.Test;
-            this.pictureEdit3.Location = new System.Drawing.Point(339, 394);
-            this.pictureEdit3.Name = "pictureEdit3";
-            this.pictureEdit3.Properties.AllowFocused = false;
-            this.pictureEdit3.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.pictureEdit3.Properties.Appearance.Options.UseBackColor = true;
-            this.pictureEdit3.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pictureEdit3.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit3.Properties.ShowMenu = false;
-            this.pictureEdit3.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit3.Size = new System.Drawing.Size(58, 50);
-            this.pictureEdit3.TabIndex = 29;
+            this.petVerPassword.Cursor = System.Windows.Forms.Cursors.Default;
+            this.petVerPassword.EditValue = global::SyncFTP.Properties.Resources.Desbloquear;
+            this.petVerPassword.Location = new System.Drawing.Point(396, 221);
+            this.petVerPassword.Name = "petVerPassword";
+            this.petVerPassword.Properties.AllowFocused = false;
+            this.petVerPassword.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.petVerPassword.Properties.Appearance.Options.UseBackColor = true;
+            this.petVerPassword.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.petVerPassword.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.petVerPassword.Properties.ShowMenu = false;
+            this.petVerPassword.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.petVerPassword.Size = new System.Drawing.Size(24, 24);
+            this.petVerPassword.TabIndex = 31;
+            this.petVerPassword.MouseDown += new System.Windows.Forms.MouseEventHandler(this.petVerPassword_MouseDown);
+            this.petVerPassword.MouseUp += new System.Windows.Forms.MouseEventHandler(this.petVerPassword_MouseUp);
+            // 
+            // petProbar
+            // 
+            this.petProbar.Cursor = System.Windows.Forms.Cursors.Default;
+            this.petProbar.EditValue = global::SyncFTP.Properties.Resources.Test;
+            this.petProbar.Location = new System.Drawing.Point(339, 394);
+            this.petProbar.Name = "petProbar";
+            this.petProbar.Properties.AllowFocused = false;
+            this.petProbar.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.petProbar.Properties.Appearance.Options.UseBackColor = true;
+            this.petProbar.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.petProbar.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.petProbar.Properties.ShowMenu = false;
+            this.petProbar.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.petProbar.Size = new System.Drawing.Size(58, 50);
+            this.petProbar.TabIndex = 29;
+            this.petProbar.Click += new System.EventHandler(this.petProbar_Click);
             // 
             // petContinuar
             // 
@@ -335,6 +366,7 @@
             this.petContinuar.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
             this.petContinuar.Size = new System.Drawing.Size(58, 50);
             this.petContinuar.TabIndex = 27;
+            this.petContinuar.Visible = false;
             this.petContinuar.Click += new System.EventHandler(this.petContinuar_Click);
             // 
             // btnAyuda
@@ -355,6 +387,7 @@
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(40, 40);
             this.btnCancelar.TabIndex = 9;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // pictureEdit2
             // 
@@ -393,9 +426,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(530, 481);
+            this.Controls.Add(this.petVerPassword);
             this.Controls.Add(this.labelControl10);
-            this.Controls.Add(this.pictureEdit3);
-            this.Controls.Add(this.labelControl9);
+            this.Controls.Add(this.petProbar);
+            this.Controls.Add(this.lblContinuar);
             this.Controls.Add(this.petContinuar);
             this.Controls.Add(this.chkActivo);
             this.Controls.Add(this.chkAutenticar);
@@ -433,7 +467,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.cbxEncriptacion.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkAutenticar.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkActivo.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.petVerPassword.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.petProbar.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.petContinuar.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
@@ -465,9 +500,10 @@
         private DevExpress.XtraEditors.LabelControl labelControl8;
         private DevExpress.XtraEditors.CheckEdit chkAutenticar;
         private DevExpress.XtraEditors.CheckEdit chkActivo;
-        private DevExpress.XtraEditors.LabelControl labelControl9;
+        private DevExpress.XtraEditors.LabelControl lblContinuar;
         private DevExpress.XtraEditors.PictureEdit petContinuar;
-        private DevExpress.XtraEditors.PictureEdit pictureEdit3;
+        private DevExpress.XtraEditors.PictureEdit petProbar;
         private DevExpress.XtraEditors.LabelControl labelControl10;
+        private DevExpress.XtraEditors.PictureEdit petVerPassword;
     }
 }

@@ -19,11 +19,7 @@ namespace SyncFTP.Views
 
         private void btnFinalizar_Click(object sender, EventArgs e)
         {
-            Principal _principal = new Principal();
-
-            Hide();
-
-            _principal.Show();
+            Close();
         }
     }
 }

@@ -52,7 +52,11 @@ namespace SyncFTP.Views
                         {
                             ConfiguracionTerminada _configTerm = new ConfiguracionTerminada();
 
-                            _configTerm.Show();
+                            _configTerm.ShowDialog();
+
+                            Principal _principal = new Principal();
+
+                            _principal.Show();
                         }
 
                         else
@@ -72,7 +76,11 @@ namespace SyncFTP.Views
                     {
                         ConfiguracionTerminada _configTerm = new ConfiguracionTerminada();
 
-                        _configTerm.Show();
+                        _configTerm.ShowDialog();
+
+                        Principal _principal = new Principal();
+
+                        _principal.Show();
                     }
 
                     else
@@ -97,7 +105,11 @@ namespace SyncFTP.Views
                             {
                                 ConfiguracionTerminada _configTerm = new ConfiguracionTerminada();
 
-                                _configTerm.Show();
+                                _configTerm.ShowDialog();
+
+                                Principal _principal = new Principal();
+
+                                _principal.Show();
                             }
                         }
 
@@ -109,7 +121,11 @@ namespace SyncFTP.Views
                                 {
                                     ConfiguracionTerminada _configTerm = new ConfiguracionTerminada();
 
-                                    _configTerm.Show();
+                                    _configTerm.ShowDialog();
+
+                                    Principal _principal = new Principal();
+
+                                    _principal.Show();
                                 }
 
                                 else
