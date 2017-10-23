@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.pnlOptions = new DevExpress.XtraEditors.PanelControl();
+            this.lblNotifications = new DevExpress.XtraEditors.LabelControl();
             this.lblElapsedTime = new DevExpress.XtraEditors.LabelControl();
             this.btnAvanzados = new DevExpress.XtraEditors.SimpleButton();
             this.btnConfirmar = new DevExpress.XtraEditors.SimpleButton();
@@ -71,7 +72,7 @@
             this.btnExitSysTray = new System.Windows.Forms.ToolStripMenuItem();
             this.nicToMinimized = new System.Windows.Forms.NotifyIcon(this.components);
             this._tmpElapsedTime = new System.Windows.Forms.Timer(this.components);
-            this.lblNotifications = new DevExpress.XtraEditors.LabelControl();
+            this.btnRefrescar = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.pnlOptions)).BeginInit();
             this.pnlOptions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbxDispositivos.Properties)).BeginInit();
@@ -108,6 +109,7 @@
             // 
             // pnlOptions
             // 
+            this.pnlOptions.Controls.Add(this.btnRefrescar);
             this.pnlOptions.Controls.Add(this.lblNotifications);
             this.pnlOptions.Controls.Add(this.lblElapsedTime);
             this.pnlOptions.Controls.Add(this.btnAvanzados);
@@ -121,6 +123,18 @@
             this.pnlOptions.Name = "pnlOptions";
             this.pnlOptions.Size = new System.Drawing.Size(484, 157);
             this.pnlOptions.TabIndex = 12;
+            // 
+            // lblNotifications
+            // 
+            this.lblNotifications.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.lblNotifications.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.lblNotifications.Appearance.Options.UseFont = true;
+            this.lblNotifications.Appearance.Options.UseForeColor = true;
+            this.lblNotifications.Location = new System.Drawing.Point(12, 136);
+            this.lblNotifications.Name = "lblNotifications";
+            this.lblNotifications.Size = new System.Drawing.Size(31, 16);
+            this.lblNotifications.TabIndex = 19;
+            this.lblNotifications.Text = "Listo";
             // 
             // lblElapsedTime
             // 
@@ -146,11 +160,12 @@
             // 
             // btnConfirmar
             // 
-            this.btnConfirmar.Location = new System.Drawing.Point(245, 31);
+            this.btnConfirmar.Location = new System.Drawing.Point(274, 30);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(80, 23);
             this.btnConfirmar.TabIndex = 16;
             this.btnConfirmar.Text = "Confirmar";
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
             // labelControl4
             // 
@@ -166,7 +181,7 @@
             // 
             // cbxDispositivos
             // 
-            this.cbxDispositivos.Location = new System.Drawing.Point(12, 31);
+            this.cbxDispositivos.Location = new System.Drawing.Point(41, 30);
             this.cbxDispositivos.Name = "cbxDispositivos";
             this.cbxDispositivos.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.cbxDispositivos.Properties.Appearance.Options.UseFont = true;
@@ -402,7 +417,7 @@
             // 
             this.btnStartRemoteStrip.Image = global::SyncFTP.Properties.Resources.Play16;
             this.btnStartRemoteStrip.Name = "btnStartRemoteStrip";
-            this.btnStartRemoteStrip.Size = new System.Drawing.Size(179, 30);
+            this.btnStartRemoteStrip.Size = new System.Drawing.Size(171, 22);
             this.btnStartRemoteStrip.Text = "Iniciar";
             this.btnStartRemoteStrip.Click += new System.EventHandler(this.btnStartRemote_Click);
             // 
@@ -410,7 +425,7 @@
             // 
             this.btnPauseRemoteStrip.Image = global::SyncFTP.Properties.Resources.Pause16;
             this.btnPauseRemoteStrip.Name = "btnPauseRemoteStrip";
-            this.btnPauseRemoteStrip.Size = new System.Drawing.Size(179, 30);
+            this.btnPauseRemoteStrip.Size = new System.Drawing.Size(171, 22);
             this.btnPauseRemoteStrip.Text = "Pausar";
             this.btnPauseRemoteStrip.Visible = false;
             // 
@@ -418,7 +433,7 @@
             // 
             this.btnStopRemoteStrip.Image = global::SyncFTP.Properties.Resources.Stop16;
             this.btnStopRemoteStrip.Name = "btnStopRemoteStrip";
-            this.btnStopRemoteStrip.Size = new System.Drawing.Size(179, 30);
+            this.btnStopRemoteStrip.Size = new System.Drawing.Size(171, 22);
             this.btnStopRemoteStrip.Text = "Detener";
             this.btnStopRemoteStrip.Visible = false;
             // 
@@ -426,7 +441,7 @@
             // 
             this.btnRemoteTreeStrip.Image = global::SyncFTP.Properties.Resources.Tree16;
             this.btnRemoteTreeStrip.Name = "btnRemoteTreeStrip";
-            this.btnRemoteTreeStrip.Size = new System.Drawing.Size(179, 30);
+            this.btnRemoteTreeStrip.Size = new System.Drawing.Size(171, 22);
             this.btnRemoteTreeStrip.Text = "Obtener directorio";
             this.btnRemoteTreeStrip.Click += new System.EventHandler(this.btnRemoteTreeStrip_Click);
             // 
@@ -446,7 +461,7 @@
             // 
             this.btnStartLocalStrip.Image = global::SyncFTP.Properties.Resources.Play16;
             this.btnStartLocalStrip.Name = "btnStartLocalStrip";
-            this.btnStartLocalStrip.Size = new System.Drawing.Size(179, 30);
+            this.btnStartLocalStrip.Size = new System.Drawing.Size(171, 22);
             this.btnStartLocalStrip.Text = "Iniciar";
             this.btnStartLocalStrip.Click += new System.EventHandler(this.btnStartLocal_Click);
             // 
@@ -454,7 +469,7 @@
             // 
             this.btnPauseLocalStrip.Image = global::SyncFTP.Properties.Resources.Pause16;
             this.btnPauseLocalStrip.Name = "btnPauseLocalStrip";
-            this.btnPauseLocalStrip.Size = new System.Drawing.Size(179, 30);
+            this.btnPauseLocalStrip.Size = new System.Drawing.Size(171, 22);
             this.btnPauseLocalStrip.Text = "Pausar";
             this.btnPauseLocalStrip.Visible = false;
             // 
@@ -462,7 +477,7 @@
             // 
             this.btnStopLocalStrip.Image = global::SyncFTP.Properties.Resources.Stop16;
             this.btnStopLocalStrip.Name = "btnStopLocalStrip";
-            this.btnStopLocalStrip.Size = new System.Drawing.Size(179, 30);
+            this.btnStopLocalStrip.Size = new System.Drawing.Size(171, 22);
             this.btnStopLocalStrip.Text = "Detener";
             this.btnStopLocalStrip.Visible = false;
             // 
@@ -470,7 +485,7 @@
             // 
             this.btnLocalTreeStrip.Image = global::SyncFTP.Properties.Resources.Tree16;
             this.btnLocalTreeStrip.Name = "btnLocalTreeStrip";
-            this.btnLocalTreeStrip.Size = new System.Drawing.Size(179, 30);
+            this.btnLocalTreeStrip.Size = new System.Drawing.Size(171, 22);
             this.btnLocalTreeStrip.Text = "Obtener directorio";
             this.btnLocalTreeStrip.Click += new System.EventHandler(this.btnLocalTreeStrip_Click);
             // 
@@ -492,17 +507,15 @@
             this._tmpElapsedTime.Interval = 1000;
             this._tmpElapsedTime.Tick += new System.EventHandler(this._tmpElapsedTime_Tick);
             // 
-            // lblNotifications
+            // btnRefrescar
             // 
-            this.lblNotifications.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.lblNotifications.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.lblNotifications.Appearance.Options.UseFont = true;
-            this.lblNotifications.Appearance.Options.UseForeColor = true;
-            this.lblNotifications.Location = new System.Drawing.Point(12, 136);
-            this.lblNotifications.Name = "lblNotifications";
-            this.lblNotifications.Size = new System.Drawing.Size(35, 16);
-            this.lblNotifications.TabIndex = 19;
-            this.lblNotifications.Text = "Listo.";
+            this.btnRefrescar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnRefrescar.ImageOptions.Image")));
+            this.btnRefrescar.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnRefrescar.Location = new System.Drawing.Point(12, 30);
+            this.btnRefrescar.Name = "btnRefrescar";
+            this.btnRefrescar.Size = new System.Drawing.Size(23, 23);
+            this.btnRefrescar.TabIndex = 20;
+            this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
             // 
             // Principal
             // 
@@ -598,5 +611,6 @@
         private System.Windows.Forms.Timer _tmpElapsedTime;
         private DevExpress.XtraEditors.LabelControl lblElapsedTime;
         private DevExpress.XtraEditors.LabelControl lblNotifications;
+        private DevExpress.XtraEditors.SimpleButton btnRefrescar;
     }
 }

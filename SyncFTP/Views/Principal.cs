@@ -62,7 +62,7 @@ namespace SyncFTP.Views
         /// <param name="e"></param>
         private void Principal_Shown(object sender, EventArgs e)
         {
-            //PromptSettings();
+            ObtenerDispositivos();
 
             WindowState = FormWindowState.Minimized;
 
@@ -139,7 +139,7 @@ namespace SyncFTP.Views
             }
         }
 
-        /// <summary>
+       /// <summary>
         /// Evento de emergencia, donde al presionar F12 en el teclado, permite que reaparezcan forzosamente los botones play
         /// </summary>
         /// <param name="sender"></param>
@@ -1289,6 +1289,56 @@ namespace SyncFTP.Views
         private void btnIniciarReplica_Click(object sender, EventArgs e)
         {
             BeginToSyncLocal();
+        }
+
+        private void ObtenerDispositivos()
+        {
+            try
+            {
+                DriveInfo[] dispositivos = DriveInfo.GetDrives();
+
+                cbxDispositivos.Properties.Items.Clear();
+
+                foreach (DriveInfo dispositivo in dispositivos)
+                {
+                    if (dispositivo.IsReady)
+                    {
+                        if (dispositivo.DriveType == DriveType.Fixed)
+                        {
+                            cbxDispositivos.Properties.Items.Add(dispositivo.Name + "  " + dispositivo.VolumeLabel + " | Disco Local");
+                        }
+
+                        if (dispositivo.DriveType == DriveType.Removable)
+                        {
+                            cbxDispositivos.Properties.Items.Add(dispositivo.Name + "  " + dispositivo.VolumeLabel + " | Unidad Extraible");
+                        }
+
+                        //if (dispositivo.DriveType == DriveType.CDRom || dispositivo.DriveType == DriveType.Network || dispositivo.DriveType == DriveType.NoRootDirectory || dispositivo.DriveType == DriveType.Ram || dispositivo.DriveType == DriveType.Unknown)
+                        //{
+
+                        //}
+                    }
+                }
+
+                cbxDispositivos.SelectedIndex = 0;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private void btnRefrescar_Click(object sender, EventArgs e)
+        {
+            ObtenerDispositivos();
+        }
+
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            _notify = new Notify( "Unicación de guardado" , "Se cambio la ruta de guardado", 3);
+
+            _notify.Show();
         }
     }
 }
