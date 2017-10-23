@@ -1305,12 +1305,12 @@ namespace SyncFTP.Views
                     {
                         if (dispositivo.DriveType == DriveType.Fixed)
                         {
-                            cbxDispositivos.Properties.Items.Add(dispositivo.Name + "  " + dispositivo.VolumeLabel + " | Disco Local");
+                            cbxDispositivos.Properties.Items.Add(dispositivo.Name + "  " + dispositivo.VolumeLabel + "  Disco Local");
                         }
 
                         if (dispositivo.DriveType == DriveType.Removable)
                         {
-                            cbxDispositivos.Properties.Items.Add(dispositivo.Name + "  " + dispositivo.VolumeLabel + " | Unidad Extraible");
+                            cbxDispositivos.Properties.Items.Add(dispositivo.Name + "  " + dispositivo.VolumeLabel + "  Unidad Extraible");
                         }
 
                         //if (dispositivo.DriveType == DriveType.CDRom || dispositivo.DriveType == DriveType.Network || dispositivo.DriveType == DriveType.NoRootDirectory || dispositivo.DriveType == DriveType.Ram || dispositivo.DriveType == DriveType.Unknown)
@@ -1336,7 +1336,7 @@ namespace SyncFTP.Views
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            _notify = new Notify( "Unicación de guardado" , "Se cambio la ruta de guardado", 3);
+            _notify = new Notify( "Ruta modificada" , "Se cambio la ruta de guardado exitosamente", 1);
 
             _notify.Show();
         }
