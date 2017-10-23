@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.pnlOptions = new DevExpress.XtraEditors.PanelControl();
@@ -52,6 +53,7 @@
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.btnIniciarReplica = new DevExpress.XtraEditors.SimpleButton();
             this.btnIniciarCentral = new DevExpress.XtraEditors.SimpleButton();
+            this.dlafSkins = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pnlOptions)).BeginInit();
             this.pnlOptions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
@@ -390,5 +392,6 @@
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.SimpleButton btnIniciarReplica;
         private DevExpress.XtraEditors.SimpleButton btnIniciarCentral;
+        private DevExpress.LookAndFeel.DefaultLookAndFeel dlafSkins;
     }
 }
