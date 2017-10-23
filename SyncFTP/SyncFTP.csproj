@@ -135,6 +135,12 @@
     <Compile Include="Views\ConfiguracionTerminada.Designer.cs">
       <DependentUpon>ConfiguracionTerminada.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Notify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Notify.Designer.cs">
+      <DependentUpon>Notify.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +186,9 @@
     <EmbeddedResource Include="Views\ConfiguracionTerminada.resx">
       <DependentUpon>ConfiguracionTerminada.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Notify.resx">
+      <DependentUpon>Notify.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
     </EmbeddedResource>
@@ -207,6 +216,17 @@
   <ItemGroup>
     <None Include="Resources\Bloquear.png" />
     <None Include="Resources\Desbloquear.png" />
+    <None Include="Resources\ErrorIcon.png" />
+    <None Include="Resources\InfoIcon.png" />
+    <None Include="Resources\OkIcon.png" />
+    <None Include="Resources\WarningIcon.png" />
+    <None Include="Resources\Exit16.png" />
+    <None Include="Resources\Local16.png" />
+    <None Include="Resources\Remote16.png" />
+    <None Include="Resources\Pause16.png" />
+    <None Include="Resources\Play16.png" />
+    <None Include="Resources\Stop16.png" />
+    <None Include="Resources\Tree16.png" />
     <Content Include="WinSCP.exe">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

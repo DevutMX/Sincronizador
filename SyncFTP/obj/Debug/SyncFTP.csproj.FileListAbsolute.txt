@@ -119,3 +119,4 @@ C:\Users\Victor\Documents\Visual Studio 2017\Projects\SyncFTP\SyncFTP\bin\Debug\
 C:\Users\Victor\Documents\Visual Studio 2017\Projects\SyncFTP\SyncFTP\bin\Debug\System.IO.xml
 C:\Users\Victor\Documents\Visual Studio 2017\Projects\SyncFTP\SyncFTP\bin\Debug\System.Runtime.xml
 C:\Users\Victor\Documents\Visual Studio 2017\Projects\SyncFTP\SyncFTP\bin\Debug\System.Threading.Tasks.xml
+C:\Users\Victor\Documents\Visual Studio 2017\Projects\SyncFTP\SyncFTP\obj\Debug\SyncFTP.Views.Notify.resources

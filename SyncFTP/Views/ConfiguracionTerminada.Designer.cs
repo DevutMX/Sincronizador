@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfiguracionTerminada));
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.pictureEdit2 = new DevExpress.XtraEditors.PictureEdit();
-            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.lblMensaje = new DevExpress.XtraEditors.LabelControl();
             this.btnFinalizar = new DevExpress.XtraEditors.SimpleButton();
+            this.pictureEdit2 = new DevExpress.XtraEditors.PictureEdit();
+            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             this.SuspendLayout();
@@ -49,6 +49,32 @@
             this.labelControl1.Size = new System.Drawing.Size(280, 23);
             this.labelControl1.TabIndex = 8;
             this.labelControl1.Text = "Configuración finalizada con éxito";
+            // 
+            // lblMensaje
+            // 
+            this.lblMensaje.AllowHtmlString = true;
+            this.lblMensaje.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.lblMensaje.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.lblMensaje.Appearance.Options.UseFont = true;
+            this.lblMensaje.Appearance.Options.UseForeColor = true;
+            this.lblMensaje.Appearance.Options.UseTextOptions = true;
+            this.lblMensaje.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.lblMensaje.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Vertical;
+            this.lblMensaje.Location = new System.Drawing.Point(12, 76);
+            this.lblMensaje.Name = "lblMensaje";
+            this.lblMensaje.Size = new System.Drawing.Size(560, 0);
+            this.lblMensaje.TabIndex = 10;
+            // 
+            // btnFinalizar
+            // 
+            this.btnFinalizar.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.btnFinalizar.Appearance.Options.UseFont = true;
+            this.btnFinalizar.Location = new System.Drawing.Point(477, 284);
+            this.btnFinalizar.Name = "btnFinalizar";
+            this.btnFinalizar.Size = new System.Drawing.Size(95, 23);
+            this.btnFinalizar.TabIndex = 11;
+            this.btnFinalizar.Text = "TERMINAR";
+            this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
             // 
             // pictureEdit2
             // 
@@ -81,32 +107,6 @@
             this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
             this.pictureEdit1.Size = new System.Drawing.Size(560, 2);
             this.pictureEdit1.TabIndex = 6;
-            // 
-            // lblMensaje
-            // 
-            this.lblMensaje.AllowHtmlString = true;
-            this.lblMensaje.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.lblMensaje.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.lblMensaje.Appearance.Options.UseFont = true;
-            this.lblMensaje.Appearance.Options.UseForeColor = true;
-            this.lblMensaje.Appearance.Options.UseTextOptions = true;
-            this.lblMensaje.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.lblMensaje.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Vertical;
-            this.lblMensaje.Location = new System.Drawing.Point(12, 76);
-            this.lblMensaje.Name = "lblMensaje";
-            this.lblMensaje.Size = new System.Drawing.Size(560, 0);
-            this.lblMensaje.TabIndex = 10;
-            // 
-            // btnFinalizar
-            // 
-            this.btnFinalizar.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.btnFinalizar.Appearance.Options.UseFont = true;
-            this.btnFinalizar.Location = new System.Drawing.Point(477, 284);
-            this.btnFinalizar.Name = "btnFinalizar";
-            this.btnFinalizar.Size = new System.Drawing.Size(95, 23);
-            this.btnFinalizar.TabIndex = 11;
-            this.btnFinalizar.Text = "TERMINAR";
-            this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
             // 
             // ConfiguracionTerminada
             // 

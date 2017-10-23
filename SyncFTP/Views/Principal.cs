@@ -36,7 +36,7 @@ namespace SyncFTP.Views
         /// <summary>
         /// Objeto a nivel global que permite interactuar con los metodos de la base de datos
         /// </summary>
-        Bridge _bridge = new Bridge();
+        //Bridge _bridge = new Bridge();
 
         /// <summary>
         /// Objeto a nivel global que permite llamar notificaciones dentro de este formulario
@@ -60,9 +60,9 @@ namespace SyncFTP.Views
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void MainForm_Shown(object sender, EventArgs e)
+        private void Principal_Shown(object sender, EventArgs e)
         {
-            PromptSettings();
+            //PromptSettings();
 
             WindowState = FormWindowState.Minimized;
 
@@ -104,7 +104,7 @@ namespace SyncFTP.Views
         /// <param name="e"></param>
         private void petSettings_Click(object sender, EventArgs e)//Revisar integridad
         {
-            SettingsForm _settingsForm = new SettingsForm();
+            Bienvenido _settingsForm = new Bienvenido();
 
             Hide();
 
@@ -120,7 +120,7 @@ namespace SyncFTP.Views
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void MainForm_Resize(object sender, EventArgs e)
+        private void Principal_Resize(object sender, EventArgs e)
         {
             if (WindowState == FormWindowState.Minimized)
             {
@@ -144,7 +144,7 @@ namespace SyncFTP.Views
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void MainForm_KeyPress(object sender, KeyPressEventArgs e)
+        private void Principal_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == Convert.ToChar(Keys.F12))
             {
@@ -191,7 +191,7 @@ namespace SyncFTP.Views
 
             else
             {
-                DialogResult f = XtraMessageBox.Show(UserLookAndFeel.Default, "No cuenta con conexión a internet, pero puede intentar en caso de que\n el servidor \"Remoto\" este conectado de forma local.\n\n¿Desea continuar?", "SyncFTP - Sin conexión a internet", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult f = XtraMessageBox.Show(UserLookAndFeel.Default, "No cuenta con conexión a internet, pero puede intentar en caso de que\n el servidor \"central\" este conectado de forma local.\n\n¿Desea continuar?", "SyncFTP - Sin conexión a internet", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                 if (f == DialogResult.Yes)
                 {
@@ -214,7 +214,7 @@ namespace SyncFTP.Views
 
             else
             {
-                DialogResult f = XtraMessageBox.Show(UserLookAndFeel.Default, "Al estar conectado a internet SyncFTP da preferencia a conexiones con el servidor \"Remoto\",\ncancelando acciones con el servidor \"Local\", pero aún así puede acceder a él, si este está accesible.\n\n¿Desea continuar?", "SyncFTP - Confirme acción", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult f = XtraMessageBox.Show(UserLookAndFeel.Default, "Al estar conectado a internet SyncFTP da preferencia a conexiones con el servidor \"central\",\ncancelando acciones con el servidor \"replica\", pero aún así puede acceder a él, si este está accesible.\n\n¿Desea continuar?", "SyncFTP - Confirme acción", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                 if (f == DialogResult.Yes)
                 {
@@ -249,30 +249,6 @@ namespace SyncFTP.Views
             }
         }
 
-        /// <summary>
-        /// Evento que permite visualizar el formulario con la lista de trasnferencias realizadas
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void petTransactions_Click(object sender, EventArgs e)
-        {
-            MovementsForm _movementsForm = MovementsForm.GetInstance();
-
-            _movementsForm.Show();
-        }
-
-        /// <summary>
-        /// Evento que permite visualizar el formulario con el manual del usuario
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void petInfo_Click(object sender, EventArgs e)
-        {
-            Help _show = Help.GetInstance();
-
-            _show.Show();
-        }
-
         #endregion
 
         #region Methods
@@ -305,24 +281,7 @@ namespace SyncFTP.Views
                 MessageBox.Show(ex.ToString());
             }
         }
-
-        /// <summary>
-        /// Quita el registro de la aplicacion en el registro de windows para evitar iniciar junto a el
-        /// </summary>
-        private void RemoveFromStartup()
-        {
-            try
-            {
-                RegistryKey key = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
-
-                key.DeleteValue("SyncFTP", false);
-            }
-            catch (Exception)
-            {
-
-            }
-        }
-
+        
         /// <summary>
         /// Evalua si los ajustes de los servidores no estan vacios
         /// </summary>
@@ -336,18 +295,28 @@ namespace SyncFTP.Views
                 {
                     if (_settings.Remote.Server == "")
                     {
-                        XtraMessageBox.Show(UserLookAndFeel.Default, "Parece que no configuró el servidor \"Remoto\"...\nSolo se revisarán ajustes del servidor local.\nRecuerde que para configurar el servidor \"Remoto\" necesitará contar\ncon conexión a internet.", "SyncFTP - Servidor remoto desconocido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if(DialogResult.Yes == XtraMessageBox.Show(UserLookAndFeel.Default, "Parece que no configuró el servidor \"central\"...\nSolo se revisarán ajustes del servidor replica.\nRecuerde que para configurar el servidor \"central\" necesitará contar\ncon conexión a internet.", "SyncFTP - Servidor central desconocido", MessageBoxButtons.YesNo, MessageBoxIcon.Information))
+                        {
+                            Central _central = new Central();
+
+                            _central.ShowDialog();
+                        }
                     }
 
                     if (_settings.Local.Server == "")
                     {
-                        XtraMessageBox.Show(UserLookAndFeel.Default, "Parece que no configuró el servidor \"Local\"...\nSolo se revisarán ajustes del servidor remoto.", "SyncFTP - Servidor local desconocido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if(DialogResult.Yes == XtraMessageBox.Show(UserLookAndFeel.Default, "Parece que no configuró el servidor \"replica\"...\nSolo se revisarán ajustes del servidor central.", "SyncFTP - Servidor replica desconocido", MessageBoxButtons.OK, MessageBoxIcon.Information))
+                        {
+                            Replica _central = new Replica();
+
+                            _central.ShowDialog();
+                        }
                     }
                 }
 
                 else
                 {
-                    if (XtraMessageBox.Show(UserLookAndFeel.Default, "Parece que no ha configurado las conexiones a los servidores...\n\nPor favor, ingrese los datos del servidor que tenga disponible,\nrecuerde que para configurar el servidor \"Remoto\" necesitará\ncontar con conexión a internet.\n\n¿Desea proseguir con las configuraciones?", "SyncFTP - Servidores sin definir", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                    if (XtraMessageBox.Show(UserLookAndFeel.Default, "Parece que no ha configurado las conexiones a los servidores...\n\nPor favor, ingrese los datos del servidor que tenga disponible,\nrecuerde que para configurar el servidor \"central\" necesitará\ncontar con conexión a internet.\n\n¿Desea proseguir con las configuraciones?", "SyncFTP - Servidores sin definir", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                     {
                         petSettings_Click(null, null);
                     }
@@ -375,12 +344,12 @@ namespace SyncFTP.Views
                 _seconds = 0;
                 _tmpElapsedTime.Enabled = !visible;
                 lblElapsedTime.Visible = !visible;
-                lblElapsedTime.Text = "Tiempo en ejecución:";
+                lblElapsedTime.Text = "";
                 pbcProgress.Position = 0;
-                gbcLocal.Visible = visible;
-                gbcRemote.Visible = visible;
+                gbcSincronizar.Visible = visible;
                 btnStartRemoteStrip.Visible = visible;
                 btnStartLocalStrip.Visible = visible;
+                lblAvance.Text = "0% de 100% completado";
             }
 
             else
@@ -388,8 +357,7 @@ namespace SyncFTP.Views
                 pbcProgress.Position = 0;
                 _tmpElapsedTime.Enabled = !visible;
                 lblElapsedTime.Visible = !visible;
-                gbcLocal.Visible = visible;
-                gbcRemote.Visible = visible;
+                gbcSincronizar.Visible = visible;
                 btnStartRemoteStrip.Visible = visible;
                 btnStartLocalStrip.Visible = visible;
             }
@@ -423,7 +391,7 @@ namespace SyncFTP.Views
 
                         _session.Open(_client);
 
-                        petStatus.Invoke(new Action(() => petStatus.Image = Properties.Resources.SyncBusy));
+                        //petStatus.Invoke(new Action(() => petStatus.Image = Properties.Resources.SyncBusy));
 
                         IEnumerable<RemoteFileInfo> _fileInfos = _session.EnumerateRemoteFiles(_secret.Decrypt(server.Remote.Find), null, EnumerationOptions.EnumerateDirectories | EnumerationOptions.AllDirectories);
 
@@ -445,7 +413,7 @@ namespace SyncFTP.Views
                                 Owner = _fileInfo.Owner
                             };
 
-                            lblNotifications.Invoke(new Action(() => lblNotifications.Text = "R - Obteniendo... " + _fileInfo.Name));
+                            //lblNotifications.Invoke(new Action(() => lblNotifications.Text = "R - Obteniendo... " + _fileInfo.Name));
 
                             _pathList.Add(new FullPath { PathStructure = _dirStructure });
                         }
@@ -455,7 +423,7 @@ namespace SyncFTP.Views
                         File.WriteAllText(_remotePathList, _data);
                     }
 
-                    return "Se creo el directorio remoto exitosamente";
+                    return "Se creo el directorio del servidor central exitosamente";
                 }
                 else
                 {
@@ -500,7 +468,7 @@ namespace SyncFTP.Views
                     {
                         _session.Open(_client);
 
-                        petStatus.Invoke(new Action(() => petStatus.Image = Properties.Resources.SyncBusy));
+                        //petStatus.Invoke(new Action(() => petStatus.Image = Properties.Resources.SyncBusy));
 
                         IEnumerable<RemoteFileInfo> _fileInfos = _session.EnumerateRemoteFiles(_secret.Decrypt(server.Local.Find), null, EnumerationOptions.EnumerateDirectories | EnumerationOptions.AllDirectories);
 
@@ -524,7 +492,7 @@ namespace SyncFTP.Views
 
                             _pathList.Add(new FullPath { PathStructure = _dirStructure });
 
-                            lblNotifications.Invoke(new Action(() => lblNotifications.Text = "L - Obteniendo... " + _fileInfo.Name));
+                            //lblNotifications.Invoke(new Action(() => lblNotifications.Text = "L - Obteniendo... " + _fileInfo.Name));
                         }
 
                         string _data = JsonConvert.SerializeObject(_pathList, Formatting.Indented);
@@ -532,7 +500,7 @@ namespace SyncFTP.Views
                         File.WriteAllText(_localPathList, _data);
                     }
 
-                    return "Se creo el directorio local exitosamente";
+                    return "Se creo el directorio del servidor replica exitosamente";
                 }
                 else
                 {
@@ -564,21 +532,21 @@ namespace SyncFTP.Views
                 {
                     if (CheckInternet())
                     {
-                        _notify = new Notify("Espere por favor...", "Obteniendo directorio del servidor remoto", 1);
+                        _notify = new Notify("Espere por favor...", "Obteniendo directorio del servidor central", 1);
 
                         _notify.Show();
 
-                        lblNotifications.Text = "Obteniendo directorio remoto... espere por favor";
+                        lblNotifications.Text = "Obteniendo directorio central... espere por favor";
 
                         lblNotifications.Refresh();
                         Task<string> _remote = new Task<string>(() => ProcessingRemote(_servers));
                         _remote.Start();
 
-                        if (await _remote == "Se creo el directorio remoto exitosamente")
+                        if (await _remote == "Se creo el directorio del servidor central exitosamente")
                         {
-                            lblNotifications.Text = "Se creo el directorio remoto exitosamente";
-                            petStatus.Image = Properties.Resources.SyncOK;
-                            _bridge.CreateMovement(new Movements { Machine = Environment.UserName, SO = Environment.OSVersion.ToString(), Date = DateTime.Now, Type = "Directorio", From = _secret.Decrypt(_servers.Remote.Server), To = "Equipo local" });
+                            lblNotifications.Text = "Se creo el directorio del servidor central exitosamente";
+                            //petStatus.Image = Properties.Resources.SyncOK;
+                            //_bridge.CreateMovement(new Movements { Machine = Environment.UserName, SO = Environment.OSVersion.ToString(), Date = DateTime.Now, Type = "Directorio", From = _secret.Decrypt(_servers.Remote.Server), To = "Equipo local" });
                         }
 
                         else
@@ -593,26 +561,26 @@ namespace SyncFTP.Views
 
                     else
                     {
-                        DialogResult f = XtraMessageBox.Show(UserLookAndFeel.Default, "No cuenta con conexión a internet, pero puede intentar en caso de que\n el servidor \"Remoto\" este conectado de forma local.\n\n¿Desea continuar?", "SyncFTP - Sin conexión a internet", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                        DialogResult f = XtraMessageBox.Show(UserLookAndFeel.Default, "No cuenta con conexión a internet, pero puede intentar en caso de que\n el servidor \"central\" este conectado de forma local.\n\n¿Desea continuar?", "SyncFTP - Sin conexión a internet", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                         if (f == DialogResult.Yes)
                         {
-                            _notify = new Notify("Espere por favor...", "Obteniendo directorio del servidor remoto", 1);
+                            _notify = new Notify("Espere por favor...", "Obteniendo directorio del servidor central", 1);
 
                             _notify.Show();
 
-                            lblNotifications.Text = "Obteniendo directorio remoto... espere por favor";
+                            lblNotifications.Text = "Obteniendo directorio central... espere por favor";
 
                             lblNotifications.Refresh();
                             Task<string> _remote = new Task<string>(() => ProcessingRemote(_servers));
                             _remote.Start();
 
-                            if (await _remote == "Se creo el directorio remoto exitosamente")
+                            if (await _remote == "Se creo el directorio central exitosamente")
                             {
-                                lblNotifications.Text = "Se creo el directorio remoto exitosamente";
-                                petStatus.Image = Properties.Resources.SyncOK;
+                                lblNotifications.Text = "Se creo el directorio central exitosamente";
+                                //petStatus.Image = Properties.Resources.SyncOK;
 
-                                _bridge.CreateMovement(new Movements { Machine = Environment.UserName, SO = Environment.OSVersion.ToString(), Date = DateTime.Now, Type = "Directorio", From = _secret.Decrypt(_servers.Remote.Server), To = "Equipo local" });
+                                //_bridge.CreateMovement(new Movements { Machine = Environment.UserName, SO = Environment.OSVersion.ToString(), Date = DateTime.Now, Type = "Directorio", From = _secret.Decrypt(_servers.Remote.Server), To = "Equipo local" });
                             }
 
                             else
@@ -657,27 +625,27 @@ namespace SyncFTP.Views
                 {
                     if (!CheckInternet())
                     {
-                        _notify = new Notify("Espere por favor...", "Obteniendo directorio del servidor local", 1);
+                        _notify = new Notify("Espere por favor...", "Obteniendo directorio del servidor replica", 1);
 
                         _notify.Show();
 
-                        lblNotifications.Text = "Obteniendo directorio local... espere por favor";
+                        lblNotifications.Text = "Obteniendo directorio replica... espere por favor";
 
                         lblNotifications.Refresh();
                         Task<string> _local = new Task<string>(() => ProcessingLocal(_servers));
                         _local.Start();
 
-                        if (await _local == "Se creo el directorio local exitosamente")
+                        if (await _local == "Se creo el directorio del servidor replica exitosamente")
                         {
-                            lblNotifications.Text = "Se creo el directorio local exitosamente";
+                            lblNotifications.Text = "Se creo el directorio del servidor replica exitosamente";
 
-                            _notify = new Notify("Éxito", "Directorio del servidor local generado", 1);
+                            _notify = new Notify("Éxito", "Directorio del servidor replica generado", 1);
 
                             _notify.Show();
 
-                            petStatus.Image = Properties.Resources.SyncOK;
+                            //petStatus.Image = Properties.Resources.SyncOK;
 
-                            _bridge.CreateMovement(new Movements { Machine = Environment.UserName, SO = Environment.OSVersion.ToString(), Date = DateTime.Now, Type = "Directorio", From = _secret.Decrypt(_servers.Local.Server), To = "Equipo local" });
+                            //_bridge.CreateMovement(new Movements { Machine = Environment.UserName, SO = Environment.OSVersion.ToString(), Date = DateTime.Now, Type = "Directorio", From = _secret.Decrypt(_servers.Local.Server), To = "Equipo local" });
                         }
 
                         else
@@ -692,31 +660,31 @@ namespace SyncFTP.Views
 
                     else
                     {
-                        DialogResult f = XtraMessageBox.Show(UserLookAndFeel.Default, "Al estar conectado a internet SyncFTP da preferencia a conexiones con el servidor \"Remoto\",\ncancelando acciones con el servidor \"Local\", pero aún así puede acceder a él, si este está accesible.\n\n¿Desea continuar?", "SyncFTP - Confirme acción", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                        DialogResult f = XtraMessageBox.Show(UserLookAndFeel.Default, "Al estar conectado a internet SyncFTP da preferencia a conexiones con el servidor \"central\",\ncancelando acciones con el servidor \"replica\", pero aún así puede acceder a él, si este está accesible.\n\n¿Desea continuar?", "SyncFTP - Confirme acción", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                         if (f == DialogResult.Yes)
                         {
-                            _notify = new Notify("Espere por favor...", "Obteniendo directorio del servidor local", 1);
+                            _notify = new Notify("Espere por favor...", "Obteniendo directorio de servidor replica", 1);
 
                             _notify.Show();
 
-                            lblNotifications.Text = "Obteniendo directorio local... espere por favor";
+                            lblNotifications.Text = "Obteniendo directorio del servidor replica... espere por favor";
 
                             lblNotifications.Refresh();
                             Task<string> _local = new Task<string>(() => ProcessingLocal(_servers));
                             _local.Start();
 
-                            if (await _local == "Se creo el directorio local exitosamente")
+                            if (await _local == "Se creo el directorio del servidor replica exitosamente")
                             {
-                                lblNotifications.Text = "Se creo el directorio local exitosamente";
+                                lblNotifications.Text = "Se creo el directorio replica exitosamente";
 
-                                _notify = new Notify("Éxito", "Directorio del servidor local generado", 1);
+                                _notify = new Notify("Éxito", "Directorio del servidor replica generado", 1);
 
                                 _notify.Show();
 
-                                petStatus.Image = Properties.Resources.SyncOK;
+                                //petStatus.Image = Properties.Resources.SyncOK;
 
-                                _bridge.CreateMovement(new Movements { Machine = Environment.UserName, SO = Environment.OSVersion.ToString(), Date = DateTime.Now, Type = "Directorio", From = _secret.Decrypt(_servers.Local.Server), To = "Equipo local" });
+                                //_bridge.CreateMovement(new Movements { Machine = Environment.UserName, SO = Environment.OSVersion.ToString(), Date = DateTime.Now, Type = "Directorio", From = _secret.Decrypt(_servers.Local.Server), To = "Equipo local" });
                             }
 
                             else
@@ -772,7 +740,7 @@ namespace SyncFTP.Views
 
                         _session.FileTransferProgress += FileTransferProgress;
 
-                        petStatus.Invoke(new Action(() => petStatus.Image = Properties.Resources.SyncBusy));
+                        //petStatus.Invoke(new Action(() => petStatus.Image = Properties.Resources.SyncBusy));
 
                         _session.Open(_client);
 
@@ -783,11 +751,11 @@ namespace SyncFTP.Views
                         _syncResult.Check();
                     }
 
-                    return "Sincronización con el servidor remoto completada";
+                    return "Sincronización con el servidor central completada";
                 }
                 else
                 {
-                    return "Servidor remoto no válido";
+                    return "Servidor central no válido";
                 }
             }
             catch (Exception)
@@ -815,9 +783,9 @@ namespace SyncFTP.Views
                 {
                     if (string.IsNullOrEmpty(_servers.Remote.Server))
                     {
-                        lblNotifications.Text = "Aún no hay datos del servidor remoto";
+                        lblNotifications.Text = "Aún no hay datos del servidor central";
 
-                        _notify = new Notify("Sin datos...", "Aún no hay datos del servidor remoto", 2);
+                        _notify = new Notify("Sin datos...", "Aún no hay datos del servidor central", 2);
 
                         _notify.Show();
                     }
@@ -826,32 +794,32 @@ namespace SyncFTP.Views
                     {
                         VisibleButtons(false);
 
-                        _notify = new Notify("Iniciando conexión", "Sincronizando con servidor remoto", 1);
+                        _notify = new Notify("Iniciando conexión", "Sincronizando con servidor central", 1);
 
                         _notify.Show();
 
-                        lblNotifications.Text = "Iniciando sincronización remota...";
+                        lblNotifications.Text = "Sincronizando servidor central...";
 
                         lblNotifications.Refresh();
-                        petStatus.Image = Properties.Resources.SyncBusy;
+                        //petStatus.Image = Properties.Resources.SyncBusy;
                         Task<string> _beginSync = new Task<string>(() => SynchronizeRemoteData(_servers));
                         _beginSync.Start();
 
-                        if (await _beginSync == "Sincronización con el servidor remoto completada")
+                        if (await _beginSync == "Sincronización con el servidor central completada")
                         {
-                            _notify = new Notify("Éxito", "Sincronización con servidor remoto completada", 0);
+                            _notify = new Notify("Éxito", "Sincronización con servidor central completada", 0);
 
                             _notify.Show();
 
-                            petStatus.Image = Properties.Resources.SyncOK;
+                            //petStatus.Image = Properties.Resources.SyncOK;
 
                             VisibleButtons(true);
 
-                            lblNotifications.Text = "Los archivos se sincronizaron con el servidor remoto. (Acción finalizada)";
+                            lblNotifications.Text = "Los archivos se sincronizaron con el servidor central. (Acción finalizada)";
 
                             string _copyTo = "";
 
-                            _bridge.CreateMovement(new Movements { Machine = Environment.UserName, SO = Environment.OSVersion.ToString(), Date = DateTime.Now, Type = "Descarga", From = _secret.Decrypt(_servers.Remote.Server), To = "Equipo local" });
+                            //_bridge.CreateMovement(new Movements { Machine = Environment.UserName, SO = Environment.OSVersion.ToString(), Date = DateTime.Now, Type = "Descarga", From = _secret.Decrypt(_servers.Remote.Server), To = "Equipo local" });
 
                             DialogResult _answer = XtraMessageBox.Show(UserLookAndFeel.Default, "¿Desea pasar los archivos sincronizados a un dispositivo extraíble?", "SyncFTP - ¿Copiar archivos?", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
@@ -890,7 +858,7 @@ namespace SyncFTP.Views
                         {
                             VisibleButtons(true);
 
-                            _notify = new Notify("Verficando ajustes remotos", "Reintente sincronización", 2);
+                            _notify = new Notify("Verficando ajustes", "Reintente sincronización", 2);
 
                             _notify.Show();
                         }
@@ -940,7 +908,7 @@ namespace SyncFTP.Views
 
                         _session.Open(_client);
 
-                        petStatus.Invoke(new Action(() => petStatus.Image = Properties.Resources.SyncBusy));
+                        //petStatus.Invoke(new Action(() => petStatus.Image = Properties.Resources.SyncBusy));
 
                         SynchronizationResult _syncResult;
                         _syncResult = _session.SynchronizeDirectories(SynchronizationMode.Remote, _remoteFilesDirectory, _secret.Decrypt(server.Local.Find), false, false, SynchronizationCriteria.Either);
@@ -948,11 +916,11 @@ namespace SyncFTP.Views
                         _syncResult.Check();
                     }
 
-                    return "Sincronización con servidor local completada";
+                    return "Sincronización con servidor replica completada";
                 }
                 else
                 {
-                    return "Servidor local no válido";
+                    return "Servidor replica no válido";
                 }
             }
             catch (Exception)
@@ -981,9 +949,9 @@ namespace SyncFTP.Views
 
                     if (string.IsNullOrEmpty(_servers.Local.Server))
                     {
-                        lblNotifications.Text = "Aún no hay datos del servidor local";
+                        lblNotifications.Text = "Aún no hay datos del servidor replica";
 
-                        _notify = new Notify("Sin datos...", "Aún no hay datos del servidor local", 2);
+                        _notify = new Notify("Sin datos...", "Aún no hay datos del servidor replica", 2);
 
                         _notify.Show();
                     }
@@ -992,29 +960,29 @@ namespace SyncFTP.Views
                     {
                         VisibleButtons(false);
 
-                        _notify = new Notify("Iniciando conexión...", "Sincronizando con servidor local", 1);
+                        _notify = new Notify("Iniciando conexión...", "Sincronizando con servidor replica", 1);
 
                         _notify.Show();
 
-                        lblNotifications.Text = "Iniciando sincronización local...";
+                        lblNotifications.Text = "Sincronizando servidor replica...";
 
                         lblNotifications.Refresh();
                         Task<string> _beginSync = new Task<string>(() => SynchronizeLocalData(_servers));
                         _beginSync.Start();
 
-                        if (await _beginSync == "Sincronización con servidor local completada")
+                        if (await _beginSync == "Sincronización con servidor replica completada")
                         {
                             VisibleButtons(true);
 
-                            petStatus.Image = Properties.Resources.SyncOK;
+                            //petStatus.Image = Properties.Resources.SyncOK;
 
-                            lblNotifications.Text = "El servidor local a sido sincronizado";
+                            lblNotifications.Text = "El servidor replica a sido sincronizado";
 
-                            _notify = new Notify("Éxito", "Sincronización con servidor local completada", 0);
+                            _notify = new Notify("Éxito", "Sincronización con servidor replica completada", 0);
 
                             _notify.Show();
 
-                            _bridge.CreateMovement(new Movements { Machine = Environment.UserName, SO = Environment.OSVersion.ToString(), Date = DateTime.Now, Type = "Carga", From = "Equipo local", To = _secret.Decrypt(_servers.Local.Server) });
+                            //_bridge.CreateMovement(new Movements { Machine = Environment.UserName, SO = Environment.OSVersion.ToString(), Date = DateTime.Now, Type = "Carga", From = "Equipo local", To = _secret.Decrypt(_servers.Local.Server) });
                         }
 
                         else
@@ -1106,7 +1074,9 @@ namespace SyncFTP.Views
                 pbcProgress.Invoke(new Action(() => pbcProgress.Position = 0));
             }
 
-            pbcProgress.Invoke(new Action(() => pbcProgress.Increment(Convert.ToInt32(e.FileProgress * 100))));
+            pbcProgress.Invoke(new Action(() => pbcProgress.Increment(Convert.ToInt32(e.OverallProgress * 100))));
+
+            lblAvance.Invoke(new Action(() => lblAvance.Text = string.Format("{0}% de 100% completado", (e.OverallProgress * 100))));
         }
 
         /// <summary>
@@ -1186,7 +1156,7 @@ namespace SyncFTP.Views
 
                             else
                             {
-                                DialogResult f = XtraMessageBox.Show(UserLookAndFeel.Default, "Parece que esta conectado a internet, se intentará acceder al servidor \"Local\".\n\n¿Desea continuar y transferir archivos?", "SyncFTP - Confirme acción", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                                DialogResult f = XtraMessageBox.Show(UserLookAndFeel.Default, "Parece que esta conectado a internet, se intentará acceder al servidor \"replica\".\n\n¿Desea continuar y transferir archivos?", "SyncFTP - Confirme acción", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                                 if (f == DialogResult.Yes)
                                 {
@@ -1229,7 +1199,7 @@ namespace SyncFTP.Views
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void MainForm_MouseClick(object sender, MouseEventArgs e)
+        private void Principal_MouseClick(object sender, MouseEventArgs e)
         {
             try
             {
@@ -1300,64 +1270,25 @@ namespace SyncFTP.Views
         private void _tmpElapsedTime_Tick(object sender, EventArgs e)
         {
             lblElapsedTime.Refresh();
-            lblElapsedTime.Text = "Tiempo en ejecución: " + _seconds.ToString() + " segundos.";
+            lblElapsedTime.Text = "Tiempo: " + _seconds.ToString() + " seg.";
             _seconds++;
         }
 
         #endregion
 
-        #region Visual Effects
-
-        private void petSettings_MouseEnter(object sender, EventArgs e)
+        private void Principal_FormClosed(object sender, FormClosedEventArgs e)
         {
-            petSettings.Image = Properties.Resources.SetttingHover;
+            Application.Exit();
         }
 
-        private void petSettings_MouseLeave(object sender, EventArgs e)
+        private void btnIniciarCentral_Click(object sender, EventArgs e)
         {
-            petSettings.Image = Properties.Resources.Settting;
+            BeginToSyncRemote();
         }
 
-        private void petRemoteFiles_MouseEnter(object sender, EventArgs e)
+        private void btnIniciarReplica_Click(object sender, EventArgs e)
         {
-            petRemoteFiles.Image = Properties.Resources.FolderHover;
+            BeginToSyncLocal();
         }
-
-        private void petRemoteFiles_MouseLeave(object sender, EventArgs e)
-        {
-            petRemoteFiles.Image = Properties.Resources.Folder;
-        }
-
-        private void petInfo_MouseEnter(object sender, EventArgs e)
-        {
-            petInfo.Image = Properties.Resources.ManualHover;
-        }
-
-        private void petInfo_MouseLeave(object sender, EventArgs e)
-        {
-            petInfo.Image = Properties.Resources.Manual;
-        }
-
-        private void petFromDrive_MouseEnter(object sender, EventArgs e)
-        {
-            petFromDrive.Image = Properties.Resources.USBHover;
-        }
-
-        private void petFromDrive_MouseLeave(object sender, EventArgs e)
-        {
-            petFromDrive.Image = Properties.Resources.USB;
-        }
-
-        private void petTransactions_MouseEnter(object sender, EventArgs e)
-        {
-            petTransactions.Image = Properties.Resources.TransactionsHover;
-        }
-
-        private void petTransactions_MouseLeave(object sender, EventArgs e)
-        {
-            petTransactions.Image = Properties.Resources.Transaction;
-        }
-
-        #endregion
     }
 }

@@ -198,6 +198,7 @@
             this.Name = "Bienvenido";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Asistente de configuración - SyncFTP";
+            this.Shown += new System.EventHandler(this.Bienvenido_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.petNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.petSi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).EndInit();

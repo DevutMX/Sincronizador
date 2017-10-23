@@ -48,13 +48,13 @@
             this.txtServidor = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.petVerPassword = new DevExpress.XtraEditors.PictureEdit();
             this.petProbar = new DevExpress.XtraEditors.PictureEdit();
             this.petContinuar = new DevExpress.XtraEditors.PictureEdit();
             this.btnAyuda = new DevExpress.XtraEditors.SimpleButton();
             this.btnCancelar = new DevExpress.XtraEditors.SimpleButton();
             this.pictureEdit2 = new DevExpress.XtraEditors.PictureEdit();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
-            this.petVerPassword = new DevExpress.XtraEditors.PictureEdit();
             ((System.ComponentModel.ISupportInitialize)(this.chkActivo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkAutenticar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbxEncriptacion.Properties)).BeginInit();
@@ -64,11 +64,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtContrasena.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUsuario.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtServidor.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.petVerPassword.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.petProbar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.petContinuar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.petVerPassword.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl10
@@ -316,6 +316,24 @@
             this.labelControl1.TabIndex = 33;
             this.labelControl1.Text = "Configuración para el servidor replica";
             // 
+            // petVerPassword
+            // 
+            this.petVerPassword.Cursor = System.Windows.Forms.Cursors.Default;
+            this.petVerPassword.EditValue = global::SyncFTP.Properties.Resources.Desbloquear;
+            this.petVerPassword.Location = new System.Drawing.Point(400, 223);
+            this.petVerPassword.Name = "petVerPassword";
+            this.petVerPassword.Properties.AllowFocused = false;
+            this.petVerPassword.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.petVerPassword.Properties.Appearance.Options.UseBackColor = true;
+            this.petVerPassword.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.petVerPassword.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.petVerPassword.Properties.ShowMenu = false;
+            this.petVerPassword.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.petVerPassword.Size = new System.Drawing.Size(24, 24);
+            this.petVerPassword.TabIndex = 56;
+            this.petVerPassword.MouseDown += new System.Windows.Forms.MouseEventHandler(this.petVerPassword_MouseDown);
+            this.petVerPassword.MouseUp += new System.Windows.Forms.MouseEventHandler(this.petVerPassword_MouseUp);
+            // 
             // petProbar
             // 
             this.petProbar.Cursor = System.Windows.Forms.Cursors.Default;
@@ -403,24 +421,6 @@
             this.pictureEdit1.Size = new System.Drawing.Size(502, 2);
             this.pictureEdit1.TabIndex = 31;
             // 
-            // petVerPassword
-            // 
-            this.petVerPassword.Cursor = System.Windows.Forms.Cursors.Default;
-            this.petVerPassword.EditValue = global::SyncFTP.Properties.Resources.Desbloquear;
-            this.petVerPassword.Location = new System.Drawing.Point(400, 223);
-            this.petVerPassword.Name = "petVerPassword";
-            this.petVerPassword.Properties.AllowFocused = false;
-            this.petVerPassword.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.petVerPassword.Properties.Appearance.Options.UseBackColor = true;
-            this.petVerPassword.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.petVerPassword.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.petVerPassword.Properties.ShowMenu = false;
-            this.petVerPassword.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.petVerPassword.Size = new System.Drawing.Size(24, 24);
-            this.petVerPassword.TabIndex = 56;
-            this.petVerPassword.MouseDown += new System.Windows.Forms.MouseEventHandler(this.petVerPassword_MouseDown);
-            this.petVerPassword.MouseUp += new System.Windows.Forms.MouseEventHandler(this.petVerPassword_MouseUp);
-            // 
             // Replica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -467,11 +467,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtContrasena.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUsuario.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtServidor.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.petVerPassword.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.petProbar.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.petContinuar.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.petVerPassword.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
