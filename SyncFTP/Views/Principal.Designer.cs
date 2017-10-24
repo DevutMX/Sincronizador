@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.pnlOptions = new DevExpress.XtraEditors.PanelControl();
+            this.btnRefrescar = new DevExpress.XtraEditors.SimpleButton();
             this.lblNotifications = new DevExpress.XtraEditors.LabelControl();
             this.lblElapsedTime = new DevExpress.XtraEditors.LabelControl();
             this.btnAvanzados = new DevExpress.XtraEditors.SimpleButton();
@@ -72,7 +73,6 @@
             this.btnExitSysTray = new System.Windows.Forms.ToolStripMenuItem();
             this.nicToMinimized = new System.Windows.Forms.NotifyIcon(this.components);
             this._tmpElapsedTime = new System.Windows.Forms.Timer(this.components);
-            this.btnRefrescar = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.pnlOptions)).BeginInit();
             this.pnlOptions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbxDispositivos.Properties)).BeginInit();
@@ -124,6 +124,16 @@
             this.pnlOptions.Size = new System.Drawing.Size(484, 157);
             this.pnlOptions.TabIndex = 12;
             // 
+            // btnRefrescar
+            // 
+            this.btnRefrescar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnRefrescar.ImageOptions.Image")));
+            this.btnRefrescar.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnRefrescar.Location = new System.Drawing.Point(12, 30);
+            this.btnRefrescar.Name = "btnRefrescar";
+            this.btnRefrescar.Size = new System.Drawing.Size(23, 23);
+            this.btnRefrescar.TabIndex = 20;
+            this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
+            // 
             // lblNotifications
             // 
             this.lblNotifications.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
@@ -157,6 +167,7 @@
             this.btnAvanzados.Size = new System.Drawing.Size(65, 73);
             this.btnAvanzados.TabIndex = 17;
             this.btnAvanzados.Text = "Avanzados";
+            this.btnAvanzados.Click += new System.EventHandler(this.btnAvanzados_Click);
             // 
             // btnConfirmar
             // 
@@ -164,7 +175,7 @@
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(80, 23);
             this.btnConfirmar.TabIndex = 16;
-            this.btnConfirmar.Text = "Confirmar";
+            this.btnConfirmar.Text = "Transferir";
             this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
             // labelControl4
@@ -190,6 +201,7 @@
             this.cbxDispositivos.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cbxDispositivos.Size = new System.Drawing.Size(227, 22);
             this.cbxDispositivos.TabIndex = 14;
+            this.cbxDispositivos.SelectedIndexChanged += new System.EventHandler(this.cbxDispositivos_SelectedIndexChanged);
             // 
             // lblAvance
             // 
@@ -506,16 +518,6 @@
             // 
             this._tmpElapsedTime.Interval = 1000;
             this._tmpElapsedTime.Tick += new System.EventHandler(this._tmpElapsedTime_Tick);
-            // 
-            // btnRefrescar
-            // 
-            this.btnRefrescar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnRefrescar.ImageOptions.Image")));
-            this.btnRefrescar.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.btnRefrescar.Location = new System.Drawing.Point(12, 30);
-            this.btnRefrescar.Name = "btnRefrescar";
-            this.btnRefrescar.Size = new System.Drawing.Size(23, 23);
-            this.btnRefrescar.TabIndex = 20;
-            this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
             // 
             // Principal
             // 

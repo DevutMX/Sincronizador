@@ -53,6 +53,8 @@ namespace SyncFTP.Views
         /// </summary>
         private int _seconds = 0;
 
+        private string _copyPath;
+
         private int _archivos = 0;
 
         #region Events
@@ -845,7 +847,7 @@ namespace SyncFTP.Views
                             {
                                 if (fbdFolderSelect.ShowDialog() == DialogResult.OK)
                                 {
-                                    _copyTo = fbdFolderSelect.SelectedPath + @"\RemoteFiles";
+                                    _copyTo = _copyPath;
 
                                     if (!string.IsNullOrEmpty(_copyTo) && Directory.Exists(_remoteFilesDirectory))
                                     {
@@ -1362,7 +1364,9 @@ namespace SyncFTP.Views
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            _notify = new Notify( "Ruta modificada" , "Se cambio la ruta de guardado exitosamente", 1);
+            _copyPath = cbxDispositivos.SelectedItem.ToString().Substring(0, 2) + @"Sincronizacion " + DateTime.Now.ToString("dd-MM-yyyy HH-mm-ss");
+
+            _notify = new Notify( "Transfiriendo archivos" , "Se transfirieron los archivos correctamente", 1);
 
             _notify.Show();
         }
@@ -1381,6 +1385,37 @@ namespace SyncFTP.Views
                 gdvReplica.Columns[1].DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
 
                 gdvReplica.Columns[1].DisplayFormat.FormatString = "g";
+            }
+            catch (Exception)
+            {
+                
+            }
+        }
+
+        private void cbxDispositivos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                _copyPath = cbxDispositivos.SelectedItem.ToString().Substring(0, 2);
+
+                MessageBox.Show(_copyPath);
+            }
+            catch (Exception)
+            {
+                
+            }
+        }
+
+        private void btnAvanzados_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (fbdFolderSelect.ShowDialog() == DialogResult.OK)
+                {
+                    _copyPath = fbdFolderSelect.SelectedPath + @"\Sincronizacion " + DateTime.Now.ToString("dd-MM-yyyy HH-mm-ss");
+
+                    MessageBox.Show(_copyPath);
+                }
             }
             catch (Exception)
             {
