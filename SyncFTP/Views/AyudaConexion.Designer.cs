@@ -159,6 +159,7 @@
             this.btnUsuario.Size = new System.Drawing.Size(140, 23);
             this.btnUsuario.TabIndex = 17;
             this.btnUsuario.Text = "Usuario y/o Contraseña";
+            this.btnUsuario.Click += new System.EventHandler(this.btnUsuario_Click);
             // 
             // btnPuerto
             // 
@@ -169,6 +170,7 @@
             this.btnPuerto.Size = new System.Drawing.Size(70, 23);
             this.btnPuerto.TabIndex = 18;
             this.btnPuerto.Text = "Puerto";
+            this.btnPuerto.Click += new System.EventHandler(this.btnPuerto_Click);
             // 
             // btnDirectorio
             // 
@@ -179,6 +181,7 @@
             this.btnDirectorio.Size = new System.Drawing.Size(70, 23);
             this.btnDirectorio.TabIndex = 19;
             this.btnDirectorio.Text = "Directorio";
+            this.btnDirectorio.Click += new System.EventHandler(this.btnDirectorio_Click);
             // 
             // btnEncriptacion
             // 
@@ -189,6 +192,7 @@
             this.btnEncriptacion.Size = new System.Drawing.Size(173, 23);
             this.btnEncriptacion.TabIndex = 20;
             this.btnEncriptacion.Text = "Encriptación y Autenticación";
+            this.btnEncriptacion.Click += new System.EventHandler(this.btnEncriptacion_Click);
             // 
             // btnModo
             // 
@@ -199,6 +203,7 @@
             this.btnModo.Size = new System.Drawing.Size(81, 23);
             this.btnModo.TabIndex = 22;
             this.btnModo.Text = "Modo Activo";
+            this.btnModo.Click += new System.EventHandler(this.btnModo_Click);
             // 
             // labelControl2
             // 
@@ -262,9 +267,7 @@
             // 
             // gbcUsuario
             // 
-            this.gbcUsuario.Controls.Add(this.gbcDirectorio);
             this.gbcUsuario.Controls.Add(this.labelControl7);
-            this.gbcUsuario.Controls.Add(this.gbcPuerto);
             this.gbcUsuario.Controls.Add(this.labelControl8);
             this.gbcUsuario.Controls.Add(this.pictureEdit9);
             this.gbcUsuario.Location = new System.Drawing.Point(455, 76);
@@ -296,7 +299,7 @@
             this.labelControl8.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl8.Appearance.Options.UseFont = true;
             this.labelControl8.Appearance.Options.UseForeColor = true;
-            this.labelControl8.Location = new System.Drawing.Point(32, 145);
+            this.labelControl8.Location = new System.Drawing.Point(37, 131);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(205, 13);
             this.labelControl8.TabIndex = 24;
@@ -307,7 +310,7 @@
             this.gbcPuerto.Controls.Add(this.labelControl9);
             this.gbcPuerto.Controls.Add(this.labelControl10);
             this.gbcPuerto.Controls.Add(this.pictureEdit10);
-            this.gbcPuerto.Location = new System.Drawing.Point(5, 0);
+            this.gbcPuerto.Location = new System.Drawing.Point(460, 76);
             this.gbcPuerto.Name = "gbcPuerto";
             this.gbcPuerto.Size = new System.Drawing.Size(267, 312);
             this.gbcPuerto.TabIndex = 26;
@@ -348,7 +351,7 @@
             this.gbcDirectorio.Controls.Add(this.labelControl11);
             this.gbcDirectorio.Controls.Add(this.labelControl12);
             this.gbcDirectorio.Controls.Add(this.pictureEdit11);
-            this.gbcDirectorio.Location = new System.Drawing.Point(0, 0);
+            this.gbcDirectorio.Location = new System.Drawing.Point(450, 72);
             this.gbcDirectorio.Name = "gbcDirectorio";
             this.gbcDirectorio.Size = new System.Drawing.Size(267, 312);
             this.gbcDirectorio.TabIndex = 27;
@@ -709,9 +712,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(454, 396);
-            this.Controls.Add(this.gbcEncriptacion);
-            this.Controls.Add(this.gbcActivo);
             this.Controls.Add(this.gbcUsuario);
+            this.Controls.Add(this.gbcPuerto);
+            this.Controls.Add(this.gbcDirectorio);
             this.Controls.Add(this.gbcServidor);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.btnModo);
@@ -731,6 +734,8 @@
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.pictureEdit2);
             this.Controls.Add(this.petDivisor);
+            this.Controls.Add(this.gbcEncriptacion);
+            this.Controls.Add(this.gbcActivo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
