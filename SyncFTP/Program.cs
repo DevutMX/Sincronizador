@@ -23,7 +23,7 @@ namespace SyncFTP
             BonusSkins.Register();
             SkinManager.EnableFormSkins();
             UserLookAndFeel.Default.SetSkinStyle("Foggy");
-            Application.Run(new Bienvenido());
+            Application.Run(new AyudaConexion());
         }
     }
 }

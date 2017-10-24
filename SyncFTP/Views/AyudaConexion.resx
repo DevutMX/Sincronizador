@@ -117,6 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="tmpEfecto.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="labelControl11.Text" xml:space="preserve">
+    <value>Indique aqui el directorio desde donde se verificaran los archivos a sincronizar, por cada "/" es una carpeta que existe dentro del servidor. Si no escribe ningún directorio, se tomarán todos los directorios disponibles.</value>
+  </data>
+  <data name="labelControl7.Text" xml:space="preserve">
+    <value>El usuario y la contraseña son campos obligatorios, si selecciono la opcion "Anónimo", el usuario y contraseña se escribirán automaticamente. Puede presionar la imagen del ojo para revelar la contraseña.</value>
+  </data>
+  <data name="labelControl13.Text" xml:space="preserve">
+    <value>Cuando usted usa un cortafuegos, es probable que tenga que seleccionar una encriptación. Tambien es necesario que active la casilla de "Requiere Autenticar" cuando normalmente se piden credenciales no comprobadas.
+(Varia dependiendo del equipo, se sugiere interactuar con las opciones si no puede conectarse)</value>
+  </data>
+  <data name="labelControl14.Text" xml:space="preserve">
+    <value>Por defecto las conexiones se hacen de forma "Pasiva" que es cuando usted conoce el puerto de conexion y recibe tiene libre acceso del cliente al servidor (Casilla no seleccionada), si activa la casilla será conexion "Activa" en donde el servidor buscara el puerto adecuado (No se recomienda).</value>
+  </data>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>54</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

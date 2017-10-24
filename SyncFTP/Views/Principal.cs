@@ -36,7 +36,7 @@ namespace SyncFTP.Views
         /// <summary>
         /// Objeto a nivel global que permite interactuar con los metodos de la base de datos
         /// </summary>
-        //Bridge _bridge = new Bridge();
+        Bridge _bridge = new Bridge();
 
         /// <summary>
         /// Objeto a nivel global que permite llamar notificaciones dentro de este formulario
@@ -53,6 +53,8 @@ namespace SyncFTP.Views
         /// </summary>
         private int _seconds = 0;
 
+        private int _archivos = 0;
+
         #region Events
 
         /// <summary>
@@ -63,6 +65,8 @@ namespace SyncFTP.Views
         private void Principal_Shown(object sender, EventArgs e)
         {
             ObtenerDispositivos();
+
+            CargarHistorial();
 
             WindowState = FormWindowState.Minimized;
 
@@ -538,6 +542,8 @@ namespace SyncFTP.Views
 
                         lblNotifications.Text = "Obteniendo directorio central... espere por favor";
 
+                        _archivos = 0;
+
                         lblNotifications.Refresh();
                         Task<string> _remote = new Task<string>(() => ProcessingRemote(_servers));
                         _remote.Start();
@@ -546,7 +552,7 @@ namespace SyncFTP.Views
                         {
                             lblNotifications.Text = "Se creo el directorio del servidor central exitosamente";
                             //petStatus.Image = Properties.Resources.SyncOK;
-                            //_bridge.CreateMovement(new Movements { Machine = Environment.UserName, SO = Environment.OSVersion.ToString(), Date = DateTime.Now, Type = "Directorio", From = _secret.Decrypt(_servers.Remote.Server), To = "Equipo local" });
+                            _bridge.CreateMovement(new Movements { Fecha = DateTime.Now, Servidor = 0, Archivos = _archivos });
                         }
 
                         else
@@ -571,6 +577,8 @@ namespace SyncFTP.Views
 
                             lblNotifications.Text = "Obteniendo directorio central... espere por favor";
 
+                            _archivos = 0;
+
                             lblNotifications.Refresh();
                             Task<string> _remote = new Task<string>(() => ProcessingRemote(_servers));
                             _remote.Start();
@@ -580,7 +588,7 @@ namespace SyncFTP.Views
                                 lblNotifications.Text = "Se creo el directorio central exitosamente";
                                 //petStatus.Image = Properties.Resources.SyncOK;
 
-                                //_bridge.CreateMovement(new Movements { Machine = Environment.UserName, SO = Environment.OSVersion.ToString(), Date = DateTime.Now, Type = "Directorio", From = _secret.Decrypt(_servers.Remote.Server), To = "Equipo local" });
+                                _bridge.CreateMovement(new Movements { Fecha = DateTime.Now, Servidor = 0, Archivos = _archivos });
                             }
 
                             else
@@ -601,6 +609,8 @@ namespace SyncFTP.Views
 
                     _notify.Show();
                 }
+
+                CargarHistorial();
             }
             catch (Exception)
             {
@@ -631,6 +641,8 @@ namespace SyncFTP.Views
 
                         lblNotifications.Text = "Obteniendo directorio replica... espere por favor";
 
+                        _archivos = 0;
+
                         lblNotifications.Refresh();
                         Task<string> _local = new Task<string>(() => ProcessingLocal(_servers));
                         _local.Start();
@@ -645,7 +657,7 @@ namespace SyncFTP.Views
 
                             //petStatus.Image = Properties.Resources.SyncOK;
 
-                            //_bridge.CreateMovement(new Movements { Machine = Environment.UserName, SO = Environment.OSVersion.ToString(), Date = DateTime.Now, Type = "Directorio", From = _secret.Decrypt(_servers.Local.Server), To = "Equipo local" });
+                            _bridge.CreateMovement(new Movements { Fecha = DateTime.Now, Servidor = 1, Archivos = _archivos });
                         }
 
                         else
@@ -670,6 +682,8 @@ namespace SyncFTP.Views
 
                             lblNotifications.Text = "Obteniendo directorio del servidor replica... espere por favor";
 
+                            _archivos = 0;
+
                             lblNotifications.Refresh();
                             Task<string> _local = new Task<string>(() => ProcessingLocal(_servers));
                             _local.Start();
@@ -684,7 +698,7 @@ namespace SyncFTP.Views
 
                                 //petStatus.Image = Properties.Resources.SyncOK;
 
-                                //_bridge.CreateMovement(new Movements { Machine = Environment.UserName, SO = Environment.OSVersion.ToString(), Date = DateTime.Now, Type = "Directorio", From = _secret.Decrypt(_servers.Local.Server), To = "Equipo local" });
+                                _bridge.CreateMovement(new Movements { Fecha = DateTime.Now, Servidor = 1, Archivos = _archivos });
                             }
 
                             else
@@ -705,6 +719,8 @@ namespace SyncFTP.Views
 
                     _notify.Show();
                 }
+
+                CargarHistorial();
             }
             catch (Exception)
             {
@@ -800,6 +816,8 @@ namespace SyncFTP.Views
 
                         lblNotifications.Text = "Sincronizando servidor central...";
 
+                        _archivos = 0;
+
                         lblNotifications.Refresh();
                         //petStatus.Image = Properties.Resources.SyncBusy;
                         Task<string> _beginSync = new Task<string>(() => SynchronizeRemoteData(_servers));
@@ -819,7 +837,7 @@ namespace SyncFTP.Views
 
                             string _copyTo = "";
 
-                            //_bridge.CreateMovement(new Movements { Machine = Environment.UserName, SO = Environment.OSVersion.ToString(), Date = DateTime.Now, Type = "Descarga", From = _secret.Decrypt(_servers.Remote.Server), To = "Equipo local" });
+                            _bridge.CreateMovement(new Movements { Fecha = DateTime.Now, Servidor = 0, Archivos = _archivos });
 
                             DialogResult _answer = XtraMessageBox.Show(UserLookAndFeel.Default, "¿Desea pasar los archivos sincronizados a un dispositivo extraíble?", "SyncFTP - ¿Copiar archivos?", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
@@ -871,6 +889,8 @@ namespace SyncFTP.Views
 
                     _notify.Show();
                 }
+
+                CargarHistorial();
             }
             catch (Exception)
             {
@@ -966,6 +986,8 @@ namespace SyncFTP.Views
 
                         lblNotifications.Text = "Sincronizando servidor replica...";
 
+                        _archivos = 0;
+
                         lblNotifications.Refresh();
                         Task<string> _beginSync = new Task<string>(() => SynchronizeLocalData(_servers));
                         _beginSync.Start();
@@ -982,7 +1004,7 @@ namespace SyncFTP.Views
 
                             _notify.Show();
 
-                            //_bridge.CreateMovement(new Movements { Machine = Environment.UserName, SO = Environment.OSVersion.ToString(), Date = DateTime.Now, Type = "Carga", From = "Equipo local", To = _secret.Decrypt(_servers.Local.Server) });
+                            _bridge.CreateMovement(new Movements { Fecha = DateTime.Now, Servidor = 1, Archivos = _archivos });
                         }
 
                         else
@@ -1002,6 +1024,8 @@ namespace SyncFTP.Views
 
                     _notify.Show();
                 }
+
+                CargarHistorial();
             }
             catch (Exception)
             {
@@ -1060,6 +1084,8 @@ namespace SyncFTP.Views
             {
                 lblNotifications.Invoke(new Action(() => lblNotifications.Text = "La fecha de: " + e.FileName.ToString() + ", no cambiará"));
             }
+
+            _archivos++;
         }
 
         /// <summary>
@@ -1339,6 +1365,27 @@ namespace SyncFTP.Views
             _notify = new Notify( "Ruta modificada" , "Se cambio la ruta de guardado exitosamente", 1);
 
             _notify.Show();
+        }
+
+        private void CargarHistorial()
+        {
+            try
+            {
+                _bridge.RemoteMovementsToList(gdcCentral);
+                _bridge.LocalMovementsToList(gdcReplica);
+
+                gdvCentral.Columns[1].DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+
+                gdvCentral.Columns[1].DisplayFormat.FormatString = "g";
+
+                gdvReplica.Columns[1].DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+
+                gdvReplica.Columns[1].DisplayFormat.FormatString = "g";
+            }
+            catch (Exception)
+            {
+                
+            }
         }
     }
 }

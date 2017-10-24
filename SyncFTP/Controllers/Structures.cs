@@ -83,12 +83,9 @@ namespace SyncFTP.Controllers
     class Movements
     {
         public int MovementId { get; private set; }
-        public string Machine { get; set; }
-        public string SO { get; set; }
-        public DateTime Date { get; set; }
-        public string Type { get; set; }
-        public string From { get; set; }
-        public string To { get; set; }
+        public DateTime Fecha { get; set; }
+        public int Archivos { get; set; }
+        public int Servidor { get; set; }
     }
 
     #endregion
