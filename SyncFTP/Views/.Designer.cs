@@ -258,6 +258,7 @@
             this.Name = "Servidores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Asistente de configuración - SyncFTP";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Servidores_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.chkCentral.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkReplica.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.petContinuar.Properties)).EndInit();

@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.pnlOptions = new DevExpress.XtraEditors.PanelControl();
+            this.btnDesdeUSB = new DevExpress.XtraEditors.SimpleButton();
             this.btnRefrescar = new DevExpress.XtraEditors.SimpleButton();
             this.lblNotifications = new DevExpress.XtraEditors.LabelControl();
             this.lblElapsedTime = new DevExpress.XtraEditors.LabelControl();
@@ -109,6 +110,7 @@
             // 
             // pnlOptions
             // 
+            this.pnlOptions.Controls.Add(this.btnDesdeUSB);
             this.pnlOptions.Controls.Add(this.btnRefrescar);
             this.pnlOptions.Controls.Add(this.lblNotifications);
             this.pnlOptions.Controls.Add(this.lblElapsedTime);
@@ -123,6 +125,18 @@
             this.pnlOptions.Name = "pnlOptions";
             this.pnlOptions.Size = new System.Drawing.Size(484, 157);
             this.pnlOptions.TabIndex = 12;
+            // 
+            // btnDesdeUSB
+            // 
+            this.btnDesdeUSB.ImageOptions.Image = global::SyncFTP.Properties.Resources.USB24;
+            this.btnDesdeUSB.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.btnDesdeUSB.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.BottomCenter;
+            this.btnDesdeUSB.Location = new System.Drawing.Point(408, 9);
+            this.btnDesdeUSB.Name = "btnDesdeUSB";
+            this.btnDesdeUSB.Size = new System.Drawing.Size(64, 43);
+            this.btnDesdeUSB.TabIndex = 21;
+            this.btnDesdeUSB.Text = "Desde USB";
+            this.btnDesdeUSB.Click += new System.EventHandler(this.btnDesdeUSB_Click);
             // 
             // btnRefrescar
             // 
@@ -152,30 +166,30 @@
             this.lblElapsedTime.Appearance.ForeColor = System.Drawing.Color.Black;
             this.lblElapsedTime.Appearance.Options.UseFont = true;
             this.lblElapsedTime.Appearance.Options.UseForeColor = true;
-            this.lblElapsedTime.Location = new System.Drawing.Point(245, 78);
+            this.lblElapsedTime.Location = new System.Drawing.Point(274, 78);
             this.lblElapsedTime.Name = "lblElapsedTime";
             this.lblElapsedTime.Size = new System.Drawing.Size(0, 16);
             this.lblElapsedTime.TabIndex = 18;
             // 
             // btnAvanzados
             // 
-            this.btnAvanzados.ImageOptions.Image = global::SyncFTP.Properties.Resources.Avanzados;
+            this.btnAvanzados.ImageOptions.Image = global::SyncFTP.Properties.Resources.Avanzados24;
             this.btnAvanzados.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
             this.btnAvanzados.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.BottomCenter;
-            this.btnAvanzados.Location = new System.Drawing.Point(407, 9);
+            this.btnAvanzados.Location = new System.Drawing.Point(341, 9);
             this.btnAvanzados.Name = "btnAvanzados";
-            this.btnAvanzados.Size = new System.Drawing.Size(65, 73);
+            this.btnAvanzados.Size = new System.Drawing.Size(64, 43);
             this.btnAvanzados.TabIndex = 17;
             this.btnAvanzados.Text = "Avanzados";
             this.btnAvanzados.Click += new System.EventHandler(this.btnAvanzados_Click);
             // 
             // btnConfirmar
             // 
-            this.btnConfirmar.Location = new System.Drawing.Point(274, 30);
+            this.btnConfirmar.Location = new System.Drawing.Point(274, 29);
             this.btnConfirmar.Name = "btnConfirmar";
-            this.btnConfirmar.Size = new System.Drawing.Size(80, 23);
+            this.btnConfirmar.Size = new System.Drawing.Size(61, 23);
             this.btnConfirmar.TabIndex = 16;
-            this.btnConfirmar.Text = "Transferir";
+            this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
             // labelControl4
@@ -201,7 +215,6 @@
             this.cbxDispositivos.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cbxDispositivos.Size = new System.Drawing.Size(227, 22);
             this.cbxDispositivos.TabIndex = 14;
-            this.cbxDispositivos.SelectedIndexChanged += new System.EventHandler(this.cbxDispositivos_SelectedIndexChanged);
             // 
             // lblAvance
             // 
@@ -614,5 +627,6 @@
         private DevExpress.XtraEditors.LabelControl lblElapsedTime;
         private DevExpress.XtraEditors.LabelControl lblNotifications;
         private DevExpress.XtraEditors.SimpleButton btnRefrescar;
+        private DevExpress.XtraEditors.SimpleButton btnDesdeUSB;
     }
 }

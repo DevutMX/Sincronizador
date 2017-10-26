@@ -52,9 +52,7 @@ namespace SyncFTP.Views
         /// Variable privada de nivel global que reinicia el contador de segundos por cada operacion
         /// </summary>
         private int _seconds = 0;
-
-        private string _copyPath;
-
+        
         private int _archivos = 0;
 
         #region Events
@@ -821,7 +819,7 @@ namespace SyncFTP.Views
                         _archivos = 0;
 
                         lblNotifications.Refresh();
-                        //petStatus.Image = Properties.Resources.SyncBusy;
+
                         Task<string> _beginSync = new Task<string>(() => SynchronizeRemoteData(_servers));
                         _beginSync.Start();
 
@@ -831,46 +829,44 @@ namespace SyncFTP.Views
 
                             _notify.Show();
 
-                            //petStatus.Image = Properties.Resources.SyncOK;
-
                             VisibleButtons(true);
 
                             lblNotifications.Text = "Los archivos se sincronizaron con el servidor central. (Acción finalizada)";
 
-                            string _copyTo = "";
-
                             _bridge.CreateMovement(new Movements { Fecha = DateTime.Now, Servidor = 0, Archivos = _archivos });
 
-                            DialogResult _answer = XtraMessageBox.Show(UserLookAndFeel.Default, "¿Desea pasar los archivos sincronizados a un dispositivo extraíble?", "SyncFTP - ¿Copiar archivos?", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                            CopySettings _copyInfo = _kernel.ReadCopyPath();
 
-                            if (_answer == DialogResult.Yes)
+                            if (_copyInfo != null)
                             {
-                                if (fbdFolderSelect.ShowDialog() == DialogResult.OK)
-                                {
-                                    _copyTo = _copyPath;
+                                string _copyTo = _copyInfo.CopyTo == null || string.IsNullOrWhiteSpace(_copyInfo.CopyTo) ? @"C:\SyncFTP\Sincronizacion" : _copyInfo.CopyTo;
 
+                                if (ValidarDirectorio(_copyInfo.CopyTo.Substring(0, 3)))
+                                {
                                     if (!string.IsNullOrEmpty(_copyTo) && Directory.Exists(_remoteFilesDirectory))
                                     {
-                                        Task<bool> _beginToCopy = new Task<bool>(() => CopyDirectory(_remoteFilesDirectory, _copyTo, true));
+                                        Task<bool> _beginToCopy = new Task<bool>(() => CopyDirectory(_remoteFilesDirectory, _copyTo + " " + DateTime.Now.ToString("dd-MM-yyyy HH-mm-ss"), true));
                                         _beginToCopy.Start();
 
-                                        if (await _beginToCopy)
-                                        {
-                                            if (XtraMessageBox.Show(UserLookAndFeel.Default, "¡Listo!, ahora los archivos están donde indicaste.\n¿Desea cerrar el programa?", "SyncFTP - Copia de archivos terminada", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
-                                            {
-                                                Application.Exit();
-                                            }
-                                        }
-
-                                        else
-                                        {
-                                            if (XtraMessageBox.Show(UserLookAndFeel.Default, "Ocurrió un error al copiar los archivos automáticamente.\nPor favor copie todos los archivos manualmente.\n¿Desea abrir la ventana con los archivos?", "SyncFTP - Error al copiar archivos", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
-                                            {
-                                                Process.Start("explorer", _remoteFilesDirectory);
-                                            }
-                                        }
+                                        await _beginToCopy;
                                     }
                                 }
+
+                                else
+                                {
+                                    Task<bool> _beginToCopy = new Task<bool>(() => CopyDirectory(_remoteFilesDirectory, @"C:\SyncFTP\Sincronizacion" + " " + DateTime.Now.ToString("dd-MM-yyyy HH-mm-ss"), true));
+                                    _beginToCopy.Start();
+
+                                    await _beginToCopy;
+                                }
+                            }
+
+                            else
+                            {
+                                Task<bool> _beginToCopy = new Task<bool>(() => CopyDirectory(_remoteFilesDirectory, @"C:\SyncFTP\Sincronizacion" + " " + DateTime.Now.ToString("dd-MM-yyyy HH-mm-ss"), true));
+                                _beginToCopy.Start();
+
+                                await _beginToCopy;
                             }
                         }
 
@@ -894,9 +890,11 @@ namespace SyncFTP.Views
 
                 CargarHistorial();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 VisibleButtons(true);
+
+                MessageBox.Show(ex.ToString());
 
                 _notify = new Notify("Error (0x006)", "Error al sincronizar", 3);
 
@@ -1202,26 +1200,7 @@ namespace SyncFTP.Views
                 _notify.Show();
             }
         }
-
-        /// <summary>
-        /// Inicia el metodo asincrono de copia de archivos desde un dispositivo extraible
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void petFromDrive_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                UploadFromExternal();
-            }
-            catch (Exception)
-            {
-                _notify = new Notify("Error (0x010)", "Error al iniciar carga", 3);
-
-                _notify.Show();
-            }
-        }
-
+        
         /// <summary>
         /// Funcion sorpresa al usuario que permite cambiar de forma aleatoria la visualizacion de SyncFTP
         /// </summary>
@@ -1382,29 +1361,14 @@ namespace SyncFTP.Views
             }
         }
 
-        private void cbxDispositivos_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                _copyPath = cbxDispositivos.SelectedItem.ToString().Substring(0, 3);
-
-                MessageBox.Show(_copyPath);
-            }
-            catch (Exception)
-            {
-
-            }
-        }
-
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            _copyPath = cbxDispositivos.SelectedItem.ToString().Substring(0, 3) + @"Sincronizacion " + DateTime.Now.ToString("dd-MM-yyyy HH-mm-ss");
+            if (DialogResult.Yes == XtraMessageBox.Show(UserLookAndFeel.Default, "En verdad desea cambiar la ruta de copiado automatico a:\n" + cbxDispositivos.SelectedItem.ToString().Substring(0, 3), "SynctFTP - Confirme acción", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
+            {
+                _kernel.SaveCopyPath(new CopySettings { CopyTo = cbxDispositivos.SelectedItem.ToString().Substring(0, 3) + @"SyncFTP\Sincronizacion", Modified = true});
 
-            MessageBox.Show(_copyPath);
-
-            _notify = new Notify("Transfiriendo archivos", "Se transfirieron los archivos correctamente", 1);
-
-            _notify.Show();
+                XtraMessageBox.Show(UserLookAndFeel.Default, "Ruta marcada como predeterminada, busque la carpeta SyncFTP.\nSi este directorio no se encuentra disponible, se almacenaran en el disco local", "SyncFTP - Ruta configurada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void btnAvanzados_Click(object sender, EventArgs e)
@@ -1413,9 +1377,12 @@ namespace SyncFTP.Views
             {
                 if (fbdFolderSelect.ShowDialog() == DialogResult.OK)
                 {
-                    _copyPath = fbdFolderSelect.SelectedPath + @"Sincronizacion " + DateTime.Now.ToString("dd-MM-yyyy HH-mm-ss");
+                    if (DialogResult.Yes == XtraMessageBox.Show(UserLookAndFeel.Default, "En verdad desea cambiar la ruta de copiado automatico a:\n" + fbdFolderSelect.SelectedPath, "SynctFTP - Confirme acción", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
+                    {
+                        _kernel.SaveCopyPath(new CopySettings { CopyTo = fbdFolderSelect.SelectedPath + @"\SyncFTP\Sincronizacion", Modified = true });
 
-                    MessageBox.Show(_copyPath);
+                        XtraMessageBox.Show(UserLookAndFeel.Default, "Ruta marcada como predeterminada, busque la carpeta SyncFTP.\nSi este directorio no se encuentra disponible, se almacenaran en el disco local", "SyncFTP - Ruta configurada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
             }
             catch (Exception)
@@ -1450,9 +1417,40 @@ namespace SyncFTP.Views
             }
         }
 
-        private void Transferir(string path)
+        private bool ValidarDirectorio(string directorio)
         {
-            CopyDirectory(_remoteFilesDirectory, path + @"Sincronizacion " + DateTime.Now.ToString("dd-MM-yyyy HH-mm-ss"), true);
+            try
+            {
+                if(Directory.Exists(directorio))
+                {
+                    return true;
+                }
+
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+
+                return false; 
+            }
+        }
+
+        private void btnDesdeUSB_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                UploadFromExternal();
+            }
+            catch (Exception)
+            {
+                _notify = new Notify("Error (0x010)", "Error al iniciar carga", 3);
+
+                _notify.Show();
+            }
         }
     }
 }

@@ -15,6 +15,9 @@ namespace SyncFTP.Controllers
         /// Variable que indica la direccion logica donde se debe alojar el archivo de las configuraciones
         /// </summary>
         private string _configPath = Application.StartupPath + @"\Settings\config.json";
+        
+        private string _copyPath = Application.StartupPath + @"\Settings\copyInfo.json";
+
         /// <summary>
         /// Variable que indica la direccion logica donde se debe alojar el archivo de log remoto
         /// </summary>
@@ -118,6 +121,30 @@ namespace SyncFTP.Controllers
             }
         }
 
+        public bool SaveCopyPath(CopySettings copyInfo)
+        {
+            try
+            {
+                if (!File.Exists(_copyPath))
+                {
+                    using (File.Create(_copyPath)) { }
+                }
+                
+                if(copyInfo != null || copyInfo.CopyTo != "")
+                {
+                    string _data = JsonConvert.SerializeObject(copyInfo, Formatting.Indented);
+
+                    File.WriteAllText(_copyPath, _data);
+                }
+
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
         /// <summary>
         /// Metodo que permite ubicar el archivo JSON y obtener los ajustes de los servidores
         /// </summary>
@@ -138,6 +165,29 @@ namespace SyncFTP.Controllers
                 Servers _settings = JsonConvert.DeserializeObject<Servers>(_data);
 
                 return _settings;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        public CopySettings ReadCopyPath()
+        {
+            try
+            {
+                if (!File.Exists(_copyPath))
+                {
+                    using (File.Create(_copyPath)) { }
+
+                    return null;
+                }
+
+                string _data = File.ReadAllText(_copyPath);
+
+                CopySettings _copyInfo = JsonConvert.DeserializeObject<CopySettings>(_data);
+
+                return _copyInfo;
             }
             catch (Exception)
             {
@@ -219,9 +269,9 @@ namespace SyncFTP.Controllers
                     return _directoryInfo != null ? _client : null;
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                //MessageBox.Show(ex.ToString());
+                MessageBox.Show(ex.ToString());
 
                 return null;
             }
@@ -297,8 +347,10 @@ namespace SyncFTP.Controllers
                     return _directoryInfo != null ? _client : null;
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                MessageBox.Show(ex.ToString());
+
                 return null;
             }
         }

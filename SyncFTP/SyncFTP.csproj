@@ -234,6 +234,8 @@
     <None Include="Resources\EncriptacionHelp.png" />
     <None Include="Resources\ModoPasivo.png" />
     <None Include="Resources\ModoActivo.png" />
+    <None Include="Resources\Avanzados24.png" />
+    <None Include="Resources\USB24.png" />
     <Content Include="WinSCP.exe">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

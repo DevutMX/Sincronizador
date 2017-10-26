@@ -89,4 +89,14 @@ namespace SyncFTP.Controllers
     }
 
     #endregion
+
+    #region SavePath
+
+    public class CopySettings
+    {
+        public string CopyTo { get; set; }
+        public bool Modified { get; set; }
+    }
+
+    #endregion
 }
