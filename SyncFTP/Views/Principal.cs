@@ -145,7 +145,7 @@ namespace SyncFTP.Views
             }
         }
 
-       /// <summary>
+        /// <summary>
         /// Evento de emergencia, donde al presionar F12 en el teclado, permite que reaparezcan forzosamente los botones play
         /// </summary>
         /// <param name="sender"></param>
@@ -177,7 +177,7 @@ namespace SyncFTP.Views
         /// <param name="e"></param>
         private void btnExitSysTray_Click(object sender, EventArgs e)//Revisar inutilidad --
         {
-            if (XtraMessageBox.Show(UserLookAndFeel.Default, "¿En verdad desea cerrar la aplicación?\nEsto detendrá todas las transferencias si no se han terminado y pueden quedar archivos corruptos", "Cerrar SyncFTP", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            if (XtraMessageBox.Show(UserLookAndFeel.Default, "¿En verdad desea cerrar la aplicación?\nEsto detendrá todas las transferencias si no se han terminado dejando archivos corruptos", "Cerrar SyncFTP", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 Application.Exit();
             }
@@ -287,7 +287,7 @@ namespace SyncFTP.Views
                 MessageBox.Show(ex.ToString());
             }
         }
-        
+
         /// <summary>
         /// Evalua si los ajustes de los servidores no estan vacios
         /// </summary>
@@ -301,7 +301,7 @@ namespace SyncFTP.Views
                 {
                     if (_settings.Remote.Server == "")
                     {
-                        if(DialogResult.Yes == XtraMessageBox.Show(UserLookAndFeel.Default, "Parece que no configuró el servidor \"central\"...\nSolo se revisarán ajustes del servidor replica.\nRecuerde que para configurar el servidor \"central\" necesitará contar\ncon conexión a internet.", "SyncFTP - Servidor central desconocido", MessageBoxButtons.YesNo, MessageBoxIcon.Information))
+                        if (DialogResult.Yes == XtraMessageBox.Show(UserLookAndFeel.Default, "Parece que no configuró el servidor \"central\"...\nSolo se revisarán ajustes del servidor replica.\nRecuerde que para configurar el servidor \"central\" necesitará contar\ncon conexión a internet.", "SyncFTP - Servidor central desconocido", MessageBoxButtons.YesNo, MessageBoxIcon.Information))
                         {
                             Central _central = new Central();
 
@@ -311,7 +311,7 @@ namespace SyncFTP.Views
 
                     if (_settings.Local.Server == "")
                     {
-                        if(DialogResult.Yes == XtraMessageBox.Show(UserLookAndFeel.Default, "Parece que no configuró el servidor \"replica\"...\nSolo se revisarán ajustes del servidor central.", "SyncFTP - Servidor replica desconocido", MessageBoxButtons.OK, MessageBoxIcon.Information))
+                        if (DialogResult.Yes == XtraMessageBox.Show(UserLookAndFeel.Default, "Parece que no configuró el servidor \"replica\"...\nSolo se revisarán ajustes del servidor central.", "SyncFTP - Servidor replica desconocido", MessageBoxButtons.OK, MessageBoxIcon.Information))
                         {
                             Replica _central = new Replica();
 
@@ -1311,12 +1311,38 @@ namespace SyncFTP.Views
 
         private void btnIniciarCentral_Click(object sender, EventArgs e)
         {
-            BeginToSyncRemote();
+            if (CheckInternet())
+            {
+                BeginToSyncRemote();
+            }
+
+            else
+            {
+                DialogResult f = XtraMessageBox.Show(UserLookAndFeel.Default, "No cuenta con conexión a internet, pero puede intentar en caso de que\n el servidor \"central\" este conectado de forma local.\n\n¿Desea continuar?", "Sin conexión a internet", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (f == DialogResult.Yes)
+                {
+                    BeginToSyncRemote();
+                }
+            }
         }
 
         private void btnIniciarReplica_Click(object sender, EventArgs e)
         {
-            BeginToSyncLocal();
+            if (!CheckInternet())
+            {
+                BeginToSyncLocal();
+            }
+
+            else
+            {
+                DialogResult f = XtraMessageBox.Show(UserLookAndFeel.Default, "Al estar conectado a internet SyncFTP da preferencia a conexiones con el servidor \"central\",\ncancelando acciones con el servidor \"replica\", pero aún así puede acceder a él, si este está accesible.\n\n¿Desea continuar?", "Confirme acción", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (f == DialogResult.Yes)
+                {
+                    BeginToSyncLocal();
+                }
+            }
         }
 
         private void ObtenerDispositivos()
@@ -1353,22 +1379,54 @@ namespace SyncFTP.Views
             catch (Exception)
             {
 
-                throw;
+            }
+        }
+
+        private void cbxDispositivos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                _copyPath = cbxDispositivos.SelectedItem.ToString().Substring(0, 3);
+
+                MessageBox.Show(_copyPath);
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            _copyPath = cbxDispositivos.SelectedItem.ToString().Substring(0, 3) + @"Sincronizacion " + DateTime.Now.ToString("dd-MM-yyyy HH-mm-ss");
+
+            MessageBox.Show(_copyPath);
+
+            _notify = new Notify("Transfiriendo archivos", "Se transfirieron los archivos correctamente", 1);
+
+            _notify.Show();
+        }
+
+        private void btnAvanzados_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (fbdFolderSelect.ShowDialog() == DialogResult.OK)
+                {
+                    _copyPath = fbdFolderSelect.SelectedPath + @"Sincronizacion " + DateTime.Now.ToString("dd-MM-yyyy HH-mm-ss");
+
+                    MessageBox.Show(_copyPath);
+                }
+            }
+            catch (Exception)
+            {
+
             }
         }
 
         private void btnRefrescar_Click(object sender, EventArgs e)
         {
             ObtenerDispositivos();
-        }
-
-        private void btnConfirmar_Click(object sender, EventArgs e)
-        {
-            _copyPath = cbxDispositivos.SelectedItem.ToString().Substring(0, 2) + @"Sincronizacion " + DateTime.Now.ToString("dd-MM-yyyy HH-mm-ss");
-
-            _notify = new Notify( "Transfiriendo archivos" , "Se transfirieron los archivos correctamente", 1);
-
-            _notify.Show();
         }
 
         private void CargarHistorial()
@@ -1388,39 +1446,13 @@ namespace SyncFTP.Views
             }
             catch (Exception)
             {
-                
+
             }
         }
 
-        private void cbxDispositivos_SelectedIndexChanged(object sender, EventArgs e)
+        private void Transferir(string path)
         {
-            try
-            {
-                _copyPath = cbxDispositivos.SelectedItem.ToString().Substring(0, 2);
-
-                MessageBox.Show(_copyPath);
-            }
-            catch (Exception)
-            {
-                
-            }
-        }
-
-        private void btnAvanzados_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (fbdFolderSelect.ShowDialog() == DialogResult.OK)
-                {
-                    _copyPath = fbdFolderSelect.SelectedPath + @"\Sincronizacion " + DateTime.Now.ToString("dd-MM-yyyy HH-mm-ss");
-
-                    MessageBox.Show(_copyPath);
-                }
-            }
-            catch (Exception)
-            {
-                
-            }
+            CopyDirectory(_remoteFilesDirectory, path + @"Sincronizacion " + DateTime.Now.ToString("dd-MM-yyyy HH-mm-ss"), true);
         }
     }
 }
