@@ -21,6 +21,8 @@ namespace SyncFTP.Views
             ReadSettings();
         }
 
+        public static bool Combinado = false;
+
         /// <summary>
         /// Objeto a nivel global que permite interactuar con el nucleo para hacer lectura y validaciones de los ajustes de los servidores
         /// </summary>
@@ -104,6 +106,10 @@ namespace SyncFTP.Views
                         {
                             chkAutenticar.Checked = true;
                         }
+                        if (_secret.Decrypt(_settings.Local.Combined) == "True")
+                        {
+                            Combinado = true;
+                        }
                     }
                 }
             }
@@ -138,7 +144,7 @@ namespace SyncFTP.Views
                     _ftpServer = txtServidor.Text.Contains("ftp.") ? txtServidor.Text : "ftp." + txtServidor.Text;
                 }
 
-                _server = new Servers { Remote = new Remote { Server = "", IsAnonymous = "", User = "", Password = "", Port = "", Find = "", FTPMode = "", IsActive = "", WithCert = "" }, Local = new Local { Server = _secret.Encrypt(_ftpServer), IsAnonymous = _secret.Encrypt(chkAnonimo.Checked.ToString()), User = _secret.Encrypt(txtUsuario.Text), Password = _secret.Encrypt(txtContrasena.Text), Port = _secret.Encrypt(txtPuerto.Text), Find = _secret.Encrypt(txtDirectorio.Text == "" ? "/" : txtDirectorio.Text), FTPMode = _secret.Encrypt(cbxEncriptacion.SelectedIndex.ToString()), IsActive = _secret.Encrypt(chkActivo.Checked.ToString()), WithCert = _secret.Encrypt(chkAutenticar.Checked.ToString()) } };
+                _server = new Servers { Remote = new Remote { Server = "", IsAnonymous = "", User = "", Password = "", Port = "", Find = "", FTPMode = "", IsActive = "", WithCert = "", Combined = _secret.Encrypt(Combinado.ToString()) }, Local = new Local { Server = _secret.Encrypt(_ftpServer), IsAnonymous = _secret.Encrypt(chkAnonimo.Checked.ToString()), User = _secret.Encrypt(txtUsuario.Text), Password = _secret.Encrypt(txtContrasena.Text), Port = _secret.Encrypt(txtPuerto.Text), Find = _secret.Encrypt(txtDirectorio.Text == "" ? "/" : txtDirectorio.Text), FTPMode = _secret.Encrypt(cbxEncriptacion.SelectedIndex.ToString()), IsActive = _secret.Encrypt(chkActivo.Checked.ToString()), WithCert = _secret.Encrypt(chkAutenticar.Checked.ToString()), Combined = _secret.Encrypt(Combinado.ToString()) } };
 
                 if (_kernel.LocalIsValid(_server) != null)
                 {

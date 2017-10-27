@@ -261,6 +261,7 @@
     <None Include="Resources\ModoActivo.png" />
     <None Include="Resources\Avanzados24.png" />
     <None Include="Resources\USB24.png" />
+    <None Include="Resources\Ajustes24.png" />
     <Content Include="WinSCP.exe">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

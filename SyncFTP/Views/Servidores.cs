@@ -99,6 +99,10 @@ namespace SyncFTP.Views
 
                         Replica _replica = new Replica();
 
+                        Central.Combinado = true;
+
+                        Replica.Combinado = true;
+
                         if (_central.ShowDialog() == DialogResult.OK)
                         {
                             if (_replica.ShowDialog() == DialogResult.OK)

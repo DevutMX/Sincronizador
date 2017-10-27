@@ -24,6 +24,11 @@ namespace SyncFTP.Views
         /// </summary>
         Kernel _kernel = new Kernel();
 
+        /// <summary>
+        /// Objeto a nivel global que permite interactuar con los metodos de cifrado
+        /// </summary>
+        Secret _secret = new Secret();
+
         private void petSi_Click(object sender, EventArgs e)
         {
             Servidores _servidores = new Servidores();
@@ -48,7 +53,7 @@ namespace SyncFTP.Views
                 {
                     Servidores _servidores = new Servidores();
 
-                    if (_settings.Remote.Server == "")
+                    if (_settings.Remote.Server == "" && _secret.Decrypt(_settings.Remote.Combined) == "True")
                     {
                         if (DialogResult.Yes == XtraMessageBox.Show(UserLookAndFeel.Default, "Parece que no configuró el servidor \"central\"...\n¿Desea ir a la pantalla de configuración?", "SyncFTP - Servidor central desconocido", MessageBoxButtons.YesNo, MessageBoxIcon.Information))
                         {
@@ -67,7 +72,7 @@ namespace SyncFTP.Views
                         }
                     }
 
-                    if (_settings.Local.Server == "")
+                    if (_settings.Local.Server == "" && _secret.Decrypt(_settings.Local.Combined) == "True")
                     {
                         if (DialogResult.Yes == XtraMessageBox.Show(UserLookAndFeel.Default, "Parece que no configuró el servidor \"replica\"...\n¿Desea ir a la pantalla de configuración?", "SyncFTP - Servidor replica desconocido", MessageBoxButtons.YesNo, MessageBoxIcon.Information))
                         {
@@ -86,7 +91,7 @@ namespace SyncFTP.Views
                         }
                     }
 
-                    if (_settings.Remote.Server != "" && _settings.Local.Server != "")
+                    if (_settings.Remote.Server != "" || _settings.Local.Server != "")
                     {
                         Principal _principal = new Principal();
 

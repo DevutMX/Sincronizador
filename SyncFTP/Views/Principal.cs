@@ -52,7 +52,7 @@ namespace SyncFTP.Views
         /// Variable privada de nivel global que reinicia el contador de segundos por cada operacion
         /// </summary>
         private int _seconds = 0;
-        
+
         private int _archivos = 0;
 
         #region Events
@@ -65,6 +65,8 @@ namespace SyncFTP.Views
         private void Principal_Shown(object sender, EventArgs e)
         {
             ObtenerDispositivos();
+
+            VerificarEstatutos();
 
             CargarHistorial();
 
@@ -1200,7 +1202,7 @@ namespace SyncFTP.Views
                 _notify.Show();
             }
         }
-        
+
         /// <summary>
         /// Funcion sorpresa al usuario que permite cambiar de forma aleatoria la visualizacion de SyncFTP
         /// </summary>
@@ -1365,7 +1367,7 @@ namespace SyncFTP.Views
         {
             if (DialogResult.Yes == XtraMessageBox.Show(UserLookAndFeel.Default, "En verdad desea cambiar la ruta de copiado automatico a:\n" + cbxDispositivos.SelectedItem.ToString().Substring(0, 3), "SynctFTP - Confirme acción", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
             {
-                _kernel.SaveCopyPath(new CopySettings { CopyTo = cbxDispositivos.SelectedItem.ToString().Substring(0, 3) + @"SyncFTP\Sincronizacion", Modified = true});
+                _kernel.SaveCopyPath(new CopySettings { CopyTo = cbxDispositivos.SelectedItem.ToString().Substring(0, 3) + @"SyncFTP\Sincronizacion", Modified = true });
 
                 XtraMessageBox.Show(UserLookAndFeel.Default, "Ruta marcada como predeterminada, busque la carpeta SyncFTP.\nSi este directorio no se encuentra disponible, se almacenaran en el disco local", "SyncFTP - Ruta configurada", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -1421,7 +1423,7 @@ namespace SyncFTP.Views
         {
             try
             {
-                if(Directory.Exists(directorio))
+                if (Directory.Exists(directorio))
                 {
                     return true;
                 }
@@ -1435,7 +1437,7 @@ namespace SyncFTP.Views
             {
                 MessageBox.Show(ex.ToString());
 
-                return false; 
+                return false;
             }
         }
 
@@ -1450,6 +1452,55 @@ namespace SyncFTP.Views
                 _notify = new Notify("Error (0x010)", "Error al iniciar carga", 3);
 
                 _notify.Show();
+            }
+        }
+
+        private void VerificarEstatutos()
+        {
+            try
+            {
+                Servers _settings = _kernel.ReadSettings();
+
+                if (_settings != null)
+                {
+                    //En caso de que sea combinado, verificar que este lleno al menos uno de los dos
+                    if ((_settings.Remote.Server != "" && _secret.Decrypt(_settings.Remote.Combined) == "True") || (_settings.Local.Server != "" && _secret.Decrypt(_settings.Local.Combined) == "True"))
+                    {
+                        gbcSincronizar.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+                        btnIniciarCentral.Visible = true;
+                        btnIniciarReplica.Visible = true;
+                        tbcHistoriales.TabPages["Central"].Show();
+                        tbcHistoriales.TabPages["Replica"].Show();
+                    }
+                    
+                    //Sino estan llenados o no son combinados
+                    else
+                    {
+                        //Detectar individual
+                        if (_settings.Remote.Server != "" && _secret.Decrypt(_settings.Remote.Combined) == "False")
+                        {
+                            gbcSincronizar.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+                            btnIniciarCentral.Visible = true;
+                            btnIniciarReplica.Visible = false;
+                            tbcHistoriales.TabPages["Central"].Show();
+                            tbcHistoriales.TabPages["Replica"].Hide();
+                        }
+
+                        if (_settings.Local.Server != "" && _secret.Decrypt(_settings.Local.Combined) == "False")
+                        {
+                            gbcSincronizar.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+                            btnIniciarCentral.Visible = false;
+                            btnIniciarReplica.Visible = true;
+                            tbcHistoriales.TabPages["Central"].Hide();
+                            tbcHistoriales.TabPages["Replica"].Show();
+                        }
+                    }
+                }
+            }
+
+            catch (Exception)
+            {
+
             }
         }
     }

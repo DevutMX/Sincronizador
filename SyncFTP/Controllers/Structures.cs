@@ -18,6 +18,7 @@ namespace SyncFTP.Controllers
         public string FTPMode { get; set; }
         public string IsActive { get; set; }
         public string WithCert { get; set; }
+        public string Combined { get; set; }
     }
 
     /// <summary>
@@ -34,6 +35,7 @@ namespace SyncFTP.Controllers
         public string FTPMode { get; set; }
         public string IsActive { get; set; }
         public string WithCert { get; set; }
+        public string Combined { get; set; }
     }
 
     /// <summary>

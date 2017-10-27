@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.pnlOptions = new DevExpress.XtraEditors.PanelControl();
+            this.btnAjustes = new DevExpress.XtraEditors.SimpleButton();
             this.btnDesdeUSB = new DevExpress.XtraEditors.SimpleButton();
             this.btnRefrescar = new DevExpress.XtraEditors.SimpleButton();
             this.lblNotifications = new DevExpress.XtraEditors.LabelControl();
@@ -45,11 +46,11 @@
             this.pnlLabels = new DevExpress.XtraEditors.PanelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.pnlTabs = new DevExpress.XtraEditors.PanelControl();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tbcHistoriales = new System.Windows.Forms.TabControl();
+            this.tbpCentral = new System.Windows.Forms.TabPage();
             this.gdcCentral = new DevExpress.XtraGrid.GridControl();
             this.gdvCentral = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tbpReplica = new System.Windows.Forms.TabPage();
             this.gdcReplica = new DevExpress.XtraGrid.GridControl();
             this.gdvReplica = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.pictureEdit2 = new DevExpress.XtraEditors.PictureEdit();
@@ -82,11 +83,11 @@
             this.pnlLabels.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pnlTabs)).BeginInit();
             this.pnlTabs.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.tbcHistoriales.SuspendLayout();
+            this.tbpCentral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gdcCentral)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdvCentral)).BeginInit();
-            this.tabPage2.SuspendLayout();
+            this.tbpReplica.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gdcReplica)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdvReplica)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
@@ -110,6 +111,7 @@
             // 
             // pnlOptions
             // 
+            this.pnlOptions.Controls.Add(this.btnAjustes);
             this.pnlOptions.Controls.Add(this.btnDesdeUSB);
             this.pnlOptions.Controls.Add(this.btnRefrescar);
             this.pnlOptions.Controls.Add(this.lblNotifications);
@@ -126,12 +128,23 @@
             this.pnlOptions.Size = new System.Drawing.Size(484, 157);
             this.pnlOptions.TabIndex = 12;
             // 
+            // btnAjustes
+            // 
+            this.btnAjustes.ImageOptions.Image = global::SyncFTP.Properties.Resources.Ajustes24;
+            this.btnAjustes.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.btnAjustes.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.BottomCenter;
+            this.btnAjustes.Location = new System.Drawing.Point(408, 10);
+            this.btnAjustes.Name = "btnAjustes";
+            this.btnAjustes.Size = new System.Drawing.Size(64, 43);
+            this.btnAjustes.TabIndex = 22;
+            this.btnAjustes.Text = "Ajustes";
+            // 
             // btnDesdeUSB
             // 
             this.btnDesdeUSB.ImageOptions.Image = global::SyncFTP.Properties.Resources.USB24;
             this.btnDesdeUSB.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
             this.btnDesdeUSB.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.BottomCenter;
-            this.btnDesdeUSB.Location = new System.Drawing.Point(408, 9);
+            this.btnDesdeUSB.Location = new System.Drawing.Point(341, 10);
             this.btnDesdeUSB.Name = "btnDesdeUSB";
             this.btnDesdeUSB.Size = new System.Drawing.Size(64, 43);
             this.btnDesdeUSB.TabIndex = 21;
@@ -150,13 +163,13 @@
             // 
             // lblNotifications
             // 
-            this.lblNotifications.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.lblNotifications.Appearance.Font = new System.Drawing.Font("Tahoma", 8F);
             this.lblNotifications.Appearance.ForeColor = System.Drawing.Color.Black;
             this.lblNotifications.Appearance.Options.UseFont = true;
             this.lblNotifications.Appearance.Options.UseForeColor = true;
             this.lblNotifications.Location = new System.Drawing.Point(12, 136);
             this.lblNotifications.Name = "lblNotifications";
-            this.lblNotifications.Size = new System.Drawing.Size(31, 16);
+            this.lblNotifications.Size = new System.Drawing.Size(22, 13);
             this.lblNotifications.TabIndex = 19;
             this.lblNotifications.Text = "Listo";
             // 
@@ -176,7 +189,7 @@
             this.btnAvanzados.ImageOptions.Image = global::SyncFTP.Properties.Resources.Avanzados24;
             this.btnAvanzados.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
             this.btnAvanzados.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.BottomCenter;
-            this.btnAvanzados.Location = new System.Drawing.Point(341, 9);
+            this.btnAvanzados.Location = new System.Drawing.Point(274, 10);
             this.btnAvanzados.Name = "btnAvanzados";
             this.btnAvanzados.Size = new System.Drawing.Size(64, 43);
             this.btnAvanzados.TabIndex = 17;
@@ -185,7 +198,7 @@
             // 
             // btnConfirmar
             // 
-            this.btnConfirmar.Location = new System.Drawing.Point(274, 29);
+            this.btnConfirmar.Location = new System.Drawing.Point(207, 58);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(61, 23);
             this.btnConfirmar.TabIndex = 16;
@@ -259,34 +272,34 @@
             // 
             // pnlTabs
             // 
-            this.pnlTabs.Controls.Add(this.tabControl1);
+            this.pnlTabs.Controls.Add(this.tbcHistoriales);
             this.pnlTabs.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlTabs.Location = new System.Drawing.Point(0, 78);
             this.pnlTabs.Name = "pnlTabs";
             this.pnlTabs.Size = new System.Drawing.Size(484, 268);
             this.pnlTabs.TabIndex = 14;
             // 
-            // tabControl1
+            // tbcHistoriales
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(2, 2);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(480, 264);
-            this.tabControl1.TabIndex = 0;
+            this.tbcHistoriales.Controls.Add(this.tbpCentral);
+            this.tbcHistoriales.Controls.Add(this.tbpReplica);
+            this.tbcHistoriales.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbcHistoriales.Location = new System.Drawing.Point(2, 2);
+            this.tbcHistoriales.Name = "tbcHistoriales";
+            this.tbcHistoriales.SelectedIndex = 0;
+            this.tbcHistoriales.Size = new System.Drawing.Size(480, 264);
+            this.tbcHistoriales.TabIndex = 0;
             // 
-            // tabPage1
+            // tbpCentral
             // 
-            this.tabPage1.Controls.Add(this.gdcCentral);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(472, 238);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Central";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tbpCentral.Controls.Add(this.gdcCentral);
+            this.tbpCentral.Location = new System.Drawing.Point(4, 22);
+            this.tbpCentral.Name = "tbpCentral";
+            this.tbpCentral.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpCentral.Size = new System.Drawing.Size(472, 238);
+            this.tbpCentral.TabIndex = 0;
+            this.tbpCentral.Text = "Central";
+            this.tbpCentral.UseVisualStyleBackColor = true;
             // 
             // gdcCentral
             // 
@@ -306,16 +319,16 @@
             this.gdvCentral.OptionsBehavior.Editable = false;
             this.gdvCentral.OptionsView.ShowGroupPanel = false;
             // 
-            // tabPage2
+            // tbpReplica
             // 
-            this.tabPage2.Controls.Add(this.gdcReplica);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(472, 238);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Replica";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tbpReplica.Controls.Add(this.gdcReplica);
+            this.tbpReplica.Location = new System.Drawing.Point(4, 22);
+            this.tbpReplica.Name = "tbpReplica";
+            this.tbpReplica.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpReplica.Size = new System.Drawing.Size(472, 238);
+            this.tbpReplica.TabIndex = 1;
+            this.tbpReplica.Text = "Replica";
+            this.tbpReplica.UseVisualStyleBackColor = true;
             // 
             // gdcReplica
             // 
@@ -386,6 +399,7 @@
             this.btnIniciarReplica.Size = new System.Drawing.Size(64, 23);
             this.btnIniciarReplica.TabIndex = 18;
             this.btnIniciarReplica.Text = "Replica";
+            this.btnIniciarReplica.Visible = false;
             this.btnIniciarReplica.Click += new System.EventHandler(this.btnIniciarReplica_Click);
             // 
             // btnIniciarCentral
@@ -395,6 +409,7 @@
             this.btnIniciarCentral.Size = new System.Drawing.Size(64, 23);
             this.btnIniciarCentral.TabIndex = 17;
             this.btnIniciarCentral.Text = "Central";
+            this.btnIniciarCentral.Visible = false;
             this.btnIniciarCentral.Click += new System.EventHandler(this.btnIniciarCentral_Click);
             // 
             // dlafSkins
@@ -565,11 +580,11 @@
             this.pnlLabels.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pnlTabs)).EndInit();
             this.pnlTabs.ResumeLayout(false);
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
+            this.tbcHistoriales.ResumeLayout(false);
+            this.tbpCentral.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gdcCentral)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdvCentral)).EndInit();
-            this.tabPage2.ResumeLayout(false);
+            this.tbpReplica.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gdcReplica)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdvReplica)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).EndInit();
@@ -592,9 +607,9 @@
         private DevExpress.XtraEditors.PanelControl pnlTabs;
         private DevExpress.XtraEditors.ProgressBarControl pbcProgress;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabControl tbcHistoriales;
+        private System.Windows.Forms.TabPage tbpCentral;
+        private System.Windows.Forms.TabPage tbpReplica;
         private DevExpress.XtraEditors.SimpleButton btnAvanzados;
         private DevExpress.XtraEditors.SimpleButton btnConfirmar;
         private DevExpress.XtraEditors.LabelControl labelControl4;
@@ -628,5 +643,6 @@
         private DevExpress.XtraEditors.LabelControl lblNotifications;
         private DevExpress.XtraEditors.SimpleButton btnRefrescar;
         private DevExpress.XtraEditors.SimpleButton btnDesdeUSB;
+        private DevExpress.XtraEditors.SimpleButton btnAjustes;
     }
 }
