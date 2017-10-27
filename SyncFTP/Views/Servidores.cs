@@ -99,7 +99,7 @@ namespace SyncFTP.Views
 
                         Replica _replica = new Replica();
 
-                        Central.Combinado = true;
+                        Central._combinado = true;
 
                         Replica.Combinado = true;
 

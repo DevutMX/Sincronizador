@@ -1,386 +1,388 @@
-[2017-10-27 17:45:30.414Z] [0001] Executing assembly: WinSCPnet, Version=1.4.0.7781, Culture=neutral, PublicKeyToken=2271ec4a3c56d0bf
-[2017-10-27 17:45:30.415Z] [0001] Executing assembly codebase: file:///C:/Users/Victor/Documents/Visual Studio 2017/Projects/SyncFTP/SyncFTP/bin/Debug/WinSCPnet.DLL
-[2017-10-27 17:45:30.415Z] [0001] Executing assembly location: C:\Users\Victor\Documents\Visual Studio 2017\Projects\SyncFTP\SyncFTP\bin\Debug\WinSCPnet.dll
-[2017-10-27 17:45:30.415Z] [0001] Entry Assembly: SyncFTP, Version=0.0.1.6, Culture=neutral, PublicKeyToken=null
-[2017-10-27 17:45:30.415Z] [0001] Operating system: Microsoft Windows NT 10.0.15063.0
-[2017-10-27 17:45:30.416Z] [0001] User: Victor@SDVICTOR@SDVICTOR; Interactive: True
-[2017-10-27 17:45:30.416Z] [0001] Runtime: 4.0.30319.42000
-[2017-10-27 17:45:30.417Z] [0001] Console encoding: Input: Europeo occidental (Windows) (1252); Output: Europeo occidental (Windows) (1252)
-[2017-10-27 17:45:30.417Z] [0001] Working directory: C:\Users\Victor\Documents\Visual Studio 2017\Projects\SyncFTP\SyncFTP\bin\Debug
-[2017-10-27 17:45:30.418Z] [0001] Assembly path: C:\Users\Victor\Documents\Visual Studio 2017\Projects\SyncFTP\SyncFTP\bin\Debug\WinSCPnet.DLL
-[2017-10-27 17:45:30.418Z] [0001] Assembly product version: 5.11.2.0
-[2017-10-27 17:45:30.423Z] [0001] Session.Open entering
-[2017-10-27 17:45:30.425Z] [0001]   Session.SetupTempPath entering
-[2017-10-27 17:45:30.425Z] [0001]     Temporary folder: C:\Users\Victor\AppData\Local\Temp\
-[2017-10-27 17:45:30.425Z] [0001]     Temporary file [C:\Users\Victor\AppData\Local\Temp\wscp02B4.016C5D04.tmp] - Exists [False]
-[2017-10-27 17:45:30.425Z] [0001]   Session.SetupTempPath leaving
-[2017-10-27 17:45:30.427Z] [0001]   ExeSessionProcess..ctor entering
-[2017-10-27 17:45:30.429Z] [0001]     ExeSessionProcess.GetExecutablePath entering
-[2017-10-27 17:45:30.430Z] [0001]       Executable found in C:\Users\Victor\Documents\Visual Studio 2017\Projects\SyncFTP\SyncFTP\bin\Debug\winscp.exe
-[2017-10-27 17:45:30.430Z] [0001]     ExeSessionProcess.GetExecutablePath leaving
-[2017-10-27 17:45:30.430Z] [0001]     EXE executable path resolved to C:\Users\Victor\Documents\Visual Studio 2017\Projects\SyncFTP\SyncFTP\bin\Debug\winscp.exe
-[2017-10-27 17:45:30.432Z] [0001]     ExeSessionProcess.CheckVersion entering
-[2017-10-27 17:45:30.432Z] [0001]       Version of C:\Users\Victor\Documents\Visual Studio 2017\Projects\SyncFTP\SyncFTP\bin\Debug\winscp.exe is 5.11.2.7781, product WinSCP version is 5.11.2.0
-[2017-10-27 17:45:30.432Z] [0001]     ExeSessionProcess.CheckVersion leaving
-[2017-10-27 17:45:30.434Z] [0001]   ExeSessionProcess..ctor leaving
-[2017-10-27 17:45:30.435Z] [0001]   ExeSessionProcess.Start entering
-[2017-10-27 17:45:30.437Z] [0001]     ExeSessionProcess.InitializeConsole entering
-[2017-10-27 17:45:30.437Z] [0001]       Trying event _692_13583655_445
-[2017-10-27 17:45:30.437Z] [0001]       Creating event WinSCPConsoleEventRequest_692_13583655_445
-[2017-10-27 17:45:30.438Z] [0001]       Created event WinSCPConsoleEventRequest_692_13583655_445 with handle 1472 with security none, new True
-[2017-10-27 17:45:30.438Z] [0001]       Event _692_13583655_445 is unique
-[2017-10-27 17:45:30.438Z] [0001]       Creating event WinSCPConsoleEventResponse_692_13583655_445
-[2017-10-27 17:45:30.438Z] [0001]       Created event WinSCPConsoleEventResponse_692_13583655_445 with handle 1132 with security none, new True
-[2017-10-27 17:45:30.438Z] [0001]       Creating event WinSCPConsoleEventCancel_692_13583655_445
-[2017-10-27 17:45:30.438Z] [0001]       Created event WinSCPConsoleEventCancel_692_13583655_445 with handle 1128 with security none, new True
-[2017-10-27 17:45:30.442Z] [0001]       Job created
-[2017-10-27 17:45:30.442Z] [0001]       Job set to kill all processes
-[2017-10-27 17:45:30.443Z] [0001]     ExeSessionProcess.InitializeConsole leaving
-[2017-10-27 17:45:30.444Z] [0001]     ExeSessionProcess.InitializeChild entering
-[2017-10-27 17:45:30.444Z] [0001]       Starting "C:\Users\Victor\Documents\Visual Studio 2017\Projects\SyncFTP\SyncFTP\bin\Debug\winscp.exe" /xmllog="C:\Users\Victor\AppData\Local\Temp\wscp02B4.016C5D04.tmp" /xmlgroups /xmllogrequired /nointeractiveinput /dotnet=5.11.2  /ini=nul  /console /consoleinstance=_692_13583655_445
-[2017-10-27 17:45:30.452Z] [0001]       Started process 2260
-[2017-10-27 17:45:30.452Z] [0001]     ExeSessionProcess.InitializeChild leaving
-[2017-10-27 17:45:30.452Z] [0001]   ExeSessionProcess.Start leaving
-[2017-10-27 17:45:30.464Z] [0001]   Command: [option batch on]
-[2017-10-27 17:45:30.465Z] [0001]   ExeSessionProcess.ExecuteCommand entering
-[2017-10-27 17:45:30.466Z] [0001]   ExeSessionProcess.ExecuteCommand leaving
-[2017-10-27 17:45:30.466Z] [0001]   Command: [option confirm off]
-[2017-10-27 17:45:30.466Z] [0001]   ExeSessionProcess.ExecuteCommand entering
-[2017-10-27 17:45:30.466Z] [0001]   ExeSessionProcess.ExecuteCommand leaving
-[2017-10-27 17:45:30.466Z] [0001]   Command: [option reconnecttime 120]
-[2017-10-27 17:45:30.466Z] [0001]   ExeSessionProcess.ExecuteCommand entering
-[2017-10-27 17:45:30.466Z] [0001]   ExeSessionProcess.ExecuteCommand leaving
-[2017-10-27 17:45:30.468Z] [0001]   Session.SessionOptionsToUrlAndSwitches entering
-[2017-10-27 17:45:30.469Z] [0003] ExeSessionProcess.ProcessEvents entering
-[2017-10-27 17:45:30.473Z] [0001]     Session.SessionOptionsToSwitches entering
-[2017-10-27 17:45:30.473Z] [0001]     Session.SessionOptionsToSwitches leaving
-[2017-10-27 17:45:30.473Z] [0001]   Session.SessionOptionsToUrlAndSwitches leaving
-[2017-10-27 17:45:30.473Z] [0001]   Command: [open "ftp://devutmx.com:***@ftp.devutmx.com:21" -passive=1 -timeout=20 -rawsettings ProxyPort="0"]
-[2017-10-27 17:45:30.473Z] [0001]   ExeSessionProcess.ExecuteCommand entering
-[2017-10-27 17:45:30.473Z] [0001]   ExeSessionProcess.ExecuteCommand leaving
-[2017-10-27 17:45:30.587Z] [0003]   ExeSessionProcess.ProcessEvent entering
-[2017-10-27 17:45:30.592Z] [0003]     ExeSessionProcess.ProcessInitEvent entering
-[2017-10-27 17:45:30.592Z] [0003]     ExeSessionProcess.ProcessInitEvent leaving
-[2017-10-27 17:45:30.592Z] [0003]   ExeSessionProcess.ProcessEvent leaving
-[2017-10-27 17:45:30.594Z] [0003]   ExeSessionProcess.ProcessEvent entering
-[2017-10-27 17:45:30.595Z] [0003]     ExeSessionProcess.ProcessTitleEvent entering
-[2017-10-27 17:45:30.595Z] [0003]       Not-supported title event [WinSCP]
-[2017-10-27 17:45:30.595Z] [0003]     ExeSessionProcess.ProcessTitleEvent leaving
-[2017-10-27 17:45:30.595Z] [0003]   ExeSessionProcess.ProcessEvent leaving
-[2017-10-27 17:45:30.595Z] [0003]   ExeSessionProcess.ProcessEvent entering
-[2017-10-27 17:45:30.595Z] [0003]     ExeSessionProcess.ProcessTitleEvent entering
-[2017-10-27 17:45:30.595Z] [0003]       Not-supported title event [WinSCP]
-[2017-10-27 17:45:30.595Z] [0003]     ExeSessionProcess.ProcessTitleEvent leaving
-[2017-10-27 17:45:30.595Z] [0003]   ExeSessionProcess.ProcessEvent leaving
-[2017-10-27 17:45:30.595Z] [0003]   ExeSessionProcess.ProcessEvent entering
-[2017-10-27 17:45:30.597Z] [0003]   ExeSessionProcess.ProcessEvent leaving
-[2017-10-27 17:45:30.598Z] [0003]   ExeSessionProcess.ProcessEvent entering
-[2017-10-27 17:45:30.599Z] [0003]     ExeSessionProcess.ProcessInputEvent entering
-[2017-10-27 17:45:30.600Z] [0003]       Scheduling output: [winscp> option batch on]
-[2017-10-27 17:45:30.601Z] [0003]     ExeSessionProcess.ProcessInputEvent leaving
-[2017-10-27 17:45:30.601Z] [0003]   ExeSessionProcess.ProcessEvent leaving
-[2017-10-27 17:45:30.601Z] [0003]   ExeSessionProcess.ProcessEvent entering
-[2017-10-27 17:45:30.601Z] [0003]     Scheduling output: [batch           on        ]
-[2017-10-27 17:45:30.601Z] [0003]   ExeSessionProcess.ProcessEvent leaving
-[2017-10-27 17:45:30.601Z] [0003]   ExeSessionProcess.ProcessEvent entering
-[2017-10-27 17:45:30.601Z] [0003]     Scheduling output: [reconnecttime   120       ]
-[2017-10-27 17:45:30.601Z] [0003]   ExeSessionProcess.ProcessEvent leaving
-[2017-10-27 17:45:30.601Z] [0003]   ExeSessionProcess.ProcessEvent entering
-[2017-10-27 17:45:30.601Z] [0003]     ExeSessionProcess.ProcessTitleEvent entering
-[2017-10-27 17:45:30.602Z] [0003]       Not-supported title event [WinSCP]
-[2017-10-27 17:45:30.602Z] [0003]     ExeSessionProcess.ProcessTitleEvent leaving
-[2017-10-27 17:45:30.602Z] [0003]   ExeSessionProcess.ProcessEvent leaving
-[2017-10-27 17:45:30.602Z] [0003]   ExeSessionProcess.ProcessEvent entering
-[2017-10-27 17:45:30.602Z] [0003]   ExeSessionProcess.ProcessEvent leaving
-[2017-10-27 17:45:30.602Z] [0003]   ExeSessionProcess.ProcessEvent entering
-[2017-10-27 17:45:30.602Z] [0003]     ExeSessionProcess.ProcessInputEvent entering
-[2017-10-27 17:45:30.602Z] [0003]       Scheduling output: [winscp> option confirm off]
-[2017-10-27 17:45:30.602Z] [0003]     ExeSessionProcess.ProcessInputEvent leaving
-[2017-10-27 17:45:30.602Z] [0003]   ExeSessionProcess.ProcessEvent leaving
-[2017-10-27 17:45:30.602Z] [0003]   ExeSessionProcess.ProcessEvent entering
-[2017-10-27 17:45:30.602Z] [0003]     Scheduling output: [confirm         off       ]
-[2017-10-27 17:45:30.602Z] [0003]   ExeSessionProcess.ProcessEvent leaving
-[2017-10-27 17:45:30.602Z] [0003]   ExeSessionProcess.ProcessEvent entering
-[2017-10-27 17:45:30.602Z] [0003]     ExeSessionProcess.ProcessTitleEvent entering
-[2017-10-27 17:45:30.602Z] [0003]       Not-supported title event [WinSCP]
-[2017-10-27 17:45:30.602Z] [0003]     ExeSessionProcess.ProcessTitleEvent leaving
-[2017-10-27 17:45:30.602Z] [0003]   ExeSessionProcess.ProcessEvent leaving
-[2017-10-27 17:45:30.602Z] [0003]   ExeSessionProcess.ProcessEvent entering
-[2017-10-27 17:45:30.602Z] [0003]   ExeSessionProcess.ProcessEvent leaving
-[2017-10-27 17:45:30.603Z] [0003]   ExeSessionProcess.ProcessEvent entering
-[2017-10-27 17:45:30.603Z] [0003]     ExeSessionProcess.ProcessInputEvent entering
-[2017-10-27 17:45:30.603Z] [0003]       Scheduling output: [winscp> option reconnecttime 120]
-[2017-10-27 17:45:30.603Z] [0003]     ExeSessionProcess.ProcessInputEvent leaving
-[2017-10-27 17:45:30.603Z] [0003]   ExeSessionProcess.ProcessEvent leaving
-[2017-10-27 17:45:30.603Z] [0003]   ExeSessionProcess.ProcessEvent entering
-[2017-10-27 17:45:30.603Z] [0003]     Scheduling output: [reconnecttime   120       ]
-[2017-10-27 17:45:30.603Z] [0003]   ExeSessionProcess.ProcessEvent leaving
-[2017-10-27 17:45:30.603Z] [0003]   ExeSessionProcess.ProcessEvent entering
-[2017-10-27 17:45:30.603Z] [0003]     ExeSessionProcess.ProcessTitleEvent entering
-[2017-10-27 17:45:30.603Z] [0003]       Not-supported title event [WinSCP]
-[2017-10-27 17:45:30.603Z] [0003]     ExeSessionProcess.ProcessTitleEvent leaving
-[2017-10-27 17:45:30.603Z] [0003]   ExeSessionProcess.ProcessEvent leaving
-[2017-10-27 17:45:30.603Z] [0003]   ExeSessionProcess.ProcessEvent entering
-[2017-10-27 17:45:30.603Z] [0003]   ExeSessionProcess.ProcessEvent leaving
-[2017-10-27 17:45:30.603Z] [0003]   ExeSessionProcess.ProcessEvent entering
-[2017-10-27 17:45:30.603Z] [0003]     ExeSessionProcess.ProcessInputEvent entering
-[2017-10-27 17:45:30.603Z] [0003]       Scheduling output: [winscp> open "ftp://devutmx.com:***@ftp.devutmx.com:21" -passive=1 -timeout=20 -rawsettings ProxyPort="0"]
-[2017-10-27 17:45:30.603Z] [0003]     ExeSessionProcess.ProcessInputEvent leaving
-[2017-10-27 17:45:30.604Z] [0003]   ExeSessionProcess.ProcessEvent leaving
-[2017-10-27 17:45:30.609Z] [0003]   ExeSessionProcess.ProcessEvent entering
-[2017-10-27 17:45:30.609Z] [0003]     Scheduling output: [Connecting to ftp.devutmx.com ...]
-[2017-10-27 17:45:30.609Z] [0003]   ExeSessionProcess.ProcessEvent leaving
-[2017-10-27 17:45:30.633Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:30.636Z] [0001]     Opening log without write sharing
-[2017-10-27 17:45:30.637Z] [0001]     Opening log with write sharing
-[2017-10-27 17:45:30.637Z] [0001]     Log opened
-[2017-10-27 17:45:30.638Z] [0001]     Skipping 0 nodes
-[2017-10-27 17:45:30.638Z] [0001]     Read node 1: XmlDeclaration xml=version="1.0" encoding="UTF-8"
-[2017-10-27 17:45:30.639Z] [0001]     Log contents:
+[2017-10-27 18:02:35.784Z] [0003] Executing assembly: WinSCPnet, Version=1.4.0.7781, Culture=neutral, PublicKeyToken=2271ec4a3c56d0bf
+[2017-10-27 18:02:35.784Z] [0003] Executing assembly codebase: file:///C:/Users/Victor/Documents/Visual Studio 2017/Projects/SyncFTP/SyncFTP/bin/Debug/WinSCPnet.DLL
+[2017-10-27 18:02:35.784Z] [0003] Executing assembly location: C:\Users\Victor\Documents\Visual Studio 2017\Projects\SyncFTP\SyncFTP\bin\Debug\WinSCPnet.dll
+[2017-10-27 18:02:35.784Z] [0003] Entry Assembly: SyncFTP, Version=0.0.1.6, Culture=neutral, PublicKeyToken=null
+[2017-10-27 18:02:35.784Z] [0003] Operating system: Microsoft Windows NT 10.0.15063.0
+[2017-10-27 18:02:35.785Z] [0003] User: Victor@SDVICTOR@SDVICTOR; Interactive: True
+[2017-10-27 18:02:35.785Z] [0003] Runtime: 4.0.30319.42000
+[2017-10-27 18:02:35.785Z] [0003] Console encoding: Input: Europeo occidental (Windows) (1252); Output: Europeo occidental (Windows) (1252)
+[2017-10-27 18:02:35.785Z] [0003] Working directory: C:\Users\Victor\Documents\Visual Studio 2017\Projects\SyncFTP\SyncFTP\bin\Debug
+[2017-10-27 18:02:35.787Z] [0003] Assembly path: C:\Users\Victor\Documents\Visual Studio 2017\Projects\SyncFTP\SyncFTP\bin\Debug\WinSCPnet.DLL
+[2017-10-27 18:02:35.787Z] [0003] Assembly product version: 5.11.2.0
+[2017-10-27 18:02:35.791Z] [0003] Session.Open entering
+[2017-10-27 18:02:35.793Z] [0003]   Session.SetupTempPath entering
+[2017-10-27 18:02:35.793Z] [0003]     Temporary folder: C:\Users\Victor\AppData\Local\Temp\
+[2017-10-27 18:02:35.793Z] [0003]     Temporary file [C:\Users\Victor\AppData\Local\Temp\wscp1488.03CE0BB8.tmp] - Exists [False]
+[2017-10-27 18:02:35.793Z] [0003]   Session.SetupTempPath leaving
+[2017-10-27 18:02:35.795Z] [0003]   ExeSessionProcess..ctor entering
+[2017-10-27 18:02:35.796Z] [0003]     ExeSessionProcess.GetExecutablePath entering
+[2017-10-27 18:02:35.797Z] [0003]       Executable found in C:\Users\Victor\Documents\Visual Studio 2017\Projects\SyncFTP\SyncFTP\bin\Debug\winscp.exe
+[2017-10-27 18:02:35.797Z] [0003]     ExeSessionProcess.GetExecutablePath leaving
+[2017-10-27 18:02:35.797Z] [0003]     EXE executable path resolved to C:\Users\Victor\Documents\Visual Studio 2017\Projects\SyncFTP\SyncFTP\bin\Debug\winscp.exe
+[2017-10-27 18:02:35.798Z] [0003]     ExeSessionProcess.CheckVersion entering
+[2017-10-27 18:02:35.798Z] [0003]       Version of C:\Users\Victor\Documents\Visual Studio 2017\Projects\SyncFTP\SyncFTP\bin\Debug\winscp.exe is 5.11.2.7781, product WinSCP version is 5.11.2.0
+[2017-10-27 18:02:35.799Z] [0003]     ExeSessionProcess.CheckVersion leaving
+[2017-10-27 18:02:35.799Z] [0003]   ExeSessionProcess..ctor leaving
+[2017-10-27 18:02:35.800Z] [0003]   ExeSessionProcess.Start entering
+[2017-10-27 18:02:35.802Z] [0003]     ExeSessionProcess.InitializeConsole entering
+[2017-10-27 18:02:35.802Z] [0003]       Trying event _5256_11454272_302
+[2017-10-27 18:02:35.803Z] [0003]       Creating event WinSCPConsoleEventRequest_5256_11454272_302
+[2017-10-27 18:02:35.804Z] [0003]       Created event WinSCPConsoleEventRequest_5256_11454272_302 with handle 1700 with security none, new True
+[2017-10-27 18:02:35.804Z] [0003]       Event _5256_11454272_302 is unique
+[2017-10-27 18:02:35.804Z] [0003]       Creating event WinSCPConsoleEventResponse_5256_11454272_302
+[2017-10-27 18:02:35.804Z] [0003]       Created event WinSCPConsoleEventResponse_5256_11454272_302 with handle 1704 with security none, new True
+[2017-10-27 18:02:35.804Z] [0003]       Creating event WinSCPConsoleEventCancel_5256_11454272_302
+[2017-10-27 18:02:35.804Z] [0003]       Created event WinSCPConsoleEventCancel_5256_11454272_302 with handle 1708 with security none, new True
+[2017-10-27 18:02:35.810Z] [0003]       Job created
+[2017-10-27 18:02:35.811Z] [0003]       Job set to kill all processes
+[2017-10-27 18:02:35.811Z] [0003]     ExeSessionProcess.InitializeConsole leaving
+[2017-10-27 18:02:35.813Z] [0003]     ExeSessionProcess.InitializeChild entering
+[2017-10-27 18:02:35.813Z] [0003]       Starting "C:\Users\Victor\Documents\Visual Studio 2017\Projects\SyncFTP\SyncFTP\bin\Debug\winscp.exe" /xmllog="C:\Users\Victor\AppData\Local\Temp\wscp1488.03CE0BB8.tmp" /xmlgroups /xmllogrequired /nointeractiveinput /dotnet=5.11.2  /ini=nul  /console /consoleinstance=_5256_11454272_302
+[2017-10-27 18:02:35.820Z] [0003]       Started process 18052
+[2017-10-27 18:02:35.820Z] [0003]     ExeSessionProcess.InitializeChild leaving
+[2017-10-27 18:02:35.820Z] [0003]   ExeSessionProcess.Start leaving
+[2017-10-27 18:02:35.830Z] [0003]   Command: [option batch on]
+[2017-10-27 18:02:35.830Z] [0003]   ExeSessionProcess.ExecuteCommand entering
+[2017-10-27 18:02:35.831Z] [0003]   ExeSessionProcess.ExecuteCommand leaving
+[2017-10-27 18:02:35.831Z] [0003]   Command: [option confirm off]
+[2017-10-27 18:02:35.831Z] [0003]   ExeSessionProcess.ExecuteCommand entering
+[2017-10-27 18:02:35.831Z] [0003]   ExeSessionProcess.ExecuteCommand leaving
+[2017-10-27 18:02:35.831Z] [0003]   Command: [option reconnecttime 120]
+[2017-10-27 18:02:35.831Z] [0003]   ExeSessionProcess.ExecuteCommand entering
+[2017-10-27 18:02:35.831Z] [0003]   ExeSessionProcess.ExecuteCommand leaving
+[2017-10-27 18:02:35.833Z] [0007] ExeSessionProcess.ProcessEvents entering
+[2017-10-27 18:02:35.834Z] [0003]   Session.SessionOptionsToUrlAndSwitches entering
+[2017-10-27 18:02:35.838Z] [0003]     Session.SessionOptionsToSwitches entering
+[2017-10-27 18:02:35.838Z] [0003]     Session.SessionOptionsToSwitches leaving
+[2017-10-27 18:02:35.838Z] [0003]   Session.SessionOptionsToUrlAndSwitches leaving
+[2017-10-27 18:02:35.838Z] [0003]   Command: [open "ftp://devutmx.com:***@ftp.devutmx.com:21" -passive=1 -timeout=20 -rawsettings ProxyPort="0"]
+[2017-10-27 18:02:35.838Z] [0003]   ExeSessionProcess.ExecuteCommand entering
+[2017-10-27 18:02:35.838Z] [0003]   ExeSessionProcess.ExecuteCommand leaving
+[2017-10-27 18:02:35.969Z] [0007]   ExeSessionProcess.ProcessEvent entering
+[2017-10-27 18:02:35.970Z] [0007]     ExeSessionProcess.ProcessInitEvent entering
+[2017-10-27 18:02:35.970Z] [0007]     ExeSessionProcess.ProcessInitEvent leaving
+[2017-10-27 18:02:35.970Z] [0007]   ExeSessionProcess.ProcessEvent leaving
+[2017-10-27 18:02:35.972Z] [0007]   ExeSessionProcess.ProcessEvent entering
+[2017-10-27 18:02:35.973Z] [0007]     ExeSessionProcess.ProcessTitleEvent entering
+[2017-10-27 18:02:35.973Z] [0007]       Not-supported title event [WinSCP]
+[2017-10-27 18:02:35.973Z] [0007]     ExeSessionProcess.ProcessTitleEvent leaving
+[2017-10-27 18:02:35.973Z] [0007]   ExeSessionProcess.ProcessEvent leaving
+[2017-10-27 18:02:35.973Z] [0007]   ExeSessionProcess.ProcessEvent entering
+[2017-10-27 18:02:35.973Z] [0007]     ExeSessionProcess.ProcessTitleEvent entering
+[2017-10-27 18:02:35.973Z] [0007]       Not-supported title event [WinSCP]
+[2017-10-27 18:02:35.973Z] [0007]     ExeSessionProcess.ProcessTitleEvent leaving
+[2017-10-27 18:02:35.973Z] [0007]   ExeSessionProcess.ProcessEvent leaving
+[2017-10-27 18:02:35.973Z] [0007]   ExeSessionProcess.ProcessEvent entering
+[2017-10-27 18:02:35.975Z] [0007]   ExeSessionProcess.ProcessEvent leaving
+[2017-10-27 18:02:35.975Z] [0007]   ExeSessionProcess.ProcessEvent entering
+[2017-10-27 18:02:35.976Z] [0007]     ExeSessionProcess.ProcessInputEvent entering
+[2017-10-27 18:02:35.978Z] [0007]       Scheduling output: [winscp> option batch on]
+[2017-10-27 18:02:35.978Z] [0007]     ExeSessionProcess.ProcessInputEvent leaving
+[2017-10-27 18:02:35.978Z] [0007]   ExeSessionProcess.ProcessEvent leaving
+[2017-10-27 18:02:35.979Z] [0007]   ExeSessionProcess.ProcessEvent entering
+[2017-10-27 18:02:35.979Z] [0007]     Scheduling output: [batch           on        ]
+[2017-10-27 18:02:35.979Z] [0007]   ExeSessionProcess.ProcessEvent leaving
+[2017-10-27 18:02:35.979Z] [0007]   ExeSessionProcess.ProcessEvent entering
+[2017-10-27 18:02:35.979Z] [0007]     Scheduling output: [reconnecttime   120       ]
+[2017-10-27 18:02:35.979Z] [0007]   ExeSessionProcess.ProcessEvent leaving
+[2017-10-27 18:02:35.979Z] [0007]   ExeSessionProcess.ProcessEvent entering
+[2017-10-27 18:02:35.979Z] [0007]     ExeSessionProcess.ProcessTitleEvent entering
+[2017-10-27 18:02:35.979Z] [0007]       Not-supported title event [WinSCP]
+[2017-10-27 18:02:35.979Z] [0007]     ExeSessionProcess.ProcessTitleEvent leaving
+[2017-10-27 18:02:35.979Z] [0007]   ExeSessionProcess.ProcessEvent leaving
+[2017-10-27 18:02:35.979Z] [0007]   ExeSessionProcess.ProcessEvent entering
+[2017-10-27 18:02:35.979Z] [0007]   ExeSessionProcess.ProcessEvent leaving
+[2017-10-27 18:02:35.979Z] [0007]   ExeSessionProcess.ProcessEvent entering
+[2017-10-27 18:02:35.979Z] [0007]     ExeSessionProcess.ProcessInputEvent entering
+[2017-10-27 18:02:35.979Z] [0007]       Scheduling output: [winscp> option confirm off]
+[2017-10-27 18:02:35.979Z] [0007]     ExeSessionProcess.ProcessInputEvent leaving
+[2017-10-27 18:02:35.979Z] [0007]   ExeSessionProcess.ProcessEvent leaving
+[2017-10-27 18:02:35.979Z] [0007]   ExeSessionProcess.ProcessEvent entering
+[2017-10-27 18:02:35.979Z] [0007]     Scheduling output: [confirm         off       ]
+[2017-10-27 18:02:35.979Z] [0007]   ExeSessionProcess.ProcessEvent leaving
+[2017-10-27 18:02:35.979Z] [0007]   ExeSessionProcess.ProcessEvent entering
+[2017-10-27 18:02:35.979Z] [0007]     ExeSessionProcess.ProcessTitleEvent entering
+[2017-10-27 18:02:35.979Z] [0007]       Not-supported title event [WinSCP]
+[2017-10-27 18:02:35.979Z] [0007]     ExeSessionProcess.ProcessTitleEvent leaving
+[2017-10-27 18:02:35.979Z] [0007]   ExeSessionProcess.ProcessEvent leaving
+[2017-10-27 18:02:35.979Z] [0007]   ExeSessionProcess.ProcessEvent entering
+[2017-10-27 18:02:35.980Z] [0007]   ExeSessionProcess.ProcessEvent leaving
+[2017-10-27 18:02:35.980Z] [0007]   ExeSessionProcess.ProcessEvent entering
+[2017-10-27 18:02:35.980Z] [0007]     ExeSessionProcess.ProcessInputEvent entering
+[2017-10-27 18:02:35.980Z] [0007]       Scheduling output: [winscp> option reconnecttime 120]
+[2017-10-27 18:02:35.980Z] [0007]     ExeSessionProcess.ProcessInputEvent leaving
+[2017-10-27 18:02:35.980Z] [0007]   ExeSessionProcess.ProcessEvent leaving
+[2017-10-27 18:02:35.980Z] [0007]   ExeSessionProcess.ProcessEvent entering
+[2017-10-27 18:02:35.980Z] [0007]     Scheduling output: [reconnecttime   120       ]
+[2017-10-27 18:02:35.980Z] [0007]   ExeSessionProcess.ProcessEvent leaving
+[2017-10-27 18:02:35.980Z] [0007]   ExeSessionProcess.ProcessEvent entering
+[2017-10-27 18:02:35.980Z] [0007]     ExeSessionProcess.ProcessTitleEvent entering
+[2017-10-27 18:02:35.980Z] [0007]       Not-supported title event [WinSCP]
+[2017-10-27 18:02:35.980Z] [0007]     ExeSessionProcess.ProcessTitleEvent leaving
+[2017-10-27 18:02:35.980Z] [0007]   ExeSessionProcess.ProcessEvent leaving
+[2017-10-27 18:02:35.980Z] [0007]   ExeSessionProcess.ProcessEvent entering
+[2017-10-27 18:02:35.980Z] [0007]   ExeSessionProcess.ProcessEvent leaving
+[2017-10-27 18:02:35.980Z] [0007]   ExeSessionProcess.ProcessEvent entering
+[2017-10-27 18:02:35.980Z] [0007]     ExeSessionProcess.ProcessInputEvent entering
+[2017-10-27 18:02:35.980Z] [0007]       Scheduling output: [winscp> open "ftp://devutmx.com:***@ftp.devutmx.com:21" -passive=1 -timeout=20 -rawsettings ProxyPort="0"]
+[2017-10-27 18:02:35.980Z] [0007]     ExeSessionProcess.ProcessInputEvent leaving
+[2017-10-27 18:02:35.980Z] [0007]   ExeSessionProcess.ProcessEvent leaving
+[2017-10-27 18:02:35.983Z] [0007]   ExeSessionProcess.ProcessEvent entering
+[2017-10-27 18:02:35.984Z] [0007]     Scheduling output: [Connecting to ftp.devutmx.com ...]
+[2017-10-27 18:02:35.984Z] [0007]   ExeSessionProcess.ProcessEvent leaving
+[2017-10-27 18:02:35.997Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:35.998Z] [0003]     Opening log without write sharing
+[2017-10-27 18:02:35.999Z] [0003]     Opening log with write sharing
+[2017-10-27 18:02:35.999Z] [0003]     Log opened
+[2017-10-27 18:02:35.999Z] [0003]     Skipping 0 nodes
+[2017-10-27 18:02:35.999Z] [0003]     Read node 1: XmlDeclaration xml=version="1.0" encoding="UTF-8"
+[2017-10-27 18:02:36.000Z] [0003]     Log contents:
 <?xml version="1.0" encoding="UTF-8"?>
-<session xmlns="http://winscp.net/schema/session/1.0" name="devutmx.com@ftp.devutmx.com" start="2017-10-27T22:45:30.607Z">
+<session xmlns="http://winscp.net/schema/session/1.0" name="devutmx.com@ftp.devutmx.com" start="2017-10-27T23:02:35.981Z">
 
-[2017-10-27 17:45:30.639Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:30.639Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:30.639Z] [0001]     Read node 2: Whitespace 
+[2017-10-27 18:02:36.000Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:36.000Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:36.000Z] [0003]     Read node 2: Whitespace 
 
-[2017-10-27 17:45:30.639Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:30.640Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:30.640Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:30.640Z] [0001]     Read node 3: Element session
-[2017-10-27 17:45:30.640Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:30.640Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:30.642Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:30.642Z] [0001]     Waiting for log update and dispatching events for 50
-[2017-10-27 17:45:30.643Z] [0001]     Output: [winscp> option batch on]
-[2017-10-27 17:45:30.643Z] [0001]     Output: [batch           on        ]
-[2017-10-27 17:45:30.643Z] [0001]     Output: [reconnecttime   120       ]
-[2017-10-27 17:45:30.643Z] [0001]     Output: [winscp> option confirm off]
-[2017-10-27 17:45:30.643Z] [0001]     Output: [confirm         off       ]
-[2017-10-27 17:45:30.643Z] [0001]     Output: [winscp> option reconnecttime 120]
-[2017-10-27 17:45:30.643Z] [0001]     Output: [reconnecttime   120       ]
-[2017-10-27 17:45:30.643Z] [0001]     Output: [winscp> open "ftp://devutmx.com:***@ftp.devutmx.com:21" -passive=1 -timeout=20 -rawsettings ProxyPort="0"]
-[2017-10-27 17:45:30.643Z] [0001]     Output: [Connecting to ftp.devutmx.com ...]
-[2017-10-27 17:45:30.693Z] [0001]     Waiting for log update and dispatching events for 100
-[2017-10-27 17:45:30.806Z] [0001]     Waiting for log update and dispatching events for 200
-[2017-10-27 17:45:31.006Z] [0001]     Waiting for log update and dispatching events for 400
-[2017-10-27 17:45:31.410Z] [0001]     Waiting for log update and dispatching events for 800
-[2017-10-27 17:45:31.946Z] [0003]   ExeSessionProcess.ProcessEvent entering
-[2017-10-27 17:45:31.946Z] [0003]     Scheduling output: [Connected]
-[2017-10-27 17:45:31.946Z] [0003]   ExeSessionProcess.ProcessEvent leaving
-[2017-10-27 17:45:31.946Z] [0001]     Output: [Connected]
-[2017-10-27 17:45:31.947Z] [0003]   ExeSessionProcess.ProcessEvent entering
-[2017-10-27 17:45:31.947Z] [0003]     Scheduling output: [Starting the session...]
-[2017-10-27 17:45:31.947Z] [0003]   ExeSessionProcess.ProcessEvent leaving
-[2017-10-27 17:45:31.947Z] [0001]     Output: [Starting the session...]
-[2017-10-27 17:45:32.035Z] [0003]   ExeSessionProcess.ProcessEvent entering
-[2017-10-27 17:45:32.035Z] [0003]     Scheduling output: [Session started.]
-[2017-10-27 17:45:32.035Z] [0003]   ExeSessionProcess.ProcessEvent leaving
-[2017-10-27 17:45:32.035Z] [0001]     Output: [Session started.]
-[2017-10-27 17:45:32.036Z] [0003]   ExeSessionProcess.ProcessEvent entering
-[2017-10-27 17:45:32.036Z] [0003]     Scheduling output: [Active session: [1] devutmx.com@ftp.devutmx.com]
-[2017-10-27 17:45:32.036Z] [0003]   ExeSessionProcess.ProcessEvent leaving
-[2017-10-27 17:45:32.036Z] [0001]     Output: [Active session: [1] devutmx.com@ftp.devutmx.com]
-[2017-10-27 17:45:32.036Z] [0003]   ExeSessionProcess.ProcessEvent entering
-[2017-10-27 17:45:32.036Z] [0003]     ExeSessionProcess.ProcessTitleEvent entering
-[2017-10-27 17:45:32.036Z] [0003]       Not-supported title event [devutmx.com@ftp.devutmx.com - WinSCP]
-[2017-10-27 17:45:32.036Z] [0003]     ExeSessionProcess.ProcessTitleEvent leaving
-[2017-10-27 17:45:32.036Z] [0003]   ExeSessionProcess.ProcessEvent leaving
-[2017-10-27 17:45:32.037Z] [0003]   ExeSessionProcess.ProcessEvent entering
-[2017-10-27 17:45:32.037Z] [0003]   ExeSessionProcess.ProcessEvent leaving
-[2017-10-27 17:45:32.037Z] [0003]   ExeSessionProcess.ProcessEvent entering
-[2017-10-27 17:45:32.037Z] [0003]     ExeSessionProcess.ProcessInputEvent entering
-[2017-10-27 17:45:32.225Z] [0001]     Read node 4: Whitespace 
+[2017-10-27 18:02:36.000Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:36.001Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:36.001Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:36.001Z] [0003]     Read node 3: Element session
+[2017-10-27 18:02:36.001Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:36.001Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:36.002Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:36.002Z] [0003]     Waiting for log update and dispatching events for 50
+[2017-10-27 18:02:36.003Z] [0003]     Output: [winscp> option batch on]
+[2017-10-27 18:02:36.003Z] [0003]     Output: [batch           on        ]
+[2017-10-27 18:02:36.003Z] [0003]     Output: [reconnecttime   120       ]
+[2017-10-27 18:02:36.003Z] [0003]     Output: [winscp> option confirm off]
+[2017-10-27 18:02:36.003Z] [0003]     Output: [confirm         off       ]
+[2017-10-27 18:02:36.003Z] [0003]     Output: [winscp> option reconnecttime 120]
+[2017-10-27 18:02:36.003Z] [0003]     Output: [reconnecttime   120       ]
+[2017-10-27 18:02:36.003Z] [0003]     Output: [winscp> open "ftp://devutmx.com:***@ftp.devutmx.com:21" -passive=1 -timeout=20 -rawsettings ProxyPort="0"]
+[2017-10-27 18:02:36.003Z] [0003]     Output: [Connecting to ftp.devutmx.com ...]
+[2017-10-27 18:02:36.053Z] [0003]     Waiting for log update and dispatching events for 100
+[2017-10-27 18:02:36.153Z] [0003]     Waiting for log update and dispatching events for 200
+[2017-10-27 18:02:36.353Z] [0003]     Waiting for log update and dispatching events for 400
+[2017-10-27 18:02:36.753Z] [0003]     Waiting for log update and dispatching events for 800
+[2017-10-27 18:02:37.468Z] [0007]   ExeSessionProcess.ProcessEvent entering
+[2017-10-27 18:02:37.468Z] [0007]     Scheduling output: [Connected]
+[2017-10-27 18:02:37.468Z] [0007]   ExeSessionProcess.ProcessEvent leaving
+[2017-10-27 18:02:37.468Z] [0003]     Output: [Connected]
+[2017-10-27 18:02:37.469Z] [0007]   ExeSessionProcess.ProcessEvent entering
+[2017-10-27 18:02:37.469Z] [0007]     Scheduling output: [Starting the session...]
+[2017-10-27 18:02:37.469Z] [0007]   ExeSessionProcess.ProcessEvent leaving
+[2017-10-27 18:02:37.469Z] [0003]     Output: [Starting the session...]
+[2017-10-27 18:02:37.554Z] [0003]     Waiting for log update and dispatching events for 800
+[2017-10-27 18:02:37.556Z] [0007]   ExeSessionProcess.ProcessEvent entering
+[2017-10-27 18:02:37.556Z] [0007]     Scheduling output: [Session started.]
+[2017-10-27 18:02:37.556Z] [0007]   ExeSessionProcess.ProcessEvent leaving
+[2017-10-27 18:02:37.556Z] [0003]     Output: [Session started.]
+[2017-10-27 18:02:37.556Z] [0007]   ExeSessionProcess.ProcessEvent entering
+[2017-10-27 18:02:37.556Z] [0007]     Scheduling output: [Active session: [1] devutmx.com@ftp.devutmx.com]
+[2017-10-27 18:02:37.556Z] [0007]   ExeSessionProcess.ProcessEvent leaving
+[2017-10-27 18:02:37.557Z] [0003]     Output: [Active session: [1] devutmx.com@ftp.devutmx.com]
+[2017-10-27 18:02:37.557Z] [0007]   ExeSessionProcess.ProcessEvent entering
+[2017-10-27 18:02:37.557Z] [0007]     ExeSessionProcess.ProcessTitleEvent entering
+[2017-10-27 18:02:37.557Z] [0007]       Not-supported title event [devutmx.com@ftp.devutmx.com - WinSCP]
+[2017-10-27 18:02:37.557Z] [0007]     ExeSessionProcess.ProcessTitleEvent leaving
+[2017-10-27 18:02:37.557Z] [0007]   ExeSessionProcess.ProcessEvent leaving
+[2017-10-27 18:02:37.557Z] [0007]   ExeSessionProcess.ProcessEvent entering
+[2017-10-27 18:02:37.557Z] [0007]   ExeSessionProcess.ProcessEvent leaving
+[2017-10-27 18:02:37.575Z] [0007]   ExeSessionProcess.ProcessEvent entering
+[2017-10-27 18:02:37.575Z] [0007]     ExeSessionProcess.ProcessInputEvent entering
+[2017-10-27 18:02:38.355Z] [0003]     Read node 4: Whitespace 
   
-[2017-10-27 17:45:32.233Z] [0001]     Log contents:
+[2017-10-27 18:02:38.359Z] [0003]     Log contents:
 <?xml version="1.0" encoding="UTF-8"?>
-<session xmlns="http://winscp.net/schema/session/1.0" name="devutmx.com@ftp.devutmx.com" start="2017-10-27T22:45:30.607Z">
-  <group name="open ftp://devutmx.com:***@ftp.devutmx.com:21 -passive=1 -timeout=20 -rawsettings ProxyPort=&quot;0&quot;" start="2017-10-27T22:45:32.036Z">
+<session xmlns="http://winscp.net/schema/session/1.0" name="devutmx.com@ftp.devutmx.com" start="2017-10-27T23:02:35.981Z">
+  <group name="open ftp://devutmx.com:***@ftp.devutmx.com:21 -passive=1 -timeout=20 -rawsettings ProxyPort=&quot;0&quot;" start="2017-10-27T23:02:37.557Z">
   </group>
 
-[2017-10-27 17:45:32.233Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:32.234Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:32.234Z] [0001]     Read node 5: Element group
-[2017-10-27 17:45:32.234Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:32.234Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:32.234Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:32.234Z] [0001]     Read node 6: Whitespace 
+[2017-10-27 18:02:38.359Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:38.359Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:38.359Z] [0003]     Read node 5: Element group
+[2017-10-27 18:02:38.360Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:38.360Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:38.360Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:38.360Z] [0003]     Read node 6: Whitespace 
   
-[2017-10-27 17:45:32.234Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:32.234Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:32.235Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:32.235Z] [0001]     Read node 7: EndElement group
-[2017-10-27 17:45:32.235Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:32.235Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:32.236Z] [0001]   ElementLogReader.Dispose(group@1) entering
-[2017-10-27 17:45:32.236Z] [0001]     ElementLogReader.ReadToEnd(group@1) entering
-[2017-10-27 17:45:32.236Z] [0001]     ElementLogReader.ReadToEnd(group@1) leaving
-[2017-10-27 17:45:32.236Z] [0001]   ElementLogReader.Dispose(group@1) leaving
-[2017-10-27 17:45:32.236Z] [0001]   Command: [pwd]
-[2017-10-27 17:45:32.236Z] [0001]   ExeSessionProcess.ExecuteCommand entering
-[2017-10-27 17:45:32.236Z] [0001]   ExeSessionProcess.ExecuteCommand leaving
-[2017-10-27 17:45:32.237Z] [0003]       Scheduling output: [winscp> pwd]
-[2017-10-27 17:45:32.237Z] [0003]     ExeSessionProcess.ProcessInputEvent leaving
-[2017-10-27 17:45:32.237Z] [0003]   ExeSessionProcess.ProcessEvent leaving
-[2017-10-27 17:45:32.237Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:32.237Z] [0001]     Read node 8: Whitespace 
+[2017-10-27 18:02:38.360Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:38.360Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:38.360Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:38.360Z] [0003]     Read node 7: EndElement group
+[2017-10-27 18:02:38.360Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:38.360Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:38.360Z] [0003]   ElementLogReader.Dispose(group@1) entering
+[2017-10-27 18:02:38.360Z] [0003]     ElementLogReader.ReadToEnd(group@1) entering
+[2017-10-27 18:02:38.360Z] [0003]     ElementLogReader.ReadToEnd(group@1) leaving
+[2017-10-27 18:02:38.360Z] [0003]   ElementLogReader.Dispose(group@1) leaving
+[2017-10-27 18:02:38.360Z] [0003]   Command: [pwd]
+[2017-10-27 18:02:38.360Z] [0003]   ExeSessionProcess.ExecuteCommand entering
+[2017-10-27 18:02:38.361Z] [0003]   ExeSessionProcess.ExecuteCommand leaving
+[2017-10-27 18:02:38.361Z] [0007]       Scheduling output: [winscp> pwd]
+[2017-10-27 18:02:38.361Z] [0007]     ExeSessionProcess.ProcessInputEvent leaving
+[2017-10-27 18:02:38.361Z] [0007]   ExeSessionProcess.ProcessEvent leaving
+[2017-10-27 18:02:38.361Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:38.361Z] [0003]     Read node 8: Whitespace 
   
-[2017-10-27 17:45:32.237Z] [0003]   ExeSessionProcess.ProcessEvent entering
-[2017-10-27 17:45:32.237Z] [0003]     Scheduling output: [/]
-[2017-10-27 17:45:32.237Z] [0003]   ExeSessionProcess.ProcessEvent leaving
-[2017-10-27 17:45:32.238Z] [0003]   ExeSessionProcess.ProcessEvent entering
-[2017-10-27 17:45:32.238Z] [0003]     ExeSessionProcess.ProcessTitleEvent entering
-[2017-10-27 17:45:32.238Z] [0003]       Not-supported title event [devutmx.com@ftp.devutmx.com - WinSCP]
-[2017-10-27 17:45:32.238Z] [0003]     ExeSessionProcess.ProcessTitleEvent leaving
-[2017-10-27 17:45:32.238Z] [0003]   ExeSessionProcess.ProcessEvent leaving
-[2017-10-27 17:45:32.238Z] [0003]   ExeSessionProcess.ProcessEvent entering
-[2017-10-27 17:45:32.238Z] [0003]   ExeSessionProcess.ProcessEvent leaving
-[2017-10-27 17:45:32.238Z] [0003]   ExeSessionProcess.ProcessEvent entering
-[2017-10-27 17:45:32.238Z] [0003]     ExeSessionProcess.ProcessInputEvent entering
-[2017-10-27 17:45:32.244Z] [0001]     Log contents:
+[2017-10-27 18:02:38.361Z] [0007]   ExeSessionProcess.ProcessEvent entering
+[2017-10-27 18:02:38.361Z] [0007]     Scheduling output: [/]
+[2017-10-27 18:02:38.361Z] [0007]   ExeSessionProcess.ProcessEvent leaving
+[2017-10-27 18:02:38.362Z] [0007]   ExeSessionProcess.ProcessEvent entering
+[2017-10-27 18:02:38.362Z] [0007]     ExeSessionProcess.ProcessTitleEvent entering
+[2017-10-27 18:02:38.362Z] [0007]       Not-supported title event [devutmx.com@ftp.devutmx.com - WinSCP]
+[2017-10-27 18:02:38.362Z] [0007]     ExeSessionProcess.ProcessTitleEvent leaving
+[2017-10-27 18:02:38.362Z] [0007]   ExeSessionProcess.ProcessEvent leaving
+[2017-10-27 18:02:38.362Z] [0007]   ExeSessionProcess.ProcessEvent entering
+[2017-10-27 18:02:38.362Z] [0007]   ExeSessionProcess.ProcessEvent leaving
+[2017-10-27 18:02:38.362Z] [0007]   ExeSessionProcess.ProcessEvent entering
+[2017-10-27 18:02:38.363Z] [0007]     ExeSessionProcess.ProcessInputEvent entering
+[2017-10-27 18:02:38.373Z] [0003]     Log contents:
 <?xml version="1.0" encoding="UTF-8"?>
-<session xmlns="http://winscp.net/schema/session/1.0" name="devutmx.com@ftp.devutmx.com" start="2017-10-27T22:45:30.607Z">
-  <group name="open ftp://devutmx.com:***@ftp.devutmx.com:21 -passive=1 -timeout=20 -rawsettings ProxyPort=&quot;0&quot;" start="2017-10-27T22:45:32.036Z">
+<session xmlns="http://winscp.net/schema/session/1.0" name="devutmx.com@ftp.devutmx.com" start="2017-10-27T23:02:35.981Z">
+  <group name="open ftp://devutmx.com:***@ftp.devutmx.com:21 -passive=1 -timeout=20 -rawsettings ProxyPort=&quot;0&quot;" start="2017-10-27T23:02:37.557Z">
   </group>
-  <group name="pwd" start="2017-10-27T22:45:32.237Z">
+  <group name="pwd" start="2017-10-27T23:02:38.361Z">
     <cwd>
       <cwd value="/" />
       <result success="true" />
     </cwd>
   </group>
 
-[2017-10-27 17:45:32.244Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:32.245Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:32.245Z] [0001]     Read node 9: Element group
-[2017-10-27 17:45:32.245Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:32.245Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:32.245Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:32.245Z] [0001]     Read node 10: Whitespace 
+[2017-10-27 18:02:38.373Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:38.374Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:38.374Z] [0003]     Read node 9: Element group
+[2017-10-27 18:02:38.374Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:38.374Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:38.375Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:38.375Z] [0003]     Read node 10: Whitespace 
     
-[2017-10-27 17:45:32.245Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:32.245Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:32.245Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:32.245Z] [0001]     Read node 11: Element cwd
-[2017-10-27 17:45:32.246Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:32.246Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:32.246Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:32.246Z] [0001]     Read node 12: Whitespace 
+[2017-10-27 18:02:38.375Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:38.375Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:38.375Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:38.375Z] [0003]     Read node 11: Element cwd
+[2017-10-27 18:02:38.376Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:38.376Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:38.376Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:38.376Z] [0003]     Read node 12: Whitespace 
       
-[2017-10-27 17:45:32.246Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:32.246Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:32.247Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:32.247Z] [0001]     Read node 13: Element cwd
-[2017-10-27 17:45:32.247Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:32.247Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:32.248Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:32.248Z] [0001]     Read node 14: Whitespace 
+[2017-10-27 18:02:38.377Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:38.377Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:38.378Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:38.378Z] [0003]     Read node 13: Element cwd
+[2017-10-27 18:02:38.379Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:38.379Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:38.379Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:38.379Z] [0003]     Read node 14: Whitespace 
       
-[2017-10-27 17:45:32.248Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:32.248Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:32.248Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:32.248Z] [0001]     Read node 15: Element result
-[2017-10-27 17:45:32.248Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:32.248Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:32.248Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:32.248Z] [0001]     Read node 16: Whitespace 
+[2017-10-27 18:02:38.379Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:38.379Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:38.379Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:38.380Z] [0003]     Read node 15: Element result
+[2017-10-27 18:02:38.380Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:38.380Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:38.380Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:38.380Z] [0003]     Read node 16: Whitespace 
     
-[2017-10-27 17:45:32.249Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:32.249Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:32.249Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:32.249Z] [0001]     Read node 17: EndElement cwd
-[2017-10-27 17:45:32.249Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:32.249Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:32.249Z] [0001]   ElementLogReader.ReadToEnd(group@1) entering
-[2017-10-27 17:45:32.249Z] [0001]     SessionLogReader.Read entering
-[2017-10-27 17:45:32.249Z] [0001]       Read node 18: Whitespace 
+[2017-10-27 18:02:38.380Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:38.380Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:38.381Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:38.381Z] [0003]     Read node 17: EndElement cwd
+[2017-10-27 18:02:38.381Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:38.381Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:38.381Z] [0003]   ElementLogReader.ReadToEnd(group@1) entering
+[2017-10-27 18:02:38.382Z] [0003]     SessionLogReader.Read entering
+[2017-10-27 18:02:38.382Z] [0003]       Read node 18: Whitespace 
   
-[2017-10-27 17:45:32.250Z] [0001]       Log contents has not changed
-[2017-10-27 17:45:32.250Z] [0001]     SessionLogReader.Read leaving
-[2017-10-27 17:45:32.250Z] [0001]     SessionLogReader.Read entering
-[2017-10-27 17:45:32.250Z] [0001]       Read node 19: EndElement group
-[2017-10-27 17:45:32.250Z] [0001]       Log contents has not changed
-[2017-10-27 17:45:32.250Z] [0001]     SessionLogReader.Read leaving
-[2017-10-27 17:45:32.250Z] [0001]   ElementLogReader.ReadToEnd(group@1) leaving
-[2017-10-27 17:45:32.250Z] [0001]   ElementLogReader.Dispose(cwd@2) entering
-[2017-10-27 17:45:32.250Z] [0001]     ElementLogReader.ReadToEnd(cwd@2) entering
-[2017-10-27 17:45:32.250Z] [0001]     ElementLogReader.ReadToEnd(cwd@2) leaving
-[2017-10-27 17:45:32.250Z] [0001]   ElementLogReader.Dispose(cwd@2) leaving
-[2017-10-27 17:45:32.251Z] [0001]   ElementLogReader.Dispose(group@1) entering
-[2017-10-27 17:45:32.251Z] [0001]     ElementLogReader.ReadToEnd(group@1) entering
-[2017-10-27 17:45:32.251Z] [0001]     ElementLogReader.ReadToEnd(group@1) leaving
-[2017-10-27 17:45:32.251Z] [0001]   ElementLogReader.Dispose(group@1) leaving
-[2017-10-27 17:45:32.251Z] [0001] Session.Open leaving
-[2017-10-27 17:45:32.281Z] [0001] Session.ListDirectory entering
-[2017-10-27 17:45:32.281Z] [0001]   Command: [ls -- "/Remote/"]
-[2017-10-27 17:45:32.281Z] [0001]   ExeSessionProcess.ExecuteCommand entering
-[2017-10-27 17:45:32.281Z] [0001]   ExeSessionProcess.ExecuteCommand leaving
-[2017-10-27 17:45:32.281Z] [0003]       Scheduling output: [winscp> ls -- "/Remote/"]
-[2017-10-27 17:45:32.281Z] [0003]     ExeSessionProcess.ProcessInputEvent leaving
-[2017-10-27 17:45:32.281Z] [0003]   ExeSessionProcess.ProcessEvent leaving
-[2017-10-27 17:45:32.282Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:32.282Z] [0001]     Read node 20: Whitespace 
+[2017-10-27 18:02:38.382Z] [0003]       Log contents has not changed
+[2017-10-27 18:02:38.382Z] [0003]     SessionLogReader.Read leaving
+[2017-10-27 18:02:38.382Z] [0003]     SessionLogReader.Read entering
+[2017-10-27 18:02:38.382Z] [0003]       Read node 19: EndElement group
+[2017-10-27 18:02:38.383Z] [0003]       Log contents has not changed
+[2017-10-27 18:02:38.383Z] [0003]     SessionLogReader.Read leaving
+[2017-10-27 18:02:38.383Z] [0003]   ElementLogReader.ReadToEnd(group@1) leaving
+[2017-10-27 18:02:38.383Z] [0003]   ElementLogReader.Dispose(cwd@2) entering
+[2017-10-27 18:02:38.383Z] [0003]     ElementLogReader.ReadToEnd(cwd@2) entering
+[2017-10-27 18:02:38.383Z] [0003]     ElementLogReader.ReadToEnd(cwd@2) leaving
+[2017-10-27 18:02:38.383Z] [0003]   ElementLogReader.Dispose(cwd@2) leaving
+[2017-10-27 18:02:38.383Z] [0003]   ElementLogReader.Dispose(group@1) entering
+[2017-10-27 18:02:38.383Z] [0003]     ElementLogReader.ReadToEnd(group@1) entering
+[2017-10-27 18:02:38.383Z] [0003]     ElementLogReader.ReadToEnd(group@1) leaving
+[2017-10-27 18:02:38.383Z] [0003]   ElementLogReader.Dispose(group@1) leaving
+[2017-10-27 18:02:38.384Z] [0003] Session.Open leaving
+[2017-10-27 18:02:38.430Z] [0003] Session.ListDirectory entering
+[2017-10-27 18:02:38.430Z] [0003]   Command: [ls -- "/Remote/"]
+[2017-10-27 18:02:38.430Z] [0003]   ExeSessionProcess.ExecuteCommand entering
+[2017-10-27 18:02:38.430Z] [0003]   ExeSessionProcess.ExecuteCommand leaving
+[2017-10-27 18:02:38.430Z] [0007]       Scheduling output: [winscp> ls -- "/Remote/"]
+[2017-10-27 18:02:38.431Z] [0007]     ExeSessionProcess.ProcessInputEvent leaving
+[2017-10-27 18:02:38.431Z] [0007]   ExeSessionProcess.ProcessEvent leaving
+[2017-10-27 18:02:38.431Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:38.431Z] [0003]     Waiting for log update and dispatching events for 50
+[2017-10-27 18:02:38.431Z] [0003]     Output: [winscp> pwd]
+[2017-10-27 18:02:38.431Z] [0003]     Output: [/]
+[2017-10-27 18:02:38.431Z] [0003]     Output: [winscp> ls -- "/Remote/"]
+[2017-10-27 18:02:38.481Z] [0003]     Read node 20: Whitespace 
   
-[2017-10-27 17:45:32.285Z] [0001]     Log contents:
+[2017-10-27 18:02:38.485Z] [0003]     Log contents:
 <?xml version="1.0" encoding="UTF-8"?>
-<session xmlns="http://winscp.net/schema/session/1.0" name="devutmx.com@ftp.devutmx.com" start="2017-10-27T22:45:30.607Z">
-  <group name="open ftp://devutmx.com:***@ftp.devutmx.com:21 -passive=1 -timeout=20 -rawsettings ProxyPort=&quot;0&quot;" start="2017-10-27T22:45:32.036Z">
+<session xmlns="http://winscp.net/schema/session/1.0" name="devutmx.com@ftp.devutmx.com" start="2017-10-27T23:02:35.981Z">
+  <group name="open ftp://devutmx.com:***@ftp.devutmx.com:21 -passive=1 -timeout=20 -rawsettings ProxyPort=&quot;0&quot;" start="2017-10-27T23:02:37.557Z">
   </group>
-  <group name="pwd" start="2017-10-27T22:45:32.237Z">
+  <group name="pwd" start="2017-10-27T23:02:38.361Z">
     <cwd>
       <cwd value="/" />
       <result success="true" />
     </cwd>
   </group>
-  <group name="ls -- &quot;/Remote/&quot;" start="2017-10-27T22:45:32.281Z">
+  <group name="ls -- &quot;/Remote/&quot;" start="2017-10-27T23:02:38.431Z">
 
-[2017-10-27 17:45:32.285Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:32.286Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:32.286Z] [0001]     Read node 21: Element group
-[2017-10-27 17:45:32.286Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:32.286Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:32.287Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:32.287Z] [0001]     Waiting for log update and dispatching events for 50
-[2017-10-27 17:45:32.287Z] [0001]     Output: [winscp> pwd]
-[2017-10-27 17:45:32.287Z] [0001]     Output: [/]
-[2017-10-27 17:45:32.287Z] [0001]     Output: [winscp> ls -- "/Remote/"]
-[2017-10-27 17:45:32.347Z] [0001]     Waiting for log update and dispatching events for 100
-[2017-10-27 17:45:32.459Z] [0001]     Waiting for log update and dispatching events for 200
-[2017-10-27 17:45:32.662Z] [0001]     Waiting for log update and dispatching events for 400
-[2017-10-27 17:45:32.950Z] [0003]   ExeSessionProcess.ProcessEvent entering
-[2017-10-27 17:45:32.951Z] [0003]     Scheduling output: [D---------   0                           0              ..]
-[2017-10-27 17:45:32.951Z] [0001]     Output: [D---------   0                           0              ..]
-[2017-10-27 17:45:32.951Z] [0003]   ExeSessionProcess.ProcessEvent leaving
-[2017-10-27 17:45:32.951Z] [0003]   ExeSessionProcess.ProcessEvent entering
-[2017-10-27 17:45:32.951Z] [0003]     Scheduling output: [-rwxr-xr-x   0 3688577  3688577    2416331 Oct 13  0:17:21 2017 3840x2160_MyN_Landscape_Metroid_Samus_Returns_A.jpg]
-[2017-10-27 17:45:32.951Z] [0001]     Output: [-rwxr-xr-x   0 3688577  3688577    2416331 Oct 13  0:17:21 2017 3840x2160_MyN_Landscape_Metroid_Samus_Returns_A.jpg]
-[2017-10-27 17:45:32.951Z] [0003]   ExeSessionProcess.ProcessEvent leaving
-[2017-10-27 17:45:32.951Z] [0003]   ExeSessionProcess.ProcessEvent entering
-[2017-10-27 17:45:32.951Z] [0003]     Scheduling output: [-rwxr-xr-x   0 3688577  3688577         23 Oct 13  0:16:51 2017 open.txt]
-[2017-10-27 17:45:32.951Z] [0001]     Output: [-rwxr-xr-x   0 3688577  3688577         23 Oct 13  0:16:51 2017 open.txt]
-[2017-10-27 17:45:32.951Z] [0003]   ExeSessionProcess.ProcessEvent leaving
-[2017-10-27 17:45:32.952Z] [0003]   ExeSessionProcess.ProcessEvent entering
-[2017-10-27 17:45:32.952Z] [0003]     ExeSessionProcess.ProcessTitleEvent entering
-[2017-10-27 17:45:32.952Z] [0003]       Not-supported title event [devutmx.com@ftp.devutmx.com - WinSCP]
-[2017-10-27 17:45:32.952Z] [0003]     ExeSessionProcess.ProcessTitleEvent leaving
-[2017-10-27 17:45:32.952Z] [0003]   ExeSessionProcess.ProcessEvent leaving
-[2017-10-27 17:45:32.952Z] [0003]   ExeSessionProcess.ProcessEvent entering
-[2017-10-27 17:45:32.952Z] [0003]   ExeSessionProcess.ProcessEvent leaving
-[2017-10-27 17:45:32.953Z] [0003]   ExeSessionProcess.ProcessEvent entering
-[2017-10-27 17:45:32.953Z] [0003]     ExeSessionProcess.ProcessInputEvent entering
-[2017-10-27 17:45:33.066Z] [0001]     Read node 22: Whitespace 
+[2017-10-27 18:02:38.485Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:38.485Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:38.485Z] [0003]     Read node 21: Element group
+[2017-10-27 18:02:38.485Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:38.485Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:38.485Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:38.485Z] [0003]     Waiting for log update and dispatching events for 50
+[2017-10-27 18:02:38.536Z] [0003]     Waiting for log update and dispatching events for 100
+[2017-10-27 18:02:38.636Z] [0003]     Waiting for log update and dispatching events for 200
+[2017-10-27 18:02:38.836Z] [0003]     Waiting for log update and dispatching events for 400
+[2017-10-27 18:02:39.159Z] [0007]   ExeSessionProcess.ProcessEvent entering
+[2017-10-27 18:02:39.159Z] [0007]     Scheduling output: [D---------   0                           0              ..]
+[2017-10-27 18:02:39.159Z] [0007]   ExeSessionProcess.ProcessEvent leaving
+[2017-10-27 18:02:39.159Z] [0003]     Output: [D---------   0                           0              ..]
+[2017-10-27 18:02:39.159Z] [0007]   ExeSessionProcess.ProcessEvent entering
+[2017-10-27 18:02:39.159Z] [0007]     Scheduling output: [-rwxr-xr-x   0 3688577  3688577    2416331 Oct 13  0:17:21 2017 3840x2160_MyN_Landscape_Metroid_Samus_Returns_A.jpg]
+[2017-10-27 18:02:39.159Z] [0003]     Output: [-rwxr-xr-x   0 3688577  3688577    2416331 Oct 13  0:17:21 2017 3840x2160_MyN_Landscape_Metroid_Samus_Returns_A.jpg]
+[2017-10-27 18:02:39.159Z] [0007]   ExeSessionProcess.ProcessEvent leaving
+[2017-10-27 18:02:39.160Z] [0007]   ExeSessionProcess.ProcessEvent entering
+[2017-10-27 18:02:39.160Z] [0007]     Scheduling output: [-rwxr-xr-x   0 3688577  3688577         23 Oct 13  0:16:51 2017 open.txt]
+[2017-10-27 18:02:39.160Z] [0003]     Output: [-rwxr-xr-x   0 3688577  3688577         23 Oct 13  0:16:51 2017 open.txt]
+[2017-10-27 18:02:39.160Z] [0007]   ExeSessionProcess.ProcessEvent leaving
+[2017-10-27 18:02:39.160Z] [0007]   ExeSessionProcess.ProcessEvent entering
+[2017-10-27 18:02:39.160Z] [0007]     ExeSessionProcess.ProcessTitleEvent entering
+[2017-10-27 18:02:39.160Z] [0007]       Not-supported title event [devutmx.com@ftp.devutmx.com - WinSCP]
+[2017-10-27 18:02:39.160Z] [0007]     ExeSessionProcess.ProcessTitleEvent leaving
+[2017-10-27 18:02:39.160Z] [0007]   ExeSessionProcess.ProcessEvent leaving
+[2017-10-27 18:02:39.160Z] [0007]   ExeSessionProcess.ProcessEvent entering
+[2017-10-27 18:02:39.160Z] [0007]   ExeSessionProcess.ProcessEvent leaving
+[2017-10-27 18:02:39.160Z] [0007]   ExeSessionProcess.ProcessEvent entering
+[2017-10-27 18:02:39.160Z] [0007]     ExeSessionProcess.ProcessInputEvent entering
+[2017-10-27 18:02:39.237Z] [0003]     Read node 22: Whitespace 
     
-[2017-10-27 17:45:33.072Z] [0001]     Log contents:
+[2017-10-27 18:02:39.243Z] [0003]     Log contents:
 <?xml version="1.0" encoding="UTF-8"?>
-<session xmlns="http://winscp.net/schema/session/1.0" name="devutmx.com@ftp.devutmx.com" start="2017-10-27T22:45:30.607Z">
-  <group name="open ftp://devutmx.com:***@ftp.devutmx.com:21 -passive=1 -timeout=20 -rawsettings ProxyPort=&quot;0&quot;" start="2017-10-27T22:45:32.036Z">
+<session xmlns="http://winscp.net/schema/session/1.0" name="devutmx.com@ftp.devutmx.com" start="2017-10-27T23:02:35.981Z">
+  <group name="open ftp://devutmx.com:***@ftp.devutmx.com:21 -passive=1 -timeout=20 -rawsettings ProxyPort=&quot;0&quot;" start="2017-10-27T23:02:37.557Z">
   </group>
-  <group name="pwd" start="2017-10-27T22:45:32.237Z">
+  <group name="pwd" start="2017-10-27T23:02:38.361Z">
     <cwd>
       <cwd value="/" />
       <result success="true" />
     </cwd>
   </group>
-  <group name="ls -- &quot;/Remote/&quot;" start="2017-10-27T22:45:32.281Z">
+  <group name="ls -- &quot;/Remote/&quot;" start="2017-10-27T23:02:38.431Z">
     <ls>
       <destination value="/Remote/" />
       <files>
@@ -413,418 +415,418 @@
     </ls>
   </group>
 
-[2017-10-27 17:45:33.072Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:33.072Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:33.072Z] [0001]     Read node 23: Element ls
-[2017-10-27 17:45:33.073Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:33.073Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:33.073Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:33.073Z] [0001]     Read node 24: Whitespace 
+[2017-10-27 18:02:39.243Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:39.244Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:39.244Z] [0003]     Read node 23: Element ls
+[2017-10-27 18:02:39.244Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:39.244Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:39.245Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:39.245Z] [0003]     Read node 24: Whitespace 
       
-[2017-10-27 17:45:33.074Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:33.074Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:33.074Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:33.074Z] [0001]     Read node 25: Element destination
-[2017-10-27 17:45:33.074Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:33.074Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:33.074Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:33.074Z] [0001]     Read node 26: Whitespace 
+[2017-10-27 18:02:39.245Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:39.245Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:39.245Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:39.245Z] [0003]     Read node 25: Element destination
+[2017-10-27 18:02:39.245Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:39.245Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:39.245Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:39.246Z] [0003]     Read node 26: Whitespace 
       
-[2017-10-27 17:45:33.074Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:33.074Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:33.074Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:33.074Z] [0001]     Read node 27: Element files
-[2017-10-27 17:45:33.075Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:33.075Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:33.075Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:33.075Z] [0001]     Read node 28: Whitespace 
+[2017-10-27 18:02:39.246Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:39.246Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:39.246Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:39.246Z] [0003]     Read node 27: Element files
+[2017-10-27 18:02:39.246Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:39.246Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:39.247Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:39.247Z] [0003]     Read node 28: Whitespace 
         
-[2017-10-27 17:45:33.075Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:33.075Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:33.075Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:33.075Z] [0001]     Read node 29: Element file
-[2017-10-27 17:45:33.075Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:33.075Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:33.075Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:33.076Z] [0001]     Read node 30: Whitespace 
+[2017-10-27 18:02:39.247Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:39.247Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:39.247Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:39.247Z] [0003]     Read node 29: Element file
+[2017-10-27 18:02:39.247Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:39.247Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:39.247Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:39.247Z] [0003]     Read node 30: Whitespace 
           
-[2017-10-27 17:45:33.076Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:33.076Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:33.077Z] [0001]   Session.ReadFile entering
-[2017-10-27 17:45:33.077Z] [0001]   Session.ReadFile leaving
-[2017-10-27 17:45:33.077Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:33.077Z] [0001]     Read node 31: Element filename
-[2017-10-27 17:45:33.077Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:33.077Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:33.077Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:33.077Z] [0001]     Read node 32: Whitespace 
+[2017-10-27 18:02:39.248Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:39.248Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:39.249Z] [0003]   Session.ReadFile entering
+[2017-10-27 18:02:39.249Z] [0003]   Session.ReadFile leaving
+[2017-10-27 18:02:39.249Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:39.249Z] [0003]     Read node 31: Element filename
+[2017-10-27 18:02:39.249Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:39.250Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:39.250Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:39.250Z] [0003]     Read node 32: Whitespace 
           
-[2017-10-27 17:45:33.078Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:33.078Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:33.078Z] [0001]   Session.ReadFile entering
-[2017-10-27 17:45:33.078Z] [0001]   Session.ReadFile leaving
-[2017-10-27 17:45:33.078Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:33.078Z] [0001]     Read node 33: Element type
-[2017-10-27 17:45:33.078Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:33.078Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:33.078Z] [0001]   Session.ReadFile entering
-[2017-10-27 17:45:33.078Z] [0001]   Session.ReadFile leaving
-[2017-10-27 17:45:33.078Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:33.079Z] [0001]     Read node 34: Whitespace 
+[2017-10-27 18:02:39.250Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:39.250Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:39.250Z] [0003]   Session.ReadFile entering
+[2017-10-27 18:02:39.250Z] [0003]   Session.ReadFile leaving
+[2017-10-27 18:02:39.250Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:39.250Z] [0003]     Read node 33: Element type
+[2017-10-27 18:02:39.250Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:39.250Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:39.250Z] [0003]   Session.ReadFile entering
+[2017-10-27 18:02:39.250Z] [0003]   Session.ReadFile leaving
+[2017-10-27 18:02:39.250Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:39.250Z] [0003]     Read node 34: Whitespace 
           
-[2017-10-27 17:45:33.079Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:33.079Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:33.079Z] [0001]   Session.ReadFile entering
-[2017-10-27 17:45:33.079Z] [0001]   Session.ReadFile leaving
-[2017-10-27 17:45:33.079Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:33.079Z] [0001]     Read node 35: Element modification
-[2017-10-27 17:45:33.079Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:33.079Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:33.079Z] [0001]   Session.ReadFile entering
-[2017-10-27 17:45:33.079Z] [0001]   Session.ReadFile leaving
-[2017-10-27 17:45:33.080Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:33.080Z] [0001]     Read node 36: Whitespace 
+[2017-10-27 18:02:39.251Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:39.251Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:39.251Z] [0003]   Session.ReadFile entering
+[2017-10-27 18:02:39.251Z] [0003]   Session.ReadFile leaving
+[2017-10-27 18:02:39.251Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:39.251Z] [0003]     Read node 35: Element modification
+[2017-10-27 18:02:39.251Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:39.251Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:39.251Z] [0003]   Session.ReadFile entering
+[2017-10-27 18:02:39.251Z] [0003]   Session.ReadFile leaving
+[2017-10-27 18:02:39.251Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:39.251Z] [0003]     Read node 36: Whitespace 
           
-[2017-10-27 17:45:33.080Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:33.080Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:33.080Z] [0001]   Session.ReadFile entering
-[2017-10-27 17:45:33.080Z] [0001]   Session.ReadFile leaving
-[2017-10-27 17:45:33.080Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:33.080Z] [0001]     Read node 37: Element permissions
-[2017-10-27 17:45:33.080Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:33.080Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:33.080Z] [0001]   Session.ReadFile entering
-[2017-10-27 17:45:33.082Z] [0001]   Session.ReadFile leaving
-[2017-10-27 17:45:33.082Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:33.082Z] [0001]     Read node 38: Whitespace 
+[2017-10-27 18:02:39.251Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:39.251Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:39.251Z] [0003]   Session.ReadFile entering
+[2017-10-27 18:02:39.251Z] [0003]   Session.ReadFile leaving
+[2017-10-27 18:02:39.252Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:39.252Z] [0003]     Read node 37: Element permissions
+[2017-10-27 18:02:39.252Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:39.252Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:39.252Z] [0003]   Session.ReadFile entering
+[2017-10-27 18:02:39.254Z] [0003]   Session.ReadFile leaving
+[2017-10-27 18:02:39.254Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:39.254Z] [0003]     Read node 38: Whitespace 
         
-[2017-10-27 17:45:33.082Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:33.082Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:33.082Z] [0001]   Session.ReadFile entering
-[2017-10-27 17:45:33.082Z] [0001]   Session.ReadFile leaving
-[2017-10-27 17:45:33.082Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:33.082Z] [0001]     Read node 39: EndElement file
-[2017-10-27 17:45:33.082Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:33.082Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:33.082Z] [0001]   ElementLogReader.Dispose(file@4) entering
-[2017-10-27 17:45:33.082Z] [0001]     ElementLogReader.ReadToEnd(file@4) entering
-[2017-10-27 17:45:33.082Z] [0001]     ElementLogReader.ReadToEnd(file@4) leaving
-[2017-10-27 17:45:33.082Z] [0001]   ElementLogReader.Dispose(file@4) leaving
-[2017-10-27 17:45:33.083Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:33.083Z] [0001]     Read node 40: Whitespace 
+[2017-10-27 18:02:39.254Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:39.254Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:39.254Z] [0003]   Session.ReadFile entering
+[2017-10-27 18:02:39.254Z] [0003]   Session.ReadFile leaving
+[2017-10-27 18:02:39.255Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:39.255Z] [0003]     Read node 39: EndElement file
+[2017-10-27 18:02:39.255Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:39.255Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:39.255Z] [0003]   ElementLogReader.Dispose(file@4) entering
+[2017-10-27 18:02:39.255Z] [0003]     ElementLogReader.ReadToEnd(file@4) entering
+[2017-10-27 18:02:39.255Z] [0003]     ElementLogReader.ReadToEnd(file@4) leaving
+[2017-10-27 18:02:39.255Z] [0003]   ElementLogReader.Dispose(file@4) leaving
+[2017-10-27 18:02:39.255Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:39.255Z] [0003]     Read node 40: Whitespace 
         
-[2017-10-27 17:45:33.083Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:33.083Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:33.083Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:33.083Z] [0001]     Read node 41: Element file
-[2017-10-27 17:45:33.083Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:33.083Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:33.083Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:33.083Z] [0001]     Read node 42: Whitespace 
+[2017-10-27 18:02:39.255Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:39.255Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:39.255Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:39.255Z] [0003]     Read node 41: Element file
+[2017-10-27 18:02:39.255Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:39.255Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:39.255Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:39.256Z] [0003]     Read node 42: Whitespace 
           
-[2017-10-27 17:45:33.083Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:33.083Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:33.083Z] [0001]   Session.ReadFile entering
-[2017-10-27 17:45:33.083Z] [0001]   Session.ReadFile leaving
-[2017-10-27 17:45:33.083Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:33.083Z] [0001]     Read node 43: Element filename
-[2017-10-27 17:45:33.083Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:33.083Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:33.083Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:33.083Z] [0001]     Read node 44: Whitespace 
+[2017-10-27 18:02:39.256Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:39.256Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:39.256Z] [0003]   Session.ReadFile entering
+[2017-10-27 18:02:39.256Z] [0003]   Session.ReadFile leaving
+[2017-10-27 18:02:39.256Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:39.256Z] [0003]     Read node 43: Element filename
+[2017-10-27 18:02:39.256Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:39.258Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:39.258Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:39.258Z] [0003]     Read node 44: Whitespace 
           
-[2017-10-27 17:45:33.084Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:33.084Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:33.084Z] [0001]   Session.ReadFile entering
-[2017-10-27 17:45:33.084Z] [0001]   Session.ReadFile leaving
-[2017-10-27 17:45:33.084Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:33.084Z] [0001]     Read node 45: Element type
-[2017-10-27 17:45:33.084Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:33.084Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:33.084Z] [0001]   Session.ReadFile entering
-[2017-10-27 17:45:33.084Z] [0001]   Session.ReadFile leaving
-[2017-10-27 17:45:33.084Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:33.084Z] [0001]     Read node 46: Whitespace 
+[2017-10-27 18:02:39.259Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:39.259Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:39.259Z] [0003]   Session.ReadFile entering
+[2017-10-27 18:02:39.259Z] [0003]   Session.ReadFile leaving
+[2017-10-27 18:02:39.259Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:39.260Z] [0003]     Read node 45: Element type
+[2017-10-27 18:02:39.260Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:39.260Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:39.260Z] [0003]   Session.ReadFile entering
+[2017-10-27 18:02:39.260Z] [0003]   Session.ReadFile leaving
+[2017-10-27 18:02:39.260Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:39.260Z] [0003]     Read node 46: Whitespace 
           
-[2017-10-27 17:45:33.084Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:33.084Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:33.084Z] [0001]   Session.ReadFile entering
-[2017-10-27 17:45:33.084Z] [0001]   Session.ReadFile leaving
-[2017-10-27 17:45:33.084Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:33.084Z] [0001]     Read node 47: Element size
-[2017-10-27 17:45:33.084Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:33.084Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:33.084Z] [0001]   Session.ReadFile entering
-[2017-10-27 17:45:33.084Z] [0001]   Session.ReadFile leaving
-[2017-10-27 17:45:33.085Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:33.085Z] [0001]     Read node 48: Whitespace 
+[2017-10-27 18:02:39.260Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:39.260Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:39.261Z] [0003]   Session.ReadFile entering
+[2017-10-27 18:02:39.261Z] [0003]   Session.ReadFile leaving
+[2017-10-27 18:02:39.261Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:39.261Z] [0003]     Read node 47: Element size
+[2017-10-27 18:02:39.261Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:39.261Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:39.261Z] [0003]   Session.ReadFile entering
+[2017-10-27 18:02:39.261Z] [0003]   Session.ReadFile leaving
+[2017-10-27 18:02:39.261Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:39.261Z] [0003]     Read node 48: Whitespace 
           
-[2017-10-27 17:45:33.085Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:33.085Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:33.085Z] [0001]   Session.ReadFile entering
-[2017-10-27 17:45:33.085Z] [0001]   Session.ReadFile leaving
-[2017-10-27 17:45:33.085Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:33.085Z] [0001]     Read node 49: Element modification
-[2017-10-27 17:45:33.085Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:33.085Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:33.085Z] [0001]   Session.ReadFile entering
-[2017-10-27 17:45:33.085Z] [0001]   Session.ReadFile leaving
-[2017-10-27 17:45:33.086Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:33.086Z] [0001]     Read node 50: Whitespace 
+[2017-10-27 18:02:39.261Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:39.261Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:39.262Z] [0003]   Session.ReadFile entering
+[2017-10-27 18:02:39.262Z] [0003]   Session.ReadFile leaving
+[2017-10-27 18:02:39.262Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:39.262Z] [0003]     Read node 49: Element modification
+[2017-10-27 18:02:39.262Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:39.262Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:39.262Z] [0003]   Session.ReadFile entering
+[2017-10-27 18:02:39.262Z] [0003]   Session.ReadFile leaving
+[2017-10-27 18:02:39.262Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:39.262Z] [0003]     Read node 50: Whitespace 
           
-[2017-10-27 17:45:33.086Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:33.086Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:33.086Z] [0001]   Session.ReadFile entering
-[2017-10-27 17:45:33.086Z] [0001]   Session.ReadFile leaving
-[2017-10-27 17:45:33.086Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:33.086Z] [0001]     Read node 51: Element permissions
-[2017-10-27 17:45:33.086Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:33.086Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:33.086Z] [0001]   Session.ReadFile entering
-[2017-10-27 17:45:33.086Z] [0001]   Session.ReadFile leaving
-[2017-10-27 17:45:33.086Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:33.086Z] [0001]     Read node 52: Whitespace 
+[2017-10-27 18:02:39.262Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:39.263Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:39.263Z] [0003]   Session.ReadFile entering
+[2017-10-27 18:02:39.263Z] [0003]   Session.ReadFile leaving
+[2017-10-27 18:02:39.263Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:39.263Z] [0003]     Read node 51: Element permissions
+[2017-10-27 18:02:39.263Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:39.263Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:39.263Z] [0003]   Session.ReadFile entering
+[2017-10-27 18:02:39.263Z] [0003]   Session.ReadFile leaving
+[2017-10-27 18:02:39.263Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:39.263Z] [0003]     Read node 52: Whitespace 
           
-[2017-10-27 17:45:33.086Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:33.086Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:33.086Z] [0001]   Session.ReadFile entering
-[2017-10-27 17:45:33.086Z] [0001]   Session.ReadFile leaving
-[2017-10-27 17:45:33.086Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:33.086Z] [0001]     Read node 53: Element owner
-[2017-10-27 17:45:33.086Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:33.086Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:33.087Z] [0001]   Session.ReadFile entering
-[2017-10-27 17:45:33.087Z] [0001]   Session.ReadFile leaving
-[2017-10-27 17:45:33.087Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:33.087Z] [0001]     Read node 54: Whitespace 
+[2017-10-27 18:02:39.263Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:39.263Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:39.263Z] [0003]   Session.ReadFile entering
+[2017-10-27 18:02:39.263Z] [0003]   Session.ReadFile leaving
+[2017-10-27 18:02:39.263Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:39.263Z] [0003]     Read node 53: Element owner
+[2017-10-27 18:02:39.263Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:39.263Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:39.263Z] [0003]   Session.ReadFile entering
+[2017-10-27 18:02:39.263Z] [0003]   Session.ReadFile leaving
+[2017-10-27 18:02:39.263Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:39.263Z] [0003]     Read node 54: Whitespace 
           
-[2017-10-27 17:45:33.087Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:33.087Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:33.087Z] [0001]   Session.ReadFile entering
-[2017-10-27 17:45:33.087Z] [0001]   Session.ReadFile leaving
-[2017-10-27 17:45:33.087Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:33.087Z] [0001]     Read node 55: Element group
-[2017-10-27 17:45:33.087Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:33.087Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:33.087Z] [0001]   Session.ReadFile entering
-[2017-10-27 17:45:33.087Z] [0001]   Session.ReadFile leaving
-[2017-10-27 17:45:33.087Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:33.087Z] [0001]     Read node 56: Whitespace 
+[2017-10-27 18:02:39.263Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:39.264Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:39.264Z] [0003]   Session.ReadFile entering
+[2017-10-27 18:02:39.264Z] [0003]   Session.ReadFile leaving
+[2017-10-27 18:02:39.264Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:39.264Z] [0003]     Read node 55: Element group
+[2017-10-27 18:02:39.264Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:39.264Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:39.264Z] [0003]   Session.ReadFile entering
+[2017-10-27 18:02:39.264Z] [0003]   Session.ReadFile leaving
+[2017-10-27 18:02:39.264Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:39.264Z] [0003]     Read node 56: Whitespace 
         
-[2017-10-27 17:45:33.087Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:33.087Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:33.087Z] [0001]   Session.ReadFile entering
-[2017-10-27 17:45:33.087Z] [0001]   Session.ReadFile leaving
-[2017-10-27 17:45:33.087Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:33.087Z] [0001]     Read node 57: EndElement file
-[2017-10-27 17:45:33.087Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:33.087Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:33.088Z] [0001]   ElementLogReader.Dispose(file@4) entering
-[2017-10-27 17:45:33.088Z] [0001]     ElementLogReader.ReadToEnd(file@4) entering
-[2017-10-27 17:45:33.088Z] [0001]     ElementLogReader.ReadToEnd(file@4) leaving
-[2017-10-27 17:45:33.088Z] [0001]   ElementLogReader.Dispose(file@4) leaving
-[2017-10-27 17:45:33.088Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:33.088Z] [0001]     Read node 58: Whitespace 
+[2017-10-27 18:02:39.264Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:39.264Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:39.264Z] [0003]   Session.ReadFile entering
+[2017-10-27 18:02:39.264Z] [0003]   Session.ReadFile leaving
+[2017-10-27 18:02:39.264Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:39.264Z] [0003]     Read node 57: EndElement file
+[2017-10-27 18:02:39.264Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:39.264Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:39.264Z] [0003]   ElementLogReader.Dispose(file@4) entering
+[2017-10-27 18:02:39.264Z] [0003]     ElementLogReader.ReadToEnd(file@4) entering
+[2017-10-27 18:02:39.264Z] [0003]     ElementLogReader.ReadToEnd(file@4) leaving
+[2017-10-27 18:02:39.264Z] [0003]   ElementLogReader.Dispose(file@4) leaving
+[2017-10-27 18:02:39.264Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:39.264Z] [0003]     Read node 58: Whitespace 
         
-[2017-10-27 17:45:33.088Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:33.088Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:33.088Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:33.088Z] [0001]     Read node 59: Element file
-[2017-10-27 17:45:33.088Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:33.088Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:33.088Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:33.088Z] [0001]     Read node 60: Whitespace 
+[2017-10-27 18:02:39.264Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:39.264Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:39.264Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:39.265Z] [0003]     Read node 59: Element file
+[2017-10-27 18:02:39.265Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:39.265Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:39.265Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:39.265Z] [0003]     Read node 60: Whitespace 
           
-[2017-10-27 17:45:33.088Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:33.088Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:33.088Z] [0001]   Session.ReadFile entering
-[2017-10-27 17:45:33.088Z] [0001]   Session.ReadFile leaving
-[2017-10-27 17:45:33.088Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:33.088Z] [0001]     Read node 61: Element filename
-[2017-10-27 17:45:33.088Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:33.088Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:33.089Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:33.089Z] [0001]     Read node 62: Whitespace 
+[2017-10-27 18:02:39.265Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:39.265Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:39.265Z] [0003]   Session.ReadFile entering
+[2017-10-27 18:02:39.265Z] [0003]   Session.ReadFile leaving
+[2017-10-27 18:02:39.265Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:39.265Z] [0003]     Read node 61: Element filename
+[2017-10-27 18:02:39.265Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:39.265Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:39.265Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:39.265Z] [0003]     Read node 62: Whitespace 
           
-[2017-10-27 17:45:33.089Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:33.089Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:33.089Z] [0001]   Session.ReadFile entering
-[2017-10-27 17:45:33.089Z] [0001]   Session.ReadFile leaving
-[2017-10-27 17:45:33.089Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:33.089Z] [0001]     Read node 63: Element type
-[2017-10-27 17:45:33.089Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:33.089Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:33.089Z] [0001]   Session.ReadFile entering
-[2017-10-27 17:45:33.089Z] [0001]   Session.ReadFile leaving
-[2017-10-27 17:45:33.089Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:33.089Z] [0001]     Read node 64: Whitespace 
+[2017-10-27 18:02:39.265Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:39.265Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:39.265Z] [0003]   Session.ReadFile entering
+[2017-10-27 18:02:39.265Z] [0003]   Session.ReadFile leaving
+[2017-10-27 18:02:39.265Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:39.265Z] [0003]     Read node 63: Element type
+[2017-10-27 18:02:39.266Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:39.266Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:39.266Z] [0003]   Session.ReadFile entering
+[2017-10-27 18:02:39.266Z] [0003]   Session.ReadFile leaving
+[2017-10-27 18:02:39.266Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:39.266Z] [0003]     Read node 64: Whitespace 
           
-[2017-10-27 17:45:33.089Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:33.089Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:33.089Z] [0001]   Session.ReadFile entering
-[2017-10-27 17:45:33.089Z] [0001]   Session.ReadFile leaving
-[2017-10-27 17:45:33.089Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:33.089Z] [0001]     Read node 65: Element size
-[2017-10-27 17:45:33.089Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:33.089Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:33.089Z] [0001]   Session.ReadFile entering
-[2017-10-27 17:45:33.089Z] [0001]   Session.ReadFile leaving
-[2017-10-27 17:45:33.090Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:33.090Z] [0001]     Read node 66: Whitespace 
+[2017-10-27 18:02:39.266Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:39.266Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:39.266Z] [0003]   Session.ReadFile entering
+[2017-10-27 18:02:39.266Z] [0003]   Session.ReadFile leaving
+[2017-10-27 18:02:39.267Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:39.267Z] [0003]     Read node 65: Element size
+[2017-10-27 18:02:39.267Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:39.267Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:39.267Z] [0003]   Session.ReadFile entering
+[2017-10-27 18:02:39.267Z] [0003]   Session.ReadFile leaving
+[2017-10-27 18:02:39.267Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:39.267Z] [0003]     Read node 66: Whitespace 
           
-[2017-10-27 17:45:33.090Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:33.090Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:33.090Z] [0001]   Session.ReadFile entering
-[2017-10-27 17:45:33.090Z] [0001]   Session.ReadFile leaving
-[2017-10-27 17:45:33.090Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:33.090Z] [0001]     Read node 67: Element modification
-[2017-10-27 17:45:33.090Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:33.090Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:33.090Z] [0001]   Session.ReadFile entering
-[2017-10-27 17:45:33.090Z] [0001]   Session.ReadFile leaving
-[2017-10-27 17:45:33.090Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:33.090Z] [0001]     Read node 68: Whitespace 
+[2017-10-27 18:02:39.267Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:39.267Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:39.267Z] [0003]   Session.ReadFile entering
+[2017-10-27 18:02:39.267Z] [0003]   Session.ReadFile leaving
+[2017-10-27 18:02:39.267Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:39.267Z] [0003]     Read node 67: Element modification
+[2017-10-27 18:02:39.267Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:39.267Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:39.267Z] [0003]   Session.ReadFile entering
+[2017-10-27 18:02:39.267Z] [0003]   Session.ReadFile leaving
+[2017-10-27 18:02:39.267Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:39.267Z] [0003]     Read node 68: Whitespace 
           
-[2017-10-27 17:45:33.090Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:33.090Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:33.090Z] [0001]   Session.ReadFile entering
-[2017-10-27 17:45:33.090Z] [0001]   Session.ReadFile leaving
-[2017-10-27 17:45:33.090Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:33.090Z] [0001]     Read node 69: Element permissions
-[2017-10-27 17:45:33.090Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:33.090Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:33.091Z] [0001]   Session.ReadFile entering
-[2017-10-27 17:45:33.091Z] [0001]   Session.ReadFile leaving
-[2017-10-27 17:45:33.091Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:33.091Z] [0001]     Read node 70: Whitespace 
+[2017-10-27 18:02:39.267Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:39.267Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:39.267Z] [0003]   Session.ReadFile entering
+[2017-10-27 18:02:39.267Z] [0003]   Session.ReadFile leaving
+[2017-10-27 18:02:39.267Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:39.267Z] [0003]     Read node 69: Element permissions
+[2017-10-27 18:02:39.267Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:39.267Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:39.267Z] [0003]   Session.ReadFile entering
+[2017-10-27 18:02:39.267Z] [0003]   Session.ReadFile leaving
+[2017-10-27 18:02:39.267Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:39.267Z] [0003]     Read node 70: Whitespace 
           
-[2017-10-27 17:45:33.091Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:33.091Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:33.091Z] [0001]   Session.ReadFile entering
-[2017-10-27 17:45:33.091Z] [0001]   Session.ReadFile leaving
-[2017-10-27 17:45:33.091Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:33.091Z] [0001]     Read node 71: Element owner
-[2017-10-27 17:45:33.091Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:33.091Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:33.091Z] [0001]   Session.ReadFile entering
-[2017-10-27 17:45:33.091Z] [0001]   Session.ReadFile leaving
-[2017-10-27 17:45:33.091Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:33.091Z] [0001]     Read node 72: Whitespace 
+[2017-10-27 18:02:39.268Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:39.268Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:39.268Z] [0003]   Session.ReadFile entering
+[2017-10-27 18:02:39.268Z] [0003]   Session.ReadFile leaving
+[2017-10-27 18:02:39.268Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:39.268Z] [0003]     Read node 71: Element owner
+[2017-10-27 18:02:39.268Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:39.268Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:39.268Z] [0003]   Session.ReadFile entering
+[2017-10-27 18:02:39.268Z] [0003]   Session.ReadFile leaving
+[2017-10-27 18:02:39.268Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:39.268Z] [0003]     Read node 72: Whitespace 
           
-[2017-10-27 17:45:33.091Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:33.091Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:33.091Z] [0001]   Session.ReadFile entering
-[2017-10-27 17:45:33.091Z] [0001]   Session.ReadFile leaving
-[2017-10-27 17:45:33.091Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:33.091Z] [0001]     Read node 73: Element group
-[2017-10-27 17:45:33.091Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:33.091Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:33.091Z] [0001]   Session.ReadFile entering
-[2017-10-27 17:45:33.091Z] [0001]   Session.ReadFile leaving
-[2017-10-27 17:45:33.091Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:33.091Z] [0001]     Read node 74: Whitespace 
+[2017-10-27 18:02:39.268Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:39.268Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:39.268Z] [0003]   Session.ReadFile entering
+[2017-10-27 18:02:39.268Z] [0003]   Session.ReadFile leaving
+[2017-10-27 18:02:39.268Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:39.268Z] [0003]     Read node 73: Element group
+[2017-10-27 18:02:39.268Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:39.268Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:39.268Z] [0003]   Session.ReadFile entering
+[2017-10-27 18:02:39.268Z] [0003]   Session.ReadFile leaving
+[2017-10-27 18:02:39.268Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:39.268Z] [0003]     Read node 74: Whitespace 
         
-[2017-10-27 17:45:33.091Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:33.091Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:33.091Z] [0001]   Session.ReadFile entering
-[2017-10-27 17:45:33.091Z] [0001]   Session.ReadFile leaving
-[2017-10-27 17:45:33.091Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:33.091Z] [0001]     Read node 75: EndElement file
-[2017-10-27 17:45:33.092Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:33.092Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:33.092Z] [0001]   ElementLogReader.Dispose(file@4) entering
-[2017-10-27 17:45:33.092Z] [0001]     ElementLogReader.ReadToEnd(file@4) entering
-[2017-10-27 17:45:33.092Z] [0001]     ElementLogReader.ReadToEnd(file@4) leaving
-[2017-10-27 17:45:33.092Z] [0001]   ElementLogReader.Dispose(file@4) leaving
-[2017-10-27 17:45:33.092Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:33.092Z] [0001]     Read node 76: Whitespace 
+[2017-10-27 18:02:39.268Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:39.268Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:39.268Z] [0003]   Session.ReadFile entering
+[2017-10-27 18:02:39.268Z] [0003]   Session.ReadFile leaving
+[2017-10-27 18:02:39.268Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:39.268Z] [0003]     Read node 75: EndElement file
+[2017-10-27 18:02:39.268Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:39.268Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:39.268Z] [0003]   ElementLogReader.Dispose(file@4) entering
+[2017-10-27 18:02:39.269Z] [0003]     ElementLogReader.ReadToEnd(file@4) entering
+[2017-10-27 18:02:39.269Z] [0003]     ElementLogReader.ReadToEnd(file@4) leaving
+[2017-10-27 18:02:39.269Z] [0003]   ElementLogReader.Dispose(file@4) leaving
+[2017-10-27 18:02:39.269Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:39.269Z] [0003]     Read node 76: Whitespace 
       
-[2017-10-27 17:45:33.092Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:33.092Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:33.092Z] [0001]   SessionLogReader.Read entering
-[2017-10-27 17:45:33.092Z] [0001]     Read node 77: EndElement files
-[2017-10-27 17:45:33.093Z] [0001]     Log contents has not changed
-[2017-10-27 17:45:33.093Z] [0001]   SessionLogReader.Read leaving
-[2017-10-27 17:45:33.093Z] [0001]   ElementLogReader.Dispose(files@3) entering
-[2017-10-27 17:45:33.093Z] [0001]     ElementLogReader.ReadToEnd(files@3) entering
-[2017-10-27 17:45:33.093Z] [0001]     ElementLogReader.ReadToEnd(files@3) leaving
-[2017-10-27 17:45:33.093Z] [0001]   ElementLogReader.Dispose(files@3) leaving
-[2017-10-27 17:45:33.093Z] [0001]   ElementLogReader.ReadToEnd(ls@2) entering
-[2017-10-27 17:45:33.093Z] [0001]     SessionLogReader.Read entering
-[2017-10-27 17:45:33.093Z] [0001]       Read node 78: Whitespace 
+[2017-10-27 18:02:39.269Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:39.269Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:39.269Z] [0003]   SessionLogReader.Read entering
+[2017-10-27 18:02:39.269Z] [0003]     Read node 77: EndElement files
+[2017-10-27 18:02:39.269Z] [0003]     Log contents has not changed
+[2017-10-27 18:02:39.269Z] [0003]   SessionLogReader.Read leaving
+[2017-10-27 18:02:39.269Z] [0003]   ElementLogReader.Dispose(files@3) entering
+[2017-10-27 18:02:39.269Z] [0003]     ElementLogReader.ReadToEnd(files@3) entering
+[2017-10-27 18:02:39.269Z] [0003]     ElementLogReader.ReadToEnd(files@3) leaving
+[2017-10-27 18:02:39.269Z] [0003]   ElementLogReader.Dispose(files@3) leaving
+[2017-10-27 18:02:39.269Z] [0003]   ElementLogReader.ReadToEnd(ls@2) entering
+[2017-10-27 18:02:39.269Z] [0003]     SessionLogReader.Read entering
+[2017-10-27 18:02:39.269Z] [0003]       Read node 78: Whitespace 
       
-[2017-10-27 17:45:33.093Z] [0001]       Log contents has not changed
-[2017-10-27 17:45:33.093Z] [0001]     SessionLogReader.Read leaving
-[2017-10-27 17:45:33.093Z] [0001]     SessionLogReader.Read entering
-[2017-10-27 17:45:33.093Z] [0001]       Read node 79: Element result
-[2017-10-27 17:45:33.093Z] [0001]       Log contents has not changed
-[2017-10-27 17:45:33.093Z] [0001]     SessionLogReader.Read leaving
-[2017-10-27 17:45:33.093Z] [0001]     SessionLogReader.Read entering
-[2017-10-27 17:45:33.093Z] [0001]       Read node 80: Whitespace 
+[2017-10-27 18:02:39.269Z] [0003]       Log contents has not changed
+[2017-10-27 18:02:39.269Z] [0003]     SessionLogReader.Read leaving
+[2017-10-27 18:02:39.269Z] [0003]     SessionLogReader.Read entering
+[2017-10-27 18:02:39.269Z] [0003]       Read node 79: Element result
+[2017-10-27 18:02:39.269Z] [0003]       Log contents has not changed
+[2017-10-27 18:02:39.269Z] [0003]     SessionLogReader.Read leaving
+[2017-10-27 18:02:39.269Z] [0003]     SessionLogReader.Read entering
+[2017-10-27 18:02:39.269Z] [0003]       Read node 80: Whitespace 
     
-[2017-10-27 17:45:33.093Z] [0001]       Log contents has not changed
-[2017-10-27 17:45:33.093Z] [0001]     SessionLogReader.Read leaving
-[2017-10-27 17:45:33.093Z] [0001]     SessionLogReader.Read entering
-[2017-10-27 17:45:33.093Z] [0001]       Read node 81: EndElement ls
-[2017-10-27 17:45:33.093Z] [0001]       Log contents has not changed
-[2017-10-27 17:45:33.093Z] [0001]     SessionLogReader.Read leaving
-[2017-10-27 17:45:33.093Z] [0001]   ElementLogReader.ReadToEnd(ls@2) leaving
-[2017-10-27 17:45:33.093Z] [0001]   ElementLogReader.ReadToEnd(group@1) entering
-[2017-10-27 17:45:33.093Z] [0001]     SessionLogReader.Read entering
-[2017-10-27 17:45:33.093Z] [0001]       Read node 82: Whitespace 
+[2017-10-27 18:02:39.269Z] [0003]       Log contents has not changed
+[2017-10-27 18:02:39.269Z] [0003]     SessionLogReader.Read leaving
+[2017-10-27 18:02:39.269Z] [0003]     SessionLogReader.Read entering
+[2017-10-27 18:02:39.269Z] [0003]       Read node 81: EndElement ls
+[2017-10-27 18:02:39.269Z] [0003]       Log contents has not changed
+[2017-10-27 18:02:39.269Z] [0003]     SessionLogReader.Read leaving
+[2017-10-27 18:02:39.270Z] [0003]   ElementLogReader.ReadToEnd(ls@2) leaving
+[2017-10-27 18:02:39.270Z] [0003]   ElementLogReader.ReadToEnd(group@1) entering
+[2017-10-27 18:02:39.270Z] [0003]     SessionLogReader.Read entering
+[2017-10-27 18:02:39.270Z] [0003]       Read node 82: Whitespace 
   
-[2017-10-27 17:45:33.093Z] [0001]       Log contents has not changed
-[2017-10-27 17:45:33.093Z] [0001]     SessionLogReader.Read leaving
-[2017-10-27 17:45:33.093Z] [0001]     SessionLogReader.Read entering
-[2017-10-27 17:45:33.093Z] [0001]       Read node 83: EndElement group
-[2017-10-27 17:45:33.093Z] [0001]       Log contents has not changed
-[2017-10-27 17:45:33.093Z] [0001]     SessionLogReader.Read leaving
-[2017-10-27 17:45:33.093Z] [0001]   ElementLogReader.ReadToEnd(group@1) leaving
-[2017-10-27 17:45:33.094Z] [0001]   ElementLogReader.Dispose(ls@2) entering
-[2017-10-27 17:45:33.094Z] [0001]     ElementLogReader.ReadToEnd(ls@2) entering
-[2017-10-27 17:45:33.094Z] [0001]     ElementLogReader.ReadToEnd(ls@2) leaving
-[2017-10-27 17:45:33.094Z] [0001]   ElementLogReader.Dispose(ls@2) leaving
-[2017-10-27 17:45:33.094Z] [0001]   ElementLogReader.Dispose(group@1) entering
-[2017-10-27 17:45:33.094Z] [0001]     ElementLogReader.ReadToEnd(group@1) entering
-[2017-10-27 17:45:33.094Z] [0001]     ElementLogReader.ReadToEnd(group@1) leaving
-[2017-10-27 17:45:33.094Z] [0001]   ElementLogReader.Dispose(group@1) leaving
-[2017-10-27 17:45:33.094Z] [0001] Session.ListDirectory leaving
-[2017-10-27 17:45:33.095Z] [0001] Session.Dispose entering
-[2017-10-27 17:45:33.095Z] [0001]   Session.Cleanup entering
-[2017-10-27 17:45:33.095Z] [0001]     Terminating process
-[2017-10-27 17:45:33.095Z] [0001]     Command: [exit]
-[2017-10-27 17:45:33.096Z] [0001]     ExeSessionProcess.ExecuteCommand entering
-[2017-10-27 17:45:33.096Z] [0001]     ExeSessionProcess.ExecuteCommand leaving
-[2017-10-27 17:45:33.096Z] [0003]       Scheduling output: [winscp> exit]
-[2017-10-27 17:45:33.096Z] [0003]     ExeSessionProcess.ProcessInputEvent leaving
-[2017-10-27 17:45:33.096Z] [0003]   ExeSessionProcess.ProcessEvent leaving
-[2017-10-27 17:45:33.096Z] [0001]     ExeSessionProcess.Close entering
-[2017-10-27 17:45:33.096Z] [0001]       Waiting for process to exit (2000 ms)
-[2017-10-27 17:45:33.126Z] [0001]     ExeSessionProcess.Close leaving
-[2017-10-27 17:45:33.127Z] [0001]     ExeSessionProcess.Dispose entering
-[2017-10-27 17:45:33.196Z] [0003]   Aborted
-[2017-10-27 17:45:33.196Z] [0003] ExeSessionProcess.ProcessEvents leaving
-[2017-10-27 17:45:33.198Z] [0001]       Closing job
-[2017-10-27 17:45:33.198Z] [0001]     ExeSessionProcess.Dispose leaving
-[2017-10-27 17:45:33.198Z] [0001]     Disposing log readers
-[2017-10-27 17:45:33.198Z] [0001]     SessionElementLogReader.Dispose entering
-[2017-10-27 17:45:33.198Z] [0001]       ElementLogReader.Dispose(session@0) entering
-[2017-10-27 17:45:33.199Z] [0001]         ElementLogReader.ReadToEnd(session@0) entering
-[2017-10-27 17:45:33.199Z] [0001]           SessionLogReader.Read entering
-[2017-10-27 17:45:33.199Z] [0001]             Read node 84: Whitespace 
+[2017-10-27 18:02:39.270Z] [0003]       Log contents has not changed
+[2017-10-27 18:02:39.270Z] [0003]     SessionLogReader.Read leaving
+[2017-10-27 18:02:39.270Z] [0003]     SessionLogReader.Read entering
+[2017-10-27 18:02:39.270Z] [0003]       Read node 83: EndElement group
+[2017-10-27 18:02:39.270Z] [0003]       Log contents has not changed
+[2017-10-27 18:02:39.270Z] [0003]     SessionLogReader.Read leaving
+[2017-10-27 18:02:39.270Z] [0003]   ElementLogReader.ReadToEnd(group@1) leaving
+[2017-10-27 18:02:39.270Z] [0003]   ElementLogReader.Dispose(ls@2) entering
+[2017-10-27 18:02:39.270Z] [0003]     ElementLogReader.ReadToEnd(ls@2) entering
+[2017-10-27 18:02:39.270Z] [0003]     ElementLogReader.ReadToEnd(ls@2) leaving
+[2017-10-27 18:02:39.270Z] [0003]   ElementLogReader.Dispose(ls@2) leaving
+[2017-10-27 18:02:39.270Z] [0003]   ElementLogReader.Dispose(group@1) entering
+[2017-10-27 18:02:39.270Z] [0003]     ElementLogReader.ReadToEnd(group@1) entering
+[2017-10-27 18:02:39.270Z] [0003]     ElementLogReader.ReadToEnd(group@1) leaving
+[2017-10-27 18:02:39.270Z] [0003]   ElementLogReader.Dispose(group@1) leaving
+[2017-10-27 18:02:39.270Z] [0003] Session.ListDirectory leaving
+[2017-10-27 18:02:39.271Z] [0003] Session.Dispose entering
+[2017-10-27 18:02:39.272Z] [0003]   Session.Cleanup entering
+[2017-10-27 18:02:39.272Z] [0003]     Terminating process
+[2017-10-27 18:02:39.272Z] [0003]     Command: [exit]
+[2017-10-27 18:02:39.272Z] [0003]     ExeSessionProcess.ExecuteCommand entering
+[2017-10-27 18:02:39.272Z] [0003]     ExeSessionProcess.ExecuteCommand leaving
+[2017-10-27 18:02:39.273Z] [0003]     ExeSessionProcess.Close entering
+[2017-10-27 18:02:39.273Z] [0003]       Waiting for process to exit (2000 ms)
+[2017-10-27 18:02:39.273Z] [0007]       Scheduling output: [winscp> exit]
+[2017-10-27 18:02:39.273Z] [0007]     ExeSessionProcess.ProcessInputEvent leaving
+[2017-10-27 18:02:39.273Z] [0007]   ExeSessionProcess.ProcessEvent leaving
+[2017-10-27 18:02:39.310Z] [0003]     ExeSessionProcess.Close leaving
+[2017-10-27 18:02:39.311Z] [0003]     ExeSessionProcess.Dispose entering
+[2017-10-27 18:02:39.373Z] [0007]   Aborted
+[2017-10-27 18:02:39.373Z] [0007] ExeSessionProcess.ProcessEvents leaving
+[2017-10-27 18:02:39.376Z] [0003]       Closing job
+[2017-10-27 18:02:39.376Z] [0003]     ExeSessionProcess.Dispose leaving
+[2017-10-27 18:02:39.376Z] [0003]     Disposing log readers
+[2017-10-27 18:02:39.376Z] [0003]     SessionElementLogReader.Dispose entering
+[2017-10-27 18:02:39.376Z] [0003]       ElementLogReader.Dispose(session@0) entering
+[2017-10-27 18:02:39.377Z] [0003]         ElementLogReader.ReadToEnd(session@0) entering
+[2017-10-27 18:02:39.377Z] [0003]           SessionLogReader.Read entering
+[2017-10-27 18:02:39.377Z] [0003]             Read node 84: Whitespace 
   
-[2017-10-27 17:45:33.199Z] [0001]             Log contents:
+[2017-10-27 18:02:39.377Z] [0003]             Log contents:
 <?xml version="1.0" encoding="UTF-8"?>
-<session xmlns="http://winscp.net/schema/session/1.0" name="devutmx.com@ftp.devutmx.com" start="2017-10-27T22:45:30.607Z">
-  <group name="open ftp://devutmx.com:***@ftp.devutmx.com:21 -passive=1 -timeout=20 -rawsettings ProxyPort=&quot;0&quot;" start="2017-10-27T22:45:32.036Z">
+<session xmlns="http://winscp.net/schema/session/1.0" name="devutmx.com@ftp.devutmx.com" start="2017-10-27T23:02:35.981Z">
+  <group name="open ftp://devutmx.com:***@ftp.devutmx.com:21 -passive=1 -timeout=20 -rawsettings ProxyPort=&quot;0&quot;" start="2017-10-27T23:02:37.557Z">
   </group>
-  <group name="pwd" start="2017-10-27T22:45:32.237Z">
+  <group name="pwd" start="2017-10-27T23:02:38.361Z">
     <cwd>
       <cwd value="/" />
       <result success="true" />
     </cwd>
   </group>
-  <group name="ls -- &quot;/Remote/&quot;" start="2017-10-27T22:45:32.281Z">
+  <group name="ls -- &quot;/Remote/&quot;" start="2017-10-27T23:02:38.431Z">
     <ls>
       <destination value="/Remote/" />
       <files>
@@ -856,38 +858,38 @@
       <result success="true" />
     </ls>
   </group>
-  <group name="exit" start="2017-10-27T22:45:33.096Z">
+  <group name="exit" start="2017-10-27T23:02:39.276Z">
   </group>
 </session>
 
-[2017-10-27 17:45:33.199Z] [0001]           SessionLogReader.Read leaving
-[2017-10-27 17:45:33.199Z] [0001]           SessionLogReader.Read entering
-[2017-10-27 17:45:33.199Z] [0001]             Read node 85: Element group
-[2017-10-27 17:45:33.199Z] [0001]             Log contents has not changed
-[2017-10-27 17:45:33.199Z] [0001]           SessionLogReader.Read leaving
-[2017-10-27 17:45:33.200Z] [0001]           SessionLogReader.Read entering
-[2017-10-27 17:45:33.200Z] [0001]             Read node 86: Whitespace 
+[2017-10-27 18:02:39.377Z] [0003]           SessionLogReader.Read leaving
+[2017-10-27 18:02:39.377Z] [0003]           SessionLogReader.Read entering
+[2017-10-27 18:02:39.377Z] [0003]             Read node 85: Element group
+[2017-10-27 18:02:39.377Z] [0003]             Log contents has not changed
+[2017-10-27 18:02:39.377Z] [0003]           SessionLogReader.Read leaving
+[2017-10-27 18:02:39.377Z] [0003]           SessionLogReader.Read entering
+[2017-10-27 18:02:39.377Z] [0003]             Read node 86: Whitespace 
   
-[2017-10-27 17:45:33.200Z] [0001]             Log contents has not changed
-[2017-10-27 17:45:33.200Z] [0001]           SessionLogReader.Read leaving
-[2017-10-27 17:45:33.200Z] [0001]           SessionLogReader.Read entering
-[2017-10-27 17:45:33.201Z] [0001]             Read node 87: EndElement group
-[2017-10-27 17:45:33.201Z] [0001]             Log contents has not changed
-[2017-10-27 17:45:33.201Z] [0001]           SessionLogReader.Read leaving
-[2017-10-27 17:45:33.201Z] [0001]           SessionLogReader.Read entering
-[2017-10-27 17:45:33.201Z] [0001]             Read node 88: Whitespace 
+[2017-10-27 18:02:39.377Z] [0003]             Log contents has not changed
+[2017-10-27 18:02:39.377Z] [0003]           SessionLogReader.Read leaving
+[2017-10-27 18:02:39.378Z] [0003]           SessionLogReader.Read entering
+[2017-10-27 18:02:39.378Z] [0003]             Read node 87: EndElement group
+[2017-10-27 18:02:39.378Z] [0003]             Log contents has not changed
+[2017-10-27 18:02:39.378Z] [0003]           SessionLogReader.Read leaving
+[2017-10-27 18:02:39.378Z] [0003]           SessionLogReader.Read entering
+[2017-10-27 18:02:39.378Z] [0003]             Read node 88: Whitespace 
 
-[2017-10-27 17:45:33.201Z] [0001]             Log contents has not changed
-[2017-10-27 17:45:33.201Z] [0001]           SessionLogReader.Read leaving
-[2017-10-27 17:45:33.201Z] [0001]           SessionLogReader.Read entering
-[2017-10-27 17:45:33.201Z] [0001]             Read node 89: EndElement session
-[2017-10-27 17:45:33.201Z] [0001]             Log contents has not changed
-[2017-10-27 17:45:33.201Z] [0001]           SessionLogReader.Read leaving
-[2017-10-27 17:45:33.201Z] [0001]         ElementLogReader.ReadToEnd(session@0) leaving
-[2017-10-27 17:45:33.201Z] [0001]       ElementLogReader.Dispose(session@0) leaving
-[2017-10-27 17:45:33.201Z] [0001]     SessionElementLogReader.Dispose leaving
-[2017-10-27 17:45:33.202Z] [0001]     SessionLogReader.Dispose entering
-[2017-10-27 17:45:33.202Z] [0001]       Closing log
-[2017-10-27 17:45:33.202Z] [0001]     SessionLogReader.Dispose leaving
-[2017-10-27 17:45:33.202Z] [0001]     Deleting XML log file [C:\Users\Victor\AppData\Local\Temp\wscp02B4.016C5D04.tmp]
-[2017-10-27 17:45:33.203Z] [0001]   Session.Cleanup leaving
+[2017-10-27 18:02:39.378Z] [0003]             Log contents has not changed
+[2017-10-27 18:02:39.378Z] [0003]           SessionLogReader.Read leaving
+[2017-10-27 18:02:39.378Z] [0003]           SessionLogReader.Read entering
+[2017-10-27 18:02:39.378Z] [0003]             Read node 89: EndElement session
+[2017-10-27 18:02:39.378Z] [0003]             Log contents has not changed
+[2017-10-27 18:02:39.378Z] [0003]           SessionLogReader.Read leaving
+[2017-10-27 18:02:39.378Z] [0003]         ElementLogReader.ReadToEnd(session@0) leaving
+[2017-10-27 18:02:39.378Z] [0003]       ElementLogReader.Dispose(session@0) leaving
+[2017-10-27 18:02:39.378Z] [0003]     SessionElementLogReader.Dispose leaving
+[2017-10-27 18:02:39.378Z] [0003]     SessionLogReader.Dispose entering
+[2017-10-27 18:02:39.379Z] [0003]       Closing log
+[2017-10-27 18:02:39.379Z] [0003]     SessionLogReader.Dispose leaving
+[2017-10-27 18:02:39.379Z] [0003]     Deleting XML log file [C:\Users\Victor\AppData\Local\Temp\wscp1488.03CE0BB8.tmp]
+[2017-10-27 18:02:39.379Z] [0003]   Session.Cleanup leaving
