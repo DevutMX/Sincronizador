@@ -47,9 +47,7 @@ namespace SyncFTP.Views
 
         private void petContinuar_Click(object sender, EventArgs e)
         {
-            DialogResult = DialogResult.OK;
-
-            Close();
+            
         }
 
         private void petVerPassword_MouseDown(object sender, MouseEventArgs e)
@@ -71,8 +69,7 @@ namespace SyncFTP.Views
 
         private void txtServidor_TextChanged(object sender, EventArgs e)
         {
-            petContinuar.Visible = false;
-            lblContinuar.Visible = false;
+            btnContinuar.Visible = false;
         }
 
         /// <summary>
@@ -121,54 +118,7 @@ namespace SyncFTP.Views
 
         private void petProbar_Click(object sender, EventArgs e)
         {
-            if (txtServidor.Text == "" || txtUsuario.Text == "" || txtContrasena.Text == "" || txtPuerto.Text == "" || Convert.ToInt32(txtPuerto.Text) < 0 || cbxEncriptacion.SelectedIndex < 0)
-            {
-                XtraMessageBox.Show(UserLookAndFeel.Default, "Son necesarios todos los datos para poder probar la conexión", "SyncFTP - Faltan datos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-                txtServidor.Focus();
-            }
-
-            else
-            {
-                //lblLocalStatus.Text = "Conectando... espere por favor.";
-
-                string _ftpServer = "";
-
-                if (txtServidor.Text.Contains("localhost") || txtServidor.Text.Contains("127.0.0.1"))
-                {
-                    _ftpServer = "localhost";
-                }
-
-                else
-                {
-                    _ftpServer = txtServidor.Text.Contains("ftp.") ? txtServidor.Text : "ftp." + txtServidor.Text;
-                }
-
-                _server = new Servers { Remote = new Remote { Server = "", IsAnonymous = "", User = "", Password = "", Port = "", Find = "", FTPMode = "", IsActive = "", WithCert = "", Combined = _secret.Encrypt(Combinado.ToString()) }, Local = new Local { Server = _secret.Encrypt(_ftpServer), IsAnonymous = _secret.Encrypt(chkAnonimo.Checked.ToString()), User = _secret.Encrypt(txtUsuario.Text), Password = _secret.Encrypt(txtContrasena.Text), Port = _secret.Encrypt(txtPuerto.Text), Find = _secret.Encrypt(txtDirectorio.Text == "" ? "/" : txtDirectorio.Text), FTPMode = _secret.Encrypt(cbxEncriptacion.SelectedIndex.ToString()), IsActive = _secret.Encrypt(chkActivo.Checked.ToString()), WithCert = _secret.Encrypt(chkAutenticar.Checked.ToString()), Combined = _secret.Encrypt(Combinado.ToString()) } };
-
-                if (_kernel.LocalIsValid(_server) != null)
-                {
-                    if (_kernel.TestAndSaveSettings(_server.Local, _server.Remote))
-                    {
-                        XtraMessageBox.Show(UserLookAndFeel.Default, "Los datos proporcionados son correctos y se ha conectado al servidor correctamente.", "Conexión establecida", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                        petContinuar.Visible = true;
-                        lblContinuar.Visible = true;
-
-                        txtServidor.Focus();
-                    }
-                }
-
-                else
-                {
-                    XtraMessageBox.Show(UserLookAndFeel.Default, "Los datos proporcionados son incorrectos o estan incompletos\nverifique por favor los datos.", "Datos incorrectos o incompletos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                    petContinuar.Visible = false;
-                    lblContinuar.Visible = false;
-
-                    txtServidor.Focus();
-                }
-            }
+            
         }
 
         private void chkAnonimo_CheckedChanged(object sender, EventArgs e)
@@ -188,9 +138,72 @@ namespace SyncFTP.Views
                 txtContrasena.Text = "";
                 txtContrasena.ReadOnly = false;
             }
+            
+            btnContinuar.Visible = false;
+        }
 
-            petContinuar.Visible = false;
-            lblContinuar.Visible = false;
+        private void btnProbar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtServidor.Text == "" || txtUsuario.Text == "" || txtContrasena.Text == "" || txtPuerto.Text == "" || Convert.ToInt32(txtPuerto.Text) < 0 || cbxEncriptacion.SelectedIndex < 0)
+                {
+                    XtraMessageBox.Show(UserLookAndFeel.Default, "Son necesarios todos los datos para poder probar la conexión", "SyncFTP - Faltan datos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                    txtServidor.Focus();
+                }
+
+                else
+                {
+                    //lblLocalStatus.Text = "Conectando... espere por favor.";
+
+                    string _ftpServer = "";
+
+                    if (txtServidor.Text.Contains("localhost") || txtServidor.Text.Contains("127.0.0.1"))
+                    {
+                        _ftpServer = "localhost";
+                    }
+
+                    else
+                    {
+                        _ftpServer = txtServidor.Text.Contains("ftp.") ? txtServidor.Text : "ftp." + txtServidor.Text;
+                    }
+
+                    _server = new Servers { Remote = new Remote { Server = "", IsAnonymous = "", User = "", Password = "", Port = "", Find = "", FTPMode = "", IsActive = "", WithCert = "", Combined = _secret.Encrypt(Combinado.ToString()) }, Local = new Local { Server = _secret.Encrypt(_ftpServer), IsAnonymous = _secret.Encrypt(chkAnonimo.Checked.ToString()), User = _secret.Encrypt(txtUsuario.Text), Password = _secret.Encrypt(txtContrasena.Text), Port = _secret.Encrypt(txtPuerto.Text), Find = _secret.Encrypt(txtDirectorio.Text == "" ? "/" : txtDirectorio.Text), FTPMode = _secret.Encrypt(cbxEncriptacion.SelectedIndex.ToString()), IsActive = _secret.Encrypt(chkActivo.Checked.ToString()), WithCert = _secret.Encrypt(chkAutenticar.Checked.ToString()), Combined = _secret.Encrypt(Combinado.ToString()) } };
+
+                    if (_kernel.LocalIsValid(_server) != null)
+                    {
+                        if (_kernel.TestAndSaveSettings(_server.Local, _server.Remote))
+                        {
+                            XtraMessageBox.Show(UserLookAndFeel.Default, "Los datos proporcionados son correctos y se ha conectado al servidor correctamente.", "Conexión establecida", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            btnContinuar.Visible = true;
+
+                            txtServidor.Focus();
+                        }
+                    }
+
+                    else
+                    {
+                        XtraMessageBox.Show(UserLookAndFeel.Default, "Los datos proporcionados son incorrectos o estan incompletos\nverifique por favor los datos.", "Datos incorrectos o incompletos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        btnContinuar.Visible = false;
+
+                        txtServidor.Focus();
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                
+            }
+        }
+
+        private void btnContinuar_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.OK;
+
+            Close();
         }
     }
 }

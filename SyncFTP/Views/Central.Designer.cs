@@ -46,11 +46,9 @@
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.chkAutenticar = new DevExpress.XtraEditors.CheckEdit();
             this.chkActivo = new DevExpress.XtraEditors.CheckEdit();
-            this.lblContinuar = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
+            this.btnContinuar = new DevExpress.XtraEditors.SimpleButton();
+            this.btnProbar = new DevExpress.XtraEditors.SimpleButton();
             this.petVerPassword = new DevExpress.XtraEditors.PictureEdit();
-            this.petProbar = new DevExpress.XtraEditors.PictureEdit();
-            this.petContinuar = new DevExpress.XtraEditors.PictureEdit();
             this.btnAyuda = new DevExpress.XtraEditors.SimpleButton();
             this.btnCancelar = new DevExpress.XtraEditors.SimpleButton();
             this.pictureEdit2 = new DevExpress.XtraEditors.PictureEdit();
@@ -65,8 +63,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.chkAutenticar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkActivo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.petVerPassword.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.petProbar.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.petContinuar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             this.SuspendLayout();
@@ -102,13 +98,14 @@
             // 
             // txtServidor
             // 
+            this.txtServidor.EditValue = "";
             this.txtServidor.Location = new System.Drawing.Point(109, 135);
             this.txtServidor.Name = "txtServidor";
             this.txtServidor.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
             this.txtServidor.Properties.Appearance.Options.UseFont = true;
             this.txtServidor.Properties.NullText = "ftp.server.com";
             this.txtServidor.Size = new System.Drawing.Size(311, 24);
-            this.txtServidor.TabIndex = 12;
+            this.txtServidor.TabIndex = 1;
             this.txtServidor.TextChanged += new System.EventHandler(this.txtServidor_TextChanged);
             // 
             // labelControl2
@@ -137,13 +134,14 @@
             // 
             // txtUsuario
             // 
+            this.txtUsuario.EditValue = "";
             this.txtUsuario.Location = new System.Drawing.Point(109, 178);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
             this.txtUsuario.Properties.Appearance.Options.UseFont = true;
-            this.txtUsuario.Properties.NullText = "usuario";
+            this.txtUsuario.Properties.NullText = "Usuario";
             this.txtUsuario.Size = new System.Drawing.Size(311, 24);
-            this.txtUsuario.TabIndex = 14;
+            this.txtUsuario.TabIndex = 2;
             this.txtUsuario.TextChanged += new System.EventHandler(this.txtServidor_TextChanged);
             // 
             // labelControl5
@@ -160,14 +158,15 @@
             // 
             // txtContrasena
             // 
+            this.txtContrasena.EditValue = "";
             this.txtContrasena.Location = new System.Drawing.Point(109, 221);
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
             this.txtContrasena.Properties.Appearance.Options.UseFont = true;
-            this.txtContrasena.Properties.NullText = "password";
+            this.txtContrasena.Properties.NullText = "Password";
             this.txtContrasena.Properties.PasswordChar = '•';
             this.txtContrasena.Size = new System.Drawing.Size(288, 24);
-            this.txtContrasena.TabIndex = 16;
+            this.txtContrasena.TabIndex = 3;
             this.txtContrasena.TextChanged += new System.EventHandler(this.txtServidor_TextChanged);
             // 
             // labelControl6
@@ -196,6 +195,7 @@
             // 
             // txtPuerto
             // 
+            this.txtPuerto.EditValue = "";
             this.txtPuerto.Location = new System.Drawing.Point(109, 307);
             this.txtPuerto.Name = "txtPuerto";
             this.txtPuerto.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
@@ -206,18 +206,19 @@
             this.txtPuerto.Properties.MaxLength = 5;
             this.txtPuerto.Properties.NullText = "00000";
             this.txtPuerto.Size = new System.Drawing.Size(132, 24);
-            this.txtPuerto.TabIndex = 20;
+            this.txtPuerto.TabIndex = 6;
             this.txtPuerto.TextChanged += new System.EventHandler(this.txtServidor_TextChanged);
             // 
             // txtDirectorio
             // 
+            this.txtDirectorio.EditValue = "";
             this.txtDirectorio.Location = new System.Drawing.Point(109, 354);
             this.txtDirectorio.Name = "txtDirectorio";
             this.txtDirectorio.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11F);
             this.txtDirectorio.Properties.Appearance.Options.UseFont = true;
             this.txtDirectorio.Properties.NullText = "/Carpeta1/Carpeta2";
             this.txtDirectorio.Size = new System.Drawing.Size(311, 24);
-            this.txtDirectorio.TabIndex = 21;
+            this.txtDirectorio.TabIndex = 8;
             this.txtDirectorio.TextChanged += new System.EventHandler(this.txtServidor_TextChanged);
             // 
             // chkAnonimo
@@ -230,7 +231,7 @@
             this.chkAnonimo.Properties.Appearance.Options.UseForeColor = true;
             this.chkAnonimo.Properties.Caption = "Anónimo";
             this.chkAnonimo.Size = new System.Drawing.Size(84, 22);
-            this.chkAnonimo.TabIndex = 22;
+            this.chkAnonimo.TabIndex = 11;
             this.chkAnonimo.CheckedChanged += new System.EventHandler(this.chkAnonimo_CheckedChanged);
             // 
             // cbxEncriptacion
@@ -250,7 +251,7 @@
             "TLS/SSL Explícita"});
             this.cbxEncriptacion.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.cbxEncriptacion.Size = new System.Drawing.Size(132, 24);
-            this.cbxEncriptacion.TabIndex = 23;
+            this.cbxEncriptacion.TabIndex = 4;
             this.cbxEncriptacion.SelectedIndexChanged += new System.EventHandler(this.txtServidor_TextChanged);
             // 
             // labelControl8
@@ -275,7 +276,7 @@
             this.chkAutenticar.Properties.Appearance.Options.UseForeColor = true;
             this.chkAutenticar.Properties.Caption = "Requiere Autenticar";
             this.chkAutenticar.Size = new System.Drawing.Size(150, 22);
-            this.chkAutenticar.TabIndex = 25;
+            this.chkAutenticar.TabIndex = 5;
             this.chkAutenticar.CheckedChanged += new System.EventHandler(this.txtServidor_TextChanged);
             // 
             // chkActivo
@@ -288,33 +289,37 @@
             this.chkActivo.Properties.Appearance.Options.UseForeColor = true;
             this.chkActivo.Properties.Caption = "Modo Activo";
             this.chkActivo.Size = new System.Drawing.Size(173, 22);
-            this.chkActivo.TabIndex = 26;
+            this.chkActivo.TabIndex = 7;
             this.chkActivo.CheckedChanged += new System.EventHandler(this.txtServidor_TextChanged);
             // 
-            // lblContinuar
+            // btnContinuar
             // 
-            this.lblContinuar.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.lblContinuar.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.lblContinuar.Appearance.Options.UseFont = true;
-            this.lblContinuar.Appearance.Options.UseForeColor = true;
-            this.lblContinuar.Location = new System.Drawing.Point(453, 450);
-            this.lblContinuar.Name = "lblContinuar";
-            this.lblContinuar.Size = new System.Drawing.Size(58, 14);
-            this.lblContinuar.TabIndex = 28;
-            this.lblContinuar.Text = "Siguiente";
-            this.lblContinuar.Visible = false;
+            this.btnContinuar.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnContinuar.Appearance.Options.UseFont = true;
+            this.btnContinuar.ImageOptions.Image = global::SyncFTP.Properties.Resources.Next48;
+            this.btnContinuar.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.btnContinuar.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnContinuar.Location = new System.Drawing.Point(427, 395);
+            this.btnContinuar.Name = "btnContinuar";
+            this.btnContinuar.Size = new System.Drawing.Size(84, 71);
+            this.btnContinuar.TabIndex = 33;
+            this.btnContinuar.Text = "Continuar";
+            this.btnContinuar.Visible = false;
+            this.btnContinuar.Click += new System.EventHandler(this.btnContinuar_Click);
             // 
-            // labelControl10
+            // btnProbar
             // 
-            this.labelControl10.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.labelControl10.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl10.Appearance.Options.UseFont = true;
-            this.labelControl10.Appearance.Options.UseForeColor = true;
-            this.labelControl10.Location = new System.Drawing.Point(320, 450);
-            this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(100, 14);
-            this.labelControl10.TabIndex = 30;
-            this.labelControl10.Text = "Probar conexión";
+            this.btnProbar.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnProbar.Appearance.Options.UseFont = true;
+            this.btnProbar.ImageOptions.Image = global::SyncFTP.Properties.Resources.Share48;
+            this.btnProbar.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.btnProbar.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnProbar.Location = new System.Drawing.Point(315, 395);
+            this.btnProbar.Name = "btnProbar";
+            this.btnProbar.Size = new System.Drawing.Size(105, 71);
+            this.btnProbar.TabIndex = 32;
+            this.btnProbar.Text = "Probar conexión";
+            this.btnProbar.Click += new System.EventHandler(this.btnProbar_Click);
             // 
             // petVerPassword
             // 
@@ -334,59 +339,24 @@
             this.petVerPassword.MouseDown += new System.Windows.Forms.MouseEventHandler(this.petVerPassword_MouseDown);
             this.petVerPassword.MouseUp += new System.Windows.Forms.MouseEventHandler(this.petVerPassword_MouseUp);
             // 
-            // petProbar
-            // 
-            this.petProbar.Cursor = System.Windows.Forms.Cursors.Default;
-            this.petProbar.EditValue = global::SyncFTP.Properties.Resources.Test;
-            this.petProbar.Location = new System.Drawing.Point(339, 394);
-            this.petProbar.Name = "petProbar";
-            this.petProbar.Properties.AllowFocused = false;
-            this.petProbar.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.petProbar.Properties.Appearance.Options.UseBackColor = true;
-            this.petProbar.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.petProbar.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.petProbar.Properties.ShowMenu = false;
-            this.petProbar.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.petProbar.Size = new System.Drawing.Size(58, 50);
-            this.petProbar.TabIndex = 29;
-            this.petProbar.Click += new System.EventHandler(this.petProbar_Click);
-            // 
-            // petContinuar
-            // 
-            this.petContinuar.Cursor = System.Windows.Forms.Cursors.Default;
-            this.petContinuar.EditValue = global::SyncFTP.Properties.Resources.Next;
-            this.petContinuar.Location = new System.Drawing.Point(453, 394);
-            this.petContinuar.Name = "petContinuar";
-            this.petContinuar.Properties.AllowFocused = false;
-            this.petContinuar.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.petContinuar.Properties.Appearance.Options.UseBackColor = true;
-            this.petContinuar.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.petContinuar.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.petContinuar.Properties.ShowMenu = false;
-            this.petContinuar.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.petContinuar.Size = new System.Drawing.Size(58, 50);
-            this.petContinuar.TabIndex = 27;
-            this.petContinuar.Visible = false;
-            this.petContinuar.Click += new System.EventHandler(this.petContinuar_Click);
-            // 
             // btnAyuda
             // 
-            this.btnAyuda.ImageOptions.Image = global::SyncFTP.Properties.Resources.Question36;
+            this.btnAyuda.ImageOptions.Image = global::SyncFTP.Properties.Resources.Help32;
             this.btnAyuda.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btnAyuda.Location = new System.Drawing.Point(473, 12);
             this.btnAyuda.Name = "btnAyuda";
             this.btnAyuda.Size = new System.Drawing.Size(40, 40);
-            this.btnAyuda.TabIndex = 10;
+            this.btnAyuda.TabIndex = 12;
             this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.ImageOptions.Image = global::SyncFTP.Properties.Resources.Gear36;
+            this.btnCancelar.ImageOptions.Image = global::SyncFTP.Properties.Resources.Back32;
             this.btnCancelar.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btnCancelar.Location = new System.Drawing.Point(427, 12);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(40, 40);
-            this.btnCancelar.TabIndex = 9;
+            this.btnCancelar.TabIndex = 11;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // pictureEdit2
@@ -426,11 +396,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(530, 481);
+            this.Controls.Add(this.btnContinuar);
+            this.Controls.Add(this.btnProbar);
             this.Controls.Add(this.petVerPassword);
-            this.Controls.Add(this.labelControl10);
-            this.Controls.Add(this.petProbar);
-            this.Controls.Add(this.lblContinuar);
-            this.Controls.Add(this.petContinuar);
             this.Controls.Add(this.chkActivo);
             this.Controls.Add(this.chkAutenticar);
             this.Controls.Add(this.labelControl8);
@@ -468,8 +436,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.chkAutenticar.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkActivo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.petVerPassword.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.petProbar.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.petContinuar.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
@@ -500,10 +466,8 @@
         private DevExpress.XtraEditors.LabelControl labelControl8;
         private DevExpress.XtraEditors.CheckEdit chkAutenticar;
         private DevExpress.XtraEditors.CheckEdit chkActivo;
-        private DevExpress.XtraEditors.LabelControl lblContinuar;
-        private DevExpress.XtraEditors.PictureEdit petContinuar;
-        private DevExpress.XtraEditors.PictureEdit petProbar;
-        private DevExpress.XtraEditors.LabelControl labelControl10;
         private DevExpress.XtraEditors.PictureEdit petVerPassword;
+        private DevExpress.XtraEditors.SimpleButton btnProbar;
+        private DevExpress.XtraEditors.SimpleButton btnContinuar;
     }
 }

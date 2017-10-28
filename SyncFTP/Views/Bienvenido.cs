@@ -64,7 +64,7 @@ namespace SyncFTP.Views
 
                         else
                         {
-                            Principal _principal = new Principal();
+                            Principal _principal = Principal.ObtenerInstancia();
 
                             Hide();
 
@@ -83,7 +83,7 @@ namespace SyncFTP.Views
 
                         else
                         {
-                            Principal _principal = new Principal();
+                            Principal _principal = Principal.ObtenerInstancia();
 
                             Hide();
 
@@ -93,7 +93,7 @@ namespace SyncFTP.Views
 
                     if (_settings.Remote.Server != "" || _settings.Local.Server != "")
                     {
-                        Principal _principal = new Principal();
+                        Principal _principal = Principal.ObtenerInstancia();
 
                         Hide();
 
@@ -117,6 +117,16 @@ namespace SyncFTP.Views
             Hide();
 
             PromptSettings();
+        }
+
+        private void petSi_MouseEnter(object sender, EventArgs e)
+        {
+            Cursor = Cursors.Hand;
+        }
+
+        private void petSi_MouseLeave(object sender, EventArgs e)
+        {
+            Cursor = Cursors.Default;
         }
     }
 }

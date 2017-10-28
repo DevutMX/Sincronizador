@@ -227,7 +227,6 @@ D:\Bibliotecas\Documentos\Visual Studio 2017\Projects\SyncFTP\SyncFTP\bin\Debug\
 D:\Bibliotecas\Documentos\Visual Studio 2017\Projects\SyncFTP\SyncFTP\bin\Debug\es\DevExpress.Office.v17.1.Core.resources.dll
 D:\Bibliotecas\Documentos\Visual Studio 2017\Projects\SyncFTP\SyncFTP\bin\Debug\ja\DevExpress.Office.v17.1.Core.resources.dll
 D:\Bibliotecas\Documentos\Visual Studio 2017\Projects\SyncFTP\SyncFTP\bin\Debug\ru\DevExpress.Office.v17.1.Core.resources.dll
-D:\Bibliotecas\Documentos\Visual Studio 2017\Projects\SyncFTP\SyncFTP\obj\Debug\SyncFTP.csprojResolveAssemblyReference.cache
 D:\Bibliotecas\Documentos\Visual Studio 2017\Projects\SyncFTP\SyncFTP\obj\Debug\SyncFTP.Properties.Resources.resources
 D:\Bibliotecas\Documentos\Visual Studio 2017\Projects\SyncFTP\SyncFTP\obj\Debug\SyncFTP.Views.AyudaConexion.resources
 D:\Bibliotecas\Documentos\Visual Studio 2017\Projects\SyncFTP\SyncFTP\obj\Debug\SyncFTP.Views.AyudaServidores.resources
@@ -242,3 +241,4 @@ D:\Bibliotecas\Documentos\Visual Studio 2017\Projects\SyncFTP\SyncFTP\obj\Debug\
 D:\Bibliotecas\Documentos\Visual Studio 2017\Projects\SyncFTP\SyncFTP\obj\Debug\SyncFTP.exe.licenses
 D:\Bibliotecas\Documentos\Visual Studio 2017\Projects\SyncFTP\SyncFTP\obj\Debug\SyncFTP.exe
 D:\Bibliotecas\Documentos\Visual Studio 2017\Projects\SyncFTP\SyncFTP\obj\Debug\SyncFTP.pdb
+D:\Bibliotecas\Documentos\Visual Studio 2017\Projects\SyncFTP\SyncFTP\obj\Debug\SyncFTP.csprojResolveAssemblyReference.cache

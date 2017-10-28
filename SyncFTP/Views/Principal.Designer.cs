@@ -29,7 +29,28 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
+            DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem3 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem3 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip4 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem4 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem4 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip5 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem5 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem5 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip6 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem6 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem6 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip7 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem7 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem7 = new DevExpress.Utils.ToolTipItem();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.pnlOptions = new DevExpress.XtraEditors.PanelControl();
             this.btnAjustes = new DevExpress.XtraEditors.SimpleButton();
@@ -45,12 +66,8 @@
             this.pbcProgress = new DevExpress.XtraEditors.ProgressBarControl();
             this.pnlLabels = new DevExpress.XtraEditors.PanelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.pnlTabs = new DevExpress.XtraEditors.PanelControl();
-            this.tbcHistoriales = new System.Windows.Forms.TabControl();
-            this.tbpCentral = new System.Windows.Forms.TabPage();
             this.gdcCentral = new DevExpress.XtraGrid.GridControl();
             this.gdvCentral = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.tbpReplica = new System.Windows.Forms.TabPage();
             this.gdcReplica = new DevExpress.XtraGrid.GridControl();
             this.gdvReplica = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.pictureEdit2 = new DevExpress.XtraEditors.PictureEdit();
@@ -75,19 +92,17 @@
             this.btnExitSysTray = new System.Windows.Forms.ToolStripMenuItem();
             this.nicToMinimized = new System.Windows.Forms.NotifyIcon(this.components);
             this._tmpElapsedTime = new System.Windows.Forms.Timer(this.components);
+            this.xtcHistoriales = new DevExpress.XtraTab.XtraTabControl();
+            this.xtpCentral = new DevExpress.XtraTab.XtraTabPage();
+            this.xtpReplica = new DevExpress.XtraTab.XtraTabPage();
             ((System.ComponentModel.ISupportInitialize)(this.pnlOptions)).BeginInit();
             this.pnlOptions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbxDispositivos.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbcProgress.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlLabels)).BeginInit();
             this.pnlLabels.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pnlTabs)).BeginInit();
-            this.pnlTabs.SuspendLayout();
-            this.tbcHistoriales.SuspendLayout();
-            this.tbpCentral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gdcCentral)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdvCentral)).BeginInit();
-            this.tbpReplica.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gdcReplica)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdvReplica)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
@@ -95,6 +110,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.gbcSincronizar)).BeginInit();
             this.gbcSincronizar.SuspendLayout();
             this.cmpMenuSysTray.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.xtcHistoriales)).BeginInit();
+            this.xtcHistoriales.SuspendLayout();
+            this.xtpCentral.SuspendLayout();
+            this.xtpReplica.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelControl1
@@ -123,7 +142,7 @@
             this.pnlOptions.Controls.Add(this.lblAvance);
             this.pnlOptions.Controls.Add(this.pbcProgress);
             this.pnlOptions.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlOptions.Location = new System.Drawing.Point(0, 376);
+            this.pnlOptions.Location = new System.Drawing.Point(0, 283);
             this.pnlOptions.Name = "pnlOptions";
             this.pnlOptions.Size = new System.Drawing.Size(484, 157);
             this.pnlOptions.TabIndex = 12;
@@ -136,8 +155,16 @@
             this.btnAjustes.Location = new System.Drawing.Point(408, 10);
             this.btnAjustes.Name = "btnAjustes";
             this.btnAjustes.Size = new System.Drawing.Size(64, 43);
+            toolTipTitleItem1.Text = "Ajustes de servidores";
+            toolTipItem1.LeftIndent = 6;
+            toolTipItem1.Text = "Realice la configuración nuevamente del servidor, si presenta algún errores de co" +
+    "nexión o si desea cambiar de servidor.";
+            superToolTip1.Items.Add(toolTipTitleItem1);
+            superToolTip1.Items.Add(toolTipItem1);
+            this.btnAjustes.SuperTip = superToolTip1;
             this.btnAjustes.TabIndex = 22;
             this.btnAjustes.Text = "Ajustes";
+            this.btnAjustes.Click += new System.EventHandler(this.btnAjustes_Click);
             // 
             // btnDesdeUSB
             // 
@@ -147,6 +174,13 @@
             this.btnDesdeUSB.Location = new System.Drawing.Point(341, 10);
             this.btnDesdeUSB.Name = "btnDesdeUSB";
             this.btnDesdeUSB.Size = new System.Drawing.Size(64, 43);
+            toolTipTitleItem2.Text = "Sincronizar desde USB";
+            toolTipItem2.LeftIndent = 6;
+            toolTipItem2.Text = "Seleccione la carpeta que contenga los archivos a sincronizar. Por favor, asegure" +
+    "se de tener conectado el dispositivo a la computadora.";
+            superToolTip2.Items.Add(toolTipTitleItem2);
+            superToolTip2.Items.Add(toolTipItem2);
+            this.btnDesdeUSB.SuperTip = superToolTip2;
             this.btnDesdeUSB.TabIndex = 21;
             this.btnDesdeUSB.Text = "Desde USB";
             this.btnDesdeUSB.Click += new System.EventHandler(this.btnDesdeUSB_Click);
@@ -158,6 +192,13 @@
             this.btnRefrescar.Location = new System.Drawing.Point(12, 30);
             this.btnRefrescar.Name = "btnRefrescar";
             this.btnRefrescar.Size = new System.Drawing.Size(23, 23);
+            toolTipTitleItem3.Text = "Refrescar dispositivos";
+            toolTipItem3.LeftIndent = 6;
+            toolTipItem3.Text = "Presione para obtener una lista actualizada de los medios locales y/o extraíbles " +
+    "disponibles.";
+            superToolTip3.Items.Add(toolTipTitleItem3);
+            superToolTip3.Items.Add(toolTipItem3);
+            this.btnRefrescar.SuperTip = superToolTip3;
             this.btnRefrescar.TabIndex = 20;
             this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
             // 
@@ -192,6 +233,12 @@
             this.btnAvanzados.Location = new System.Drawing.Point(274, 10);
             this.btnAvanzados.Name = "btnAvanzados";
             this.btnAvanzados.Size = new System.Drawing.Size(64, 43);
+            toolTipTitleItem4.Text = "Ruta especifica";
+            toolTipItem4.LeftIndent = 6;
+            toolTipItem4.Text = resources.GetString("toolTipItem4.Text");
+            superToolTip4.Items.Add(toolTipTitleItem4);
+            superToolTip4.Items.Add(toolTipItem4);
+            this.btnAvanzados.SuperTip = superToolTip4;
             this.btnAvanzados.TabIndex = 17;
             this.btnAvanzados.Text = "Avanzados";
             this.btnAvanzados.Click += new System.EventHandler(this.btnAvanzados_Click);
@@ -201,6 +248,12 @@
             this.btnConfirmar.Location = new System.Drawing.Point(207, 58);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(61, 23);
+            toolTipTitleItem5.Text = "Confirme ruta";
+            toolTipItem5.LeftIndent = 6;
+            toolTipItem5.Text = resources.GetString("toolTipItem5.Text");
+            superToolTip5.Items.Add(toolTipTitleItem5);
+            superToolTip5.Items.Add(toolTipItem5);
+            this.btnConfirmar.SuperTip = superToolTip5;
             this.btnConfirmar.TabIndex = 16;
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
@@ -253,7 +306,7 @@
             this.pnlLabels.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
             this.pnlLabels.Controls.Add(this.labelControl2);
             this.pnlLabels.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlLabels.Location = new System.Drawing.Point(0, 346);
+            this.pnlLabels.Location = new System.Drawing.Point(0, 253);
             this.pnlLabels.Name = "pnlLabels";
             this.pnlLabels.Size = new System.Drawing.Size(484, 30);
             this.pnlLabels.TabIndex = 13;
@@ -270,44 +323,13 @@
             this.labelControl2.TabIndex = 12;
             this.labelControl2.Text = "Sincronización con unidad extraíble";
             // 
-            // pnlTabs
-            // 
-            this.pnlTabs.Controls.Add(this.tbcHistoriales);
-            this.pnlTabs.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlTabs.Location = new System.Drawing.Point(0, 78);
-            this.pnlTabs.Name = "pnlTabs";
-            this.pnlTabs.Size = new System.Drawing.Size(484, 268);
-            this.pnlTabs.TabIndex = 14;
-            // 
-            // tbcHistoriales
-            // 
-            this.tbcHistoriales.Controls.Add(this.tbpCentral);
-            this.tbcHistoriales.Controls.Add(this.tbpReplica);
-            this.tbcHistoriales.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbcHistoriales.Location = new System.Drawing.Point(2, 2);
-            this.tbcHistoriales.Name = "tbcHistoriales";
-            this.tbcHistoriales.SelectedIndex = 0;
-            this.tbcHistoriales.Size = new System.Drawing.Size(480, 264);
-            this.tbcHistoriales.TabIndex = 0;
-            // 
-            // tbpCentral
-            // 
-            this.tbpCentral.Controls.Add(this.gdcCentral);
-            this.tbpCentral.Location = new System.Drawing.Point(4, 22);
-            this.tbpCentral.Name = "tbpCentral";
-            this.tbpCentral.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpCentral.Size = new System.Drawing.Size(472, 238);
-            this.tbpCentral.TabIndex = 0;
-            this.tbpCentral.Text = "Central";
-            this.tbpCentral.UseVisualStyleBackColor = true;
-            // 
             // gdcCentral
             // 
             this.gdcCentral.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gdcCentral.Location = new System.Drawing.Point(3, 3);
+            this.gdcCentral.Location = new System.Drawing.Point(0, 0);
             this.gdcCentral.MainView = this.gdvCentral;
             this.gdcCentral.Name = "gdcCentral";
-            this.gdcCentral.Size = new System.Drawing.Size(466, 232);
+            this.gdcCentral.Size = new System.Drawing.Size(480, 149);
             this.gdcCentral.TabIndex = 0;
             this.gdcCentral.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gdvCentral});
@@ -319,24 +341,13 @@
             this.gdvCentral.OptionsBehavior.Editable = false;
             this.gdvCentral.OptionsView.ShowGroupPanel = false;
             // 
-            // tbpReplica
-            // 
-            this.tbpReplica.Controls.Add(this.gdcReplica);
-            this.tbpReplica.Location = new System.Drawing.Point(4, 22);
-            this.tbpReplica.Name = "tbpReplica";
-            this.tbpReplica.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpReplica.Size = new System.Drawing.Size(472, 238);
-            this.tbpReplica.TabIndex = 1;
-            this.tbpReplica.Text = "Replica";
-            this.tbpReplica.UseVisualStyleBackColor = true;
-            // 
             // gdcReplica
             // 
             this.gdcReplica.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gdcReplica.Location = new System.Drawing.Point(3, 3);
+            this.gdcReplica.Location = new System.Drawing.Point(0, 0);
             this.gdcReplica.MainView = this.gdvReplica;
             this.gdcReplica.Name = "gdcReplica";
-            this.gdcReplica.Size = new System.Drawing.Size(466, 232);
+            this.gdcReplica.Size = new System.Drawing.Size(480, 149);
             this.gdcReplica.TabIndex = 1;
             this.gdcReplica.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gdvReplica});
@@ -394,9 +405,16 @@
             // 
             // btnIniciarReplica
             // 
-            this.btnIniciarReplica.Location = new System.Drawing.Point(84, 23);
+            this.btnIniciarReplica.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnIniciarReplica.Location = new System.Drawing.Point(87, 23);
             this.btnIniciarReplica.Name = "btnIniciarReplica";
             this.btnIniciarReplica.Size = new System.Drawing.Size(64, 23);
+            toolTipTitleItem6.Text = "Sincronizar con servidor Replica";
+            toolTipItem6.LeftIndent = 6;
+            toolTipItem6.Text = "Inicia la sincronización con el servidor replica.";
+            superToolTip6.Items.Add(toolTipTitleItem6);
+            superToolTip6.Items.Add(toolTipItem6);
+            this.btnIniciarReplica.SuperTip = superToolTip6;
             this.btnIniciarReplica.TabIndex = 18;
             this.btnIniciarReplica.Text = "Replica";
             this.btnIniciarReplica.Visible = false;
@@ -407,6 +425,12 @@
             this.btnIniciarCentral.Location = new System.Drawing.Point(14, 23);
             this.btnIniciarCentral.Name = "btnIniciarCentral";
             this.btnIniciarCentral.Size = new System.Drawing.Size(64, 23);
+            toolTipTitleItem7.Text = "Sincronizar con servidor Central";
+            toolTipItem7.LeftIndent = 6;
+            toolTipItem7.Text = "Inicia la sincronización con el servidor central";
+            superToolTip7.Items.Add(toolTipTitleItem7);
+            superToolTip7.Items.Add(toolTipItem7);
+            this.btnIniciarCentral.SuperTip = superToolTip7;
             this.btnIniciarCentral.TabIndex = 17;
             this.btnIniciarCentral.Text = "Central";
             this.btnIniciarCentral.Visible = false;
@@ -547,13 +571,38 @@
             this._tmpElapsedTime.Interval = 1000;
             this._tmpElapsedTime.Tick += new System.EventHandler(this._tmpElapsedTime_Tick);
             // 
+            // xtcHistoriales
+            // 
+            this.xtcHistoriales.Location = new System.Drawing.Point(0, 76);
+            this.xtcHistoriales.Name = "xtcHistoriales";
+            this.xtcHistoriales.SelectedTabPage = this.xtpCentral;
+            this.xtcHistoriales.Size = new System.Drawing.Size(484, 174);
+            this.xtcHistoriales.TabIndex = 16;
+            this.xtcHistoriales.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
+            this.xtpCentral,
+            this.xtpReplica});
+            // 
+            // xtpCentral
+            // 
+            this.xtpCentral.Controls.Add(this.gdcCentral);
+            this.xtpCentral.Name = "xtpCentral";
+            this.xtpCentral.Size = new System.Drawing.Size(480, 149);
+            this.xtpCentral.Text = "Central";
+            // 
+            // xtpReplica
+            // 
+            this.xtpReplica.Controls.Add(this.gdcReplica);
+            this.xtpReplica.Name = "xtpReplica";
+            this.xtpReplica.Size = new System.Drawing.Size(480, 149);
+            this.xtpReplica.Text = "Replica";
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 533);
+            this.ClientSize = new System.Drawing.Size(484, 440);
+            this.Controls.Add(this.xtcHistoriales);
             this.Controls.Add(this.gbcSincronizar);
-            this.Controls.Add(this.pnlTabs);
             this.Controls.Add(this.pnlLabels);
             this.Controls.Add(this.pnlOptions);
             this.Controls.Add(this.labelControl1);
@@ -578,13 +627,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pnlLabels)).EndInit();
             this.pnlLabels.ResumeLayout(false);
             this.pnlLabels.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pnlTabs)).EndInit();
-            this.pnlTabs.ResumeLayout(false);
-            this.tbcHistoriales.ResumeLayout(false);
-            this.tbpCentral.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gdcCentral)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdvCentral)).EndInit();
-            this.tbpReplica.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gdcReplica)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdvReplica)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).EndInit();
@@ -592,6 +636,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.gbcSincronizar)).EndInit();
             this.gbcSincronizar.ResumeLayout(false);
             this.cmpMenuSysTray.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.xtcHistoriales)).EndInit();
+            this.xtcHistoriales.ResumeLayout(false);
+            this.xtpCentral.ResumeLayout(false);
+            this.xtpReplica.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -604,12 +652,8 @@
         private DevExpress.XtraEditors.PictureEdit pictureEdit1;
         private DevExpress.XtraEditors.PanelControl pnlOptions;
         private DevExpress.XtraEditors.PanelControl pnlLabels;
-        private DevExpress.XtraEditors.PanelControl pnlTabs;
         private DevExpress.XtraEditors.ProgressBarControl pbcProgress;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private System.Windows.Forms.TabControl tbcHistoriales;
-        private System.Windows.Forms.TabPage tbpCentral;
-        private System.Windows.Forms.TabPage tbpReplica;
         private DevExpress.XtraEditors.SimpleButton btnAvanzados;
         private DevExpress.XtraEditors.SimpleButton btnConfirmar;
         private DevExpress.XtraEditors.LabelControl labelControl4;
@@ -644,5 +688,8 @@
         private DevExpress.XtraEditors.SimpleButton btnRefrescar;
         private DevExpress.XtraEditors.SimpleButton btnDesdeUSB;
         private DevExpress.XtraEditors.SimpleButton btnAjustes;
+        private DevExpress.XtraTab.XtraTabControl xtcHistoriales;
+        private DevExpress.XtraTab.XtraTabPage xtpCentral;
+        private DevExpress.XtraTab.XtraTabPage xtpReplica;
     }
 }

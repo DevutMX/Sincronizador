@@ -1,5 +1,7 @@
 ﻿using DevExpress.LookAndFeel;
 using DevExpress.XtraEditors;
+using DevExpress.XtraTab;
+using DevExpress.XtraTab.ViewInfo;
 using Microsoft.Win32;
 using Newtonsoft.Json;
 using SyncFTP.Controllers;
@@ -16,7 +18,21 @@ namespace SyncFTP.Views
 {
     public partial class Principal : XtraForm
     {
-        public Principal()
+        private static Principal _singleton;
+
+        public static Principal ObtenerInstancia()
+        {
+            if (_singleton == null || _singleton.IsDisposed)
+            {
+                _singleton = new Principal();
+            }
+
+            _singleton.BringToFront();
+
+            return _singleton;
+        }
+
+        private Principal()
         {
             InitializeComponent();
 
@@ -1469,8 +1485,10 @@ namespace SyncFTP.Views
                         gbcSincronizar.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
                         btnIniciarCentral.Visible = true;
                         btnIniciarReplica.Visible = true;
-                        tbcHistoriales.TabPages["Central"].Show();
-                        tbcHistoriales.TabPages["Replica"].Show();
+                        xtcHistoriales.TabPages[0].PageVisible = true;
+                        xtcHistoriales.TabPages[1].PageVisible = true;
+                        gbcSincronizar.Location = new System.Drawing.Point(310, 9);
+                        gbcSincronizar.Size = new System.Drawing.Size(162, 53);
                     }
                     
                     //Sino estan llenados o no son combinados
@@ -1482,8 +1500,10 @@ namespace SyncFTP.Views
                             gbcSincronizar.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
                             btnIniciarCentral.Visible = true;
                             btnIniciarReplica.Visible = false;
-                            tbcHistoriales.TabPages["Central"].Show();
-                            tbcHistoriales.TabPages["Replica"].Hide();
+                            xtcHistoriales.TabPages[0].PageVisible = true;
+                            xtcHistoriales.TabPages[1].PageVisible = false;
+                            gbcSincronizar.Location = new System.Drawing.Point(310, 9);
+                            gbcSincronizar.Size = new System.Drawing.Size(95, 53);
                         }
 
                         if (_settings.Local.Server != "" && _secret.Decrypt(_settings.Local.Combined) == "False")
@@ -1491,8 +1511,10 @@ namespace SyncFTP.Views
                             gbcSincronizar.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
                             btnIniciarCentral.Visible = false;
                             btnIniciarReplica.Visible = true;
-                            tbcHistoriales.TabPages["Central"].Hide();
-                            tbcHistoriales.TabPages["Replica"].Show();
+                            xtcHistoriales.TabPages[0].PageVisible = false;
+                            xtcHistoriales.TabPages[1].PageVisible = true;
+                            gbcSincronizar.Location = new System.Drawing.Point(381, 9);
+                            gbcSincronizar.Size = new System.Drawing.Size(88, 53);
                         }
                     }
                 }
@@ -1501,6 +1523,48 @@ namespace SyncFTP.Views
             catch (Exception)
             {
 
+            }
+        }
+
+        private void btnAjustes_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Servers _settings = _kernel.ReadSettings();
+
+                if (_settings != null)
+                {
+                    //En caso de que sea combinado, verificar que este lleno al menos uno de los dos
+                    if ((_settings.Remote.Server != "" && _secret.Decrypt(_settings.Remote.Combined) == "True") || (_settings.Local.Server != "" && _secret.Decrypt(_settings.Local.Combined) == "True"))
+                    {
+                        Servidores _servidores = new Servidores();
+
+                        _servidores.ShowDialog();
+                    }
+
+                    //Sino estan llenados o no son combinados
+                    else
+                    {
+                        //Detectar individual
+                        if (_settings.Remote.Server != "" && _secret.Decrypt(_settings.Remote.Combined) == "False")
+                        {
+                            Central _central = new Central();
+
+                            _central.ShowDialog();
+                        }
+
+                        if (_settings.Local.Server != "" && _secret.Decrypt(_settings.Local.Combined) == "False")
+                        {
+                            Replica _replica = new Replica();
+
+                            _replica.ShowDialog();
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                
             }
         }
     }

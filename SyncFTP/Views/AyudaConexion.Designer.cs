@@ -42,27 +42,30 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.tmpEfecto = new System.Windows.Forms.Timer(this.components);
             this.gbcServidor = new DevExpress.XtraEditors.GroupControl();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.gbcUsuario = new DevExpress.XtraEditors.GroupControl();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
+            this.pictureEdit9 = new DevExpress.XtraEditors.PictureEdit();
             this.gbcPuerto = new DevExpress.XtraEditors.GroupControl();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
+            this.pictureEdit10 = new DevExpress.XtraEditors.PictureEdit();
             this.gbcDirectorio = new DevExpress.XtraEditors.GroupControl();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
+            this.pictureEdit11 = new DevExpress.XtraEditors.PictureEdit();
             this.gbcEncriptacion = new DevExpress.XtraEditors.GroupControl();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
+            this.pictureEdit12 = new DevExpress.XtraEditors.PictureEdit();
             this.gbcActivo = new DevExpress.XtraEditors.GroupControl();
+            this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
+            this.pictureEdit14 = new DevExpress.XtraEditors.PictureEdit();
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
             this.pictureEdit13 = new DevExpress.XtraEditors.PictureEdit();
-            this.pictureEdit12 = new DevExpress.XtraEditors.PictureEdit();
-            this.pictureEdit11 = new DevExpress.XtraEditors.PictureEdit();
-            this.pictureEdit10 = new DevExpress.XtraEditors.PictureEdit();
-            this.pictureEdit9 = new DevExpress.XtraEditors.PictureEdit();
-            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.pictureEdit8 = new DevExpress.XtraEditors.PictureEdit();
             this.pictureEdit7 = new DevExpress.XtraEditors.PictureEdit();
             this.pictureEdit6 = new DevExpress.XtraEditors.PictureEdit();
@@ -71,27 +74,25 @@
             this.pictureEdit3 = new DevExpress.XtraEditors.PictureEdit();
             this.pictureEdit2 = new DevExpress.XtraEditors.PictureEdit();
             this.petDivisor = new DevExpress.XtraEditors.PictureEdit();
-            this.pictureEdit14 = new DevExpress.XtraEditors.PictureEdit();
-            this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.gbcServidor)).BeginInit();
             this.gbcServidor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gbcUsuario)).BeginInit();
             this.gbcUsuario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit9.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gbcPuerto)).BeginInit();
             this.gbcPuerto.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit10.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gbcDirectorio)).BeginInit();
             this.gbcDirectorio.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit11.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gbcEncriptacion)).BeginInit();
             this.gbcEncriptacion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit12.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gbcActivo)).BeginInit();
             this.gbcActivo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit14.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit13.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit12.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit11.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit10.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit9.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit8.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit7.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit6.Properties)).BeginInit();
@@ -100,7 +101,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.petDivisor.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit14.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
@@ -207,13 +207,13 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 6F);
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 7F);
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Black;
             this.labelControl2.Appearance.Options.UseFont = true;
             this.labelControl2.Appearance.Options.UseForeColor = true;
-            this.labelControl2.Location = new System.Drawing.Point(35, 378);
+            this.labelControl2.Location = new System.Drawing.Point(2, 376);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(388, 10);
+            this.labelControl2.Size = new System.Drawing.Size(449, 11);
             this.labelControl2.TabIndex = 23;
             this.labelControl2.Text = "*NOTA: Si algún error persiste y ya verifico que sus datos sean correctos, por fa" +
     "vor llame a soporte técnico.";
@@ -235,18 +235,6 @@
             this.gbcServidor.Text = "Servidor FTP";
             this.gbcServidor.Visible = false;
             // 
-            // labelControl5
-            // 
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 8F);
-            this.labelControl5.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Appearance.Options.UseForeColor = true;
-            this.labelControl5.Location = new System.Drawing.Point(61, 150);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(164, 13);
-            this.labelControl5.TabIndex = 24;
-            this.labelControl5.Text = "Formatos posibles de servidor FTP";
-            // 
             // labelControl6
             // 
             this.labelControl6.AllowHtmlString = true;
@@ -264,6 +252,34 @@
             this.labelControl6.Text = "Por favor escriba en el campo de texto el nombre del servidor FTP en alguno de lo" +
     "s formatos válidos mostrados en la imagen, omitiendo http y/o https. (Evite lo m" +
     "ás posible de usar IP)";
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.labelControl5.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl5.Appearance.Options.UseFont = true;
+            this.labelControl5.Appearance.Options.UseForeColor = true;
+            this.labelControl5.Location = new System.Drawing.Point(61, 150);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(164, 13);
+            this.labelControl5.TabIndex = 24;
+            this.labelControl5.Text = "Formatos posibles de servidor FTP";
+            // 
+            // pictureEdit1
+            // 
+            this.pictureEdit1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureEdit1.EditValue = global::SyncFTP.Properties.Resources.ServidorHelp;
+            this.pictureEdit1.Location = new System.Drawing.Point(5, 25);
+            this.pictureEdit1.Name = "pictureEdit1";
+            this.pictureEdit1.Properties.AllowFocused = false;
+            this.pictureEdit1.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pictureEdit1.Properties.Appearance.Options.UseBackColor = true;
+            this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit1.Properties.ShowMenu = false;
+            this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.pictureEdit1.Size = new System.Drawing.Size(257, 114);
+            this.pictureEdit1.TabIndex = 12;
             // 
             // gbcUsuario
             // 
@@ -304,6 +320,22 @@
             this.labelControl8.Size = new System.Drawing.Size(205, 13);
             this.labelControl8.TabIndex = 24;
             this.labelControl8.Text = "Ejemplo de usuario y contraseña protegida";
+            // 
+            // pictureEdit9
+            // 
+            this.pictureEdit9.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureEdit9.EditValue = global::SyncFTP.Properties.Resources.usuarioHelp;
+            this.pictureEdit9.Location = new System.Drawing.Point(5, 25);
+            this.pictureEdit9.Name = "pictureEdit9";
+            this.pictureEdit9.Properties.AllowFocused = false;
+            this.pictureEdit9.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pictureEdit9.Properties.Appearance.Options.UseBackColor = true;
+            this.pictureEdit9.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pictureEdit9.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit9.Properties.ShowMenu = false;
+            this.pictureEdit9.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.pictureEdit9.Size = new System.Drawing.Size(257, 114);
+            this.pictureEdit9.TabIndex = 12;
             // 
             // gbcPuerto
             // 
@@ -346,6 +378,22 @@
             this.labelControl10.TabIndex = 24;
             this.labelControl10.Text = "Campo de puerto de conexión";
             // 
+            // pictureEdit10
+            // 
+            this.pictureEdit10.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureEdit10.EditValue = global::SyncFTP.Properties.Resources.PuertoHelp;
+            this.pictureEdit10.Location = new System.Drawing.Point(32, 38);
+            this.pictureEdit10.Name = "pictureEdit10";
+            this.pictureEdit10.Properties.AllowFocused = false;
+            this.pictureEdit10.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pictureEdit10.Properties.Appearance.Options.UseBackColor = true;
+            this.pictureEdit10.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pictureEdit10.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit10.Properties.ShowMenu = false;
+            this.pictureEdit10.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.pictureEdit10.Size = new System.Drawing.Size(203, 44);
+            this.pictureEdit10.TabIndex = 12;
+            // 
             // gbcDirectorio
             // 
             this.gbcDirectorio.Controls.Add(this.labelControl11);
@@ -386,6 +434,22 @@
             this.labelControl12.TabIndex = 24;
             this.labelControl12.Text = "Ejemplo de tipo de formato de directorio";
             // 
+            // pictureEdit11
+            // 
+            this.pictureEdit11.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureEdit11.EditValue = global::SyncFTP.Properties.Resources.DirectorioHelp;
+            this.pictureEdit11.Location = new System.Drawing.Point(5, 37);
+            this.pictureEdit11.Name = "pictureEdit11";
+            this.pictureEdit11.Properties.AllowFocused = false;
+            this.pictureEdit11.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pictureEdit11.Properties.Appearance.Options.UseBackColor = true;
+            this.pictureEdit11.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pictureEdit11.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit11.Properties.ShowMenu = false;
+            this.pictureEdit11.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.pictureEdit11.Size = new System.Drawing.Size(257, 44);
+            this.pictureEdit11.TabIndex = 12;
+            // 
             // gbcEncriptacion
             // 
             this.gbcEncriptacion.Controls.Add(this.labelControl13);
@@ -413,6 +477,22 @@
             this.labelControl13.TabIndex = 25;
             this.labelControl13.Text = resources.GetString("labelControl13.Text");
             // 
+            // pictureEdit12
+            // 
+            this.pictureEdit12.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureEdit12.EditValue = global::SyncFTP.Properties.Resources.EncriptacionHelp;
+            this.pictureEdit12.Location = new System.Drawing.Point(5, 25);
+            this.pictureEdit12.Name = "pictureEdit12";
+            this.pictureEdit12.Properties.AllowFocused = false;
+            this.pictureEdit12.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pictureEdit12.Properties.Appearance.Options.UseBackColor = true;
+            this.pictureEdit12.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pictureEdit12.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit12.Properties.ShowMenu = false;
+            this.pictureEdit12.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.pictureEdit12.Size = new System.Drawing.Size(257, 54);
+            this.pictureEdit12.TabIndex = 12;
+            // 
             // gbcActivo
             // 
             this.gbcActivo.Controls.Add(this.labelControl16);
@@ -426,6 +506,46 @@
             this.gbcActivo.TabIndex = 29;
             this.gbcActivo.Text = "Modo Activo / Pasivo";
             this.gbcActivo.Visible = false;
+            // 
+            // labelControl16
+            // 
+            this.labelControl16.Appearance.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.labelControl16.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl16.Appearance.Options.UseFont = true;
+            this.labelControl16.Appearance.Options.UseForeColor = true;
+            this.labelControl16.Location = new System.Drawing.Point(155, 72);
+            this.labelControl16.Name = "labelControl16";
+            this.labelControl16.Size = new System.Drawing.Size(59, 13);
+            this.labelControl16.TabIndex = 28;
+            this.labelControl16.Text = "Modo Activo";
+            // 
+            // labelControl15
+            // 
+            this.labelControl15.Appearance.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.labelControl15.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.labelControl15.Appearance.Options.UseFont = true;
+            this.labelControl15.Appearance.Options.UseForeColor = true;
+            this.labelControl15.Location = new System.Drawing.Point(38, 72);
+            this.labelControl15.Name = "labelControl15";
+            this.labelControl15.Size = new System.Drawing.Size(60, 13);
+            this.labelControl15.TabIndex = 27;
+            this.labelControl15.Text = "Modo Pasivo";
+            // 
+            // pictureEdit14
+            // 
+            this.pictureEdit14.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureEdit14.EditValue = global::SyncFTP.Properties.Resources.ModoActivo;
+            this.pictureEdit14.Location = new System.Drawing.Point(139, 34);
+            this.pictureEdit14.Name = "pictureEdit14";
+            this.pictureEdit14.Properties.AllowFocused = false;
+            this.pictureEdit14.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pictureEdit14.Properties.Appearance.Options.UseBackColor = true;
+            this.pictureEdit14.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pictureEdit14.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit14.Properties.ShowMenu = false;
+            this.pictureEdit14.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.pictureEdit14.Size = new System.Drawing.Size(98, 32);
+            this.pictureEdit14.TabIndex = 26;
             // 
             // labelControl14
             // 
@@ -458,86 +578,6 @@
             this.pictureEdit13.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
             this.pictureEdit13.Size = new System.Drawing.Size(98, 32);
             this.pictureEdit13.TabIndex = 12;
-            // 
-            // pictureEdit12
-            // 
-            this.pictureEdit12.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureEdit12.EditValue = global::SyncFTP.Properties.Resources.EncriptacionHelp;
-            this.pictureEdit12.Location = new System.Drawing.Point(5, 25);
-            this.pictureEdit12.Name = "pictureEdit12";
-            this.pictureEdit12.Properties.AllowFocused = false;
-            this.pictureEdit12.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.pictureEdit12.Properties.Appearance.Options.UseBackColor = true;
-            this.pictureEdit12.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pictureEdit12.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit12.Properties.ShowMenu = false;
-            this.pictureEdit12.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit12.Size = new System.Drawing.Size(257, 54);
-            this.pictureEdit12.TabIndex = 12;
-            // 
-            // pictureEdit11
-            // 
-            this.pictureEdit11.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureEdit11.EditValue = global::SyncFTP.Properties.Resources.DirectorioHelp;
-            this.pictureEdit11.Location = new System.Drawing.Point(5, 37);
-            this.pictureEdit11.Name = "pictureEdit11";
-            this.pictureEdit11.Properties.AllowFocused = false;
-            this.pictureEdit11.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.pictureEdit11.Properties.Appearance.Options.UseBackColor = true;
-            this.pictureEdit11.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pictureEdit11.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit11.Properties.ShowMenu = false;
-            this.pictureEdit11.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit11.Size = new System.Drawing.Size(257, 44);
-            this.pictureEdit11.TabIndex = 12;
-            // 
-            // pictureEdit10
-            // 
-            this.pictureEdit10.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureEdit10.EditValue = global::SyncFTP.Properties.Resources.PuertoHelp;
-            this.pictureEdit10.Location = new System.Drawing.Point(32, 38);
-            this.pictureEdit10.Name = "pictureEdit10";
-            this.pictureEdit10.Properties.AllowFocused = false;
-            this.pictureEdit10.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.pictureEdit10.Properties.Appearance.Options.UseBackColor = true;
-            this.pictureEdit10.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pictureEdit10.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit10.Properties.ShowMenu = false;
-            this.pictureEdit10.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit10.Size = new System.Drawing.Size(203, 44);
-            this.pictureEdit10.TabIndex = 12;
-            // 
-            // pictureEdit9
-            // 
-            this.pictureEdit9.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureEdit9.EditValue = global::SyncFTP.Properties.Resources.usuarioHelp;
-            this.pictureEdit9.Location = new System.Drawing.Point(5, 25);
-            this.pictureEdit9.Name = "pictureEdit9";
-            this.pictureEdit9.Properties.AllowFocused = false;
-            this.pictureEdit9.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.pictureEdit9.Properties.Appearance.Options.UseBackColor = true;
-            this.pictureEdit9.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pictureEdit9.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit9.Properties.ShowMenu = false;
-            this.pictureEdit9.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit9.Size = new System.Drawing.Size(257, 114);
-            this.pictureEdit9.TabIndex = 12;
-            // 
-            // pictureEdit1
-            // 
-            this.pictureEdit1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureEdit1.EditValue = global::SyncFTP.Properties.Resources.ServidorHelp;
-            this.pictureEdit1.Location = new System.Drawing.Point(5, 25);
-            this.pictureEdit1.Name = "pictureEdit1";
-            this.pictureEdit1.Properties.AllowFocused = false;
-            this.pictureEdit1.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.pictureEdit1.Properties.Appearance.Options.UseBackColor = true;
-            this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit1.Properties.ShowMenu = false;
-            this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit1.Size = new System.Drawing.Size(257, 114);
-            this.pictureEdit1.TabIndex = 12;
             // 
             // pictureEdit8
             // 
@@ -667,46 +707,6 @@
             this.petDivisor.Size = new System.Drawing.Size(430, 2);
             this.petDivisor.TabIndex = 6;
             // 
-            // pictureEdit14
-            // 
-            this.pictureEdit14.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureEdit14.EditValue = global::SyncFTP.Properties.Resources.ModoActivo;
-            this.pictureEdit14.Location = new System.Drawing.Point(139, 34);
-            this.pictureEdit14.Name = "pictureEdit14";
-            this.pictureEdit14.Properties.AllowFocused = false;
-            this.pictureEdit14.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.pictureEdit14.Properties.Appearance.Options.UseBackColor = true;
-            this.pictureEdit14.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pictureEdit14.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit14.Properties.ShowMenu = false;
-            this.pictureEdit14.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit14.Size = new System.Drawing.Size(98, 32);
-            this.pictureEdit14.TabIndex = 26;
-            // 
-            // labelControl15
-            // 
-            this.labelControl15.Appearance.Font = new System.Drawing.Font("Tahoma", 8F);
-            this.labelControl15.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl15.Appearance.Options.UseFont = true;
-            this.labelControl15.Appearance.Options.UseForeColor = true;
-            this.labelControl15.Location = new System.Drawing.Point(38, 72);
-            this.labelControl15.Name = "labelControl15";
-            this.labelControl15.Size = new System.Drawing.Size(60, 13);
-            this.labelControl15.TabIndex = 27;
-            this.labelControl15.Text = "Modo Pasivo";
-            // 
-            // labelControl16
-            // 
-            this.labelControl16.Appearance.Font = new System.Drawing.Font("Tahoma", 8F);
-            this.labelControl16.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl16.Appearance.Options.UseFont = true;
-            this.labelControl16.Appearance.Options.UseForeColor = true;
-            this.labelControl16.Location = new System.Drawing.Point(155, 72);
-            this.labelControl16.Name = "labelControl16";
-            this.labelControl16.Size = new System.Drawing.Size(59, 13);
-            this.labelControl16.TabIndex = 28;
-            this.labelControl16.Text = "Modo Activo";
-            // 
             // AyudaConexion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -746,26 +746,27 @@
             ((System.ComponentModel.ISupportInitialize)(this.gbcServidor)).EndInit();
             this.gbcServidor.ResumeLayout(false);
             this.gbcServidor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gbcUsuario)).EndInit();
             this.gbcUsuario.ResumeLayout(false);
             this.gbcUsuario.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit9.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gbcPuerto)).EndInit();
             this.gbcPuerto.ResumeLayout(false);
             this.gbcPuerto.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit10.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gbcDirectorio)).EndInit();
             this.gbcDirectorio.ResumeLayout(false);
             this.gbcDirectorio.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit11.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gbcEncriptacion)).EndInit();
             this.gbcEncriptacion.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit12.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gbcActivo)).EndInit();
             this.gbcActivo.ResumeLayout(false);
             this.gbcActivo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit14.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit13.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit12.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit11.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit10.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit9.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit8.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit7.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit6.Properties)).EndInit();
@@ -774,7 +775,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.petDivisor.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit14.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

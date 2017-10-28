@@ -109,6 +109,8 @@
             this.petNo.Size = new System.Drawing.Size(50, 46);
             this.petNo.TabIndex = 8;
             this.petNo.Click += new System.EventHandler(this.petNo_Click);
+            this.petNo.MouseEnter += new System.EventHandler(this.petSi_MouseEnter);
+            this.petNo.MouseLeave += new System.EventHandler(this.petSi_MouseLeave);
             // 
             // petSi
             // 
@@ -126,6 +128,8 @@
             this.petSi.Size = new System.Drawing.Size(50, 46);
             this.petSi.TabIndex = 7;
             this.petSi.Click += new System.EventHandler(this.petSi_Click);
+            this.petSi.MouseEnter += new System.EventHandler(this.petSi_MouseEnter);
+            this.petSi.MouseLeave += new System.EventHandler(this.petSi_MouseLeave);
             // 
             // pictureEdit3
             // 

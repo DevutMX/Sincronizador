@@ -13,7 +13,6 @@ namespace SyncFTP.Models
 
         SQLiteConnection _connection;
         SQLiteCommand _command;
-        SQLiteDataReader _dataReader;
         SQLiteDataAdapter _dataAdapter;
         DataTable _table;
 
@@ -59,7 +58,7 @@ namespace SyncFTP.Models
             {
                 using (_connection = new SQLiteConnection(_connectionString))
                 {
-                    string _query = "SELECT Movimiento as 'No. de Movimiento', Fecha as 'Ultima sincronización', Archivos as 'No. de archivos transferidos' FROM Movimientos WHERE Servidor = 0 Order by Fecha Desc;";
+                    string _query = "SELECT Movimiento as 'No. Ulitmo movimiento', Fecha as 'Fecha de sincronización', Archivos as 'No. de archivos transferidos' FROM Movimientos WHERE Servidor = 0 Order by Fecha Desc Limit 1;";
 
                     _connection.Open();
 
@@ -90,7 +89,7 @@ namespace SyncFTP.Models
             {
                 using (_connection = new SQLiteConnection(_connectionString))
                 {
-                    string _query = "SELECT Movimiento as 'No. de Movimiento', Fecha as 'Ultima sincronización', Archivos as 'No. de archivos transferidos' FROM Movimientos WHERE Servidor = 1 Order by Fecha Desc;";
+                    string _query = "SELECT Movimiento as 'No. Ulitmo movimiento', Fecha as 'Fecha de sincronización', Archivos as 'No. de archivos transferidos' FROM Movimientos WHERE Servidor = 1 Order by Fecha Desc Limit 1;";
 
                     _connection.Open();
 

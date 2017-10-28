@@ -17,44 +17,64 @@ namespace SyncFTP.Views
         {
             InitializeComponent();
         }
-
-        private void petAyuda_Click(object sender, EventArgs e)
+        
+        private void Servidores_FormClosed(object sender, FormClosedEventArgs e)
         {
-            AyudaServidores _ayudaServidores = new AyudaServidores();
-
-            Hide();
-
-            _ayudaServidores.ShowDialog();
-
-            Show();
+            Application.Exit();
         }
 
-        private void petContinuar_Click(object sender, EventArgs e)
+        private void btnContinuar_Click(object sender, EventArgs e)
         {
-            if(!chkCentral.Checked && !chkReplica.Checked)
+            try
             {
-                XtraMessageBox.Show(UserLookAndFeel.Default, "Por favor, selecciona al menos un servidor a configurar", "Error de selección", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                chkCentral.Focus();
-            }
-
-            else
-            {
-                if (chkCentral.Checked && !chkReplica.Checked)
+                if (!chkCentral.Checked && !chkReplica.Checked)
                 {
-                    if(DialogResult.Yes == XtraMessageBox.Show(UserLookAndFeel.Default, "El servidor central requiere de conexión internet\n\n¿Desea continuar?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
+                    XtraMessageBox.Show(UserLookAndFeel.Default, "Por favor, selecciona al menos un servidor a configurar", "Error de selección", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    chkCentral.Focus();
+                }
+
+                else
+                {
+                    if (chkCentral.Checked && !chkReplica.Checked)
+                    {
+                        if (DialogResult.Yes == XtraMessageBox.Show(UserLookAndFeel.Default, "El servidor central requiere de conexión internet\n\n¿Desea continuar?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
+                        {
+                            Hide();
+
+                            Central _central = new Central();
+
+                            if (_central.ShowDialog() == DialogResult.OK)
+                            {
+                                ConfiguracionTerminada _configTerm = new ConfiguracionTerminada("central", null);
+
+                                _configTerm.ShowDialog();
+
+                                Principal _principal = Principal.ObtenerInstancia();
+
+                                _principal.Show();
+                            }
+
+                            else
+                            {
+                                Show();
+                            }
+                        }
+                    }
+
+                    else if (!chkCentral.Checked && chkReplica.Checked)
                     {
                         Hide();
 
-                        Central _central = new Central();
+                        Replica _replica = new Replica();
 
-                        if(_central.ShowDialog() == DialogResult.OK)
+                        if (_replica.ShowDialog() == DialogResult.OK)
                         {
-                            ConfiguracionTerminada _configTerm = new ConfiguracionTerminada("central", null);
+                            ConfiguracionTerminada _configTerm = new ConfiguracionTerminada(null, "replica");
 
                             _configTerm.ShowDialog();
 
-                            Principal _principal = new Principal();
+                            Principal _principal = Principal.ObtenerInstancia();
 
                             _principal.Show();
                         }
@@ -64,72 +84,54 @@ namespace SyncFTP.Views
                             Show();
                         }
                     }
-                }
-
-                else if(!chkCentral.Checked && chkReplica.Checked)
-                {
-                    Hide();
-
-                    Replica _replica = new Replica();
-
-                    if(_replica.ShowDialog() == DialogResult.OK)
-                    {
-                        ConfiguracionTerminada _configTerm = new ConfiguracionTerminada(null, "replica");
-
-                        _configTerm.ShowDialog();
-
-                        Principal _principal = new Principal();
-
-                        _principal.Show();
-                    }
 
                     else
                     {
-                        Show();
-                    }
-                }
-
-                else
-                {
-                    if(DialogResult.Yes == XtraMessageBox.Show(UserLookAndFeel.Default, "Primero configuraremos el servidor central, para ello necesitas tener conexión a internet\n\n¿Desea continuar?", "¡Vamos por pasos!", MessageBoxButtons.YesNo, MessageBoxIcon.Information))
-                    {
-                        Hide();
-
-                        Central _central = new Central();
-
-                        Replica _replica = new Replica();
-
-                        Central._combinado = true;
-
-                        Replica.Combinado = true;
-
-                        if (_central.ShowDialog() == DialogResult.OK)
+                        if (DialogResult.Yes == XtraMessageBox.Show(UserLookAndFeel.Default, "Primero configuraremos el servidor central, para ello necesitas tener conexión a internet\n\n¿Desea continuar?", "¡Vamos por pasos!", MessageBoxButtons.YesNo, MessageBoxIcon.Information))
                         {
-                            if (_replica.ShowDialog() == DialogResult.OK)
-                            {
-                                ConfiguracionTerminada _configTerm = new ConfiguracionTerminada("central", "replica");
+                            Hide();
 
-                                _configTerm.ShowDialog();
+                            Central _central = new Central();
 
-                                Principal _principal = new Principal();
+                            Replica _replica = new Replica();
 
-                                _principal.Show();
-                            }
-                        }
+                            Central._combinado = true;
 
-                        else
-                        {
-                            if (DialogResult.Yes == XtraMessageBox.Show(UserLookAndFeel.Default, "Al parecer no se configuro el servidor central.\n\n¿Deseas configurar el servidor replica?", "Continuar configuración", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
+                            Replica.Combinado = true;
+
+                            if (_central.ShowDialog() == DialogResult.OK)
                             {
                                 if (_replica.ShowDialog() == DialogResult.OK)
                                 {
-                                    ConfiguracionTerminada _configTerm = new ConfiguracionTerminada(null, "replica");
+                                    ConfiguracionTerminada _configTerm = new ConfiguracionTerminada("central", "replica");
 
                                     _configTerm.ShowDialog();
 
-                                    Principal _principal = new Principal();
+                                    Principal _principal = Principal.ObtenerInstancia();
 
                                     _principal.Show();
+                                }
+                            }
+
+                            else
+                            {
+                                if (DialogResult.Yes == XtraMessageBox.Show(UserLookAndFeel.Default, "Al parecer no se configuro el servidor central.\n\n¿Deseas configurar el servidor replica?", "Continuar configuración", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
+                                {
+                                    if (_replica.ShowDialog() == DialogResult.OK)
+                                    {
+                                        ConfiguracionTerminada _configTerm = new ConfiguracionTerminada(null, "replica");
+
+                                        _configTerm.ShowDialog();
+
+                                        Principal _principal = Principal.ObtenerInstancia();
+
+                                        _principal.Show();
+                                    }
+
+                                    else
+                                    {
+                                        Show();
+                                    }
                                 }
 
                                 else
@@ -137,20 +139,25 @@ namespace SyncFTP.Views
                                     Show();
                                 }
                             }
-
-                            else
-                            {
-                                Show();
-                            }
                         }
                     }
                 }
             }
+            catch (Exception)
+            {
+                
+            }
         }
 
-        private void Servidores_FormClosed(object sender, FormClosedEventArgs e)
+        private void btnAyuda_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            AyudaServidores _ayudaServidores = new AyudaServidores();
+
+            Hide();
+
+            _ayudaServidores.ShowDialog();
+
+            Show();
         }
     }
 }
