@@ -1,17 +1,5 @@
 {
   "Local": {
-    "Server": "xfHCOFcGrWP5Lq/rSIpH+xLG9jvCKCrsSNMw7GcvFC0=",
-    "IsAnonymous": "QLswsJCNkWQ1MYpQ/C7Z6Q==",
-    "User": "LXVbFaJGil/Kbjk+ZVHFiw==",
-    "Password": "bFqht8Wn6G3LEZjiY/QSww==",
-    "Port": "sFc1srXlXpZPPmWqXO3jSQ==",
-    "Find": "Hi0Z79WmsMY6fJABtSE54w==",
-    "FTPMode": "RgL9+MmGpO+DcxQKpfD6/w==",
-    "IsActive": "plP+7m4jDAjyCxvX/Ugu4A==",
-    "WithCert": "QLswsJCNkWQ1MYpQ/C7Z6Q==",
-    "Combined": "QLswsJCNkWQ1MYpQ/C7Z6Q=="
-  },
-  "Remote": {
     "Server": "",
     "IsAnonymous": "",
     "User": "",
@@ -21,6 +9,18 @@
     "FTPMode": "",
     "IsActive": "",
     "WithCert": "",
+    "Combined": "QLswsJCNkWQ1MYpQ/C7Z6Q=="
+  },
+  "Remote": {
+    "Server": "AI6sjMzwiIiFDTPfqC3MjuxeK6YkUBElbKFe/CmNzKQ=",
+    "IsAnonymous": "QLswsJCNkWQ1MYpQ/C7Z6Q==",
+    "User": "wSq1uSgk05LMh+t7azfqMM313iHdDMIa4BoUmj6D8+U=",
+    "Password": "/fCJtFeSAp+PzywuVyiiMYkmVWpsXbI2Jjj8aL7VLDw=",
+    "Port": "sFc1srXlXpZPPmWqXO3jSQ==",
+    "Find": "ecieG+8b5AT23hSSMK+OdQ==",
+    "FTPMode": "RgL9+MmGpO+DcxQKpfD6/w==",
+    "IsActive": "QLswsJCNkWQ1MYpQ/C7Z6Q==",
+    "WithCert": "QLswsJCNkWQ1MYpQ/C7Z6Q==",
     "Combined": "QLswsJCNkWQ1MYpQ/C7Z6Q=="
   }
 }
