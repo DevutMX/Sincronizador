@@ -60,12 +60,12 @@
             this.lblElapsedTime = new DevExpress.XtraEditors.LabelControl();
             this.btnAvanzados = new DevExpress.XtraEditors.SimpleButton();
             this.btnConfirmar = new DevExpress.XtraEditors.SimpleButton();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.lblTitulo2 = new DevExpress.XtraEditors.LabelControl();
             this.cbxDispositivos = new DevExpress.XtraEditors.ComboBoxEdit();
             this.lblAvance = new DevExpress.XtraEditors.LabelControl();
             this.pbcProgress = new DevExpress.XtraEditors.ProgressBarControl();
             this.pnlLabels = new DevExpress.XtraEditors.PanelControl();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.lblTitulo1 = new DevExpress.XtraEditors.LabelControl();
             this.gdcCentral = new DevExpress.XtraGrid.GridControl();
             this.gdvCentral = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gdcReplica = new DevExpress.XtraGrid.GridControl();
@@ -137,7 +137,7 @@
             this.pnlOptions.Controls.Add(this.lblElapsedTime);
             this.pnlOptions.Controls.Add(this.btnAvanzados);
             this.pnlOptions.Controls.Add(this.btnConfirmar);
-            this.pnlOptions.Controls.Add(this.labelControl4);
+            this.pnlOptions.Controls.Add(this.lblTitulo2);
             this.pnlOptions.Controls.Add(this.cbxDispositivos);
             this.pnlOptions.Controls.Add(this.lblAvance);
             this.pnlOptions.Controls.Add(this.pbcProgress);
@@ -258,17 +258,17 @@
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
-            // labelControl4
+            // lblTitulo2
             // 
-            this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.labelControl4.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Appearance.Options.UseForeColor = true;
-            this.labelControl4.Location = new System.Drawing.Point(12, 9);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(178, 16);
-            this.labelControl4.TabIndex = 15;
-            this.labelControl4.Text = "Elija medio extraíble o local:";
+            this.lblTitulo2.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.lblTitulo2.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.lblTitulo2.Appearance.Options.UseFont = true;
+            this.lblTitulo2.Appearance.Options.UseForeColor = true;
+            this.lblTitulo2.Location = new System.Drawing.Point(12, 9);
+            this.lblTitulo2.Name = "lblTitulo2";
+            this.lblTitulo2.Size = new System.Drawing.Size(178, 16);
+            this.lblTitulo2.TabIndex = 15;
+            this.lblTitulo2.Text = "Elija medio extraíble o local:";
             // 
             // cbxDispositivos
             // 
@@ -304,24 +304,24 @@
             // pnlLabels
             // 
             this.pnlLabels.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
-            this.pnlLabels.Controls.Add(this.labelControl2);
+            this.pnlLabels.Controls.Add(this.lblTitulo1);
             this.pnlLabels.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlLabels.Location = new System.Drawing.Point(0, 253);
             this.pnlLabels.Name = "pnlLabels";
             this.pnlLabels.Size = new System.Drawing.Size(484, 30);
             this.pnlLabels.TabIndex = 13;
             // 
-            // labelControl2
+            // lblTitulo1
             // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Appearance.Options.UseForeColor = true;
-            this.labelControl2.Location = new System.Drawing.Point(12, 6);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(227, 16);
-            this.labelControl2.TabIndex = 12;
-            this.labelControl2.Text = "Sincronización con unidad extraíble";
+            this.lblTitulo1.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.lblTitulo1.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.lblTitulo1.Appearance.Options.UseFont = true;
+            this.lblTitulo1.Appearance.Options.UseForeColor = true;
+            this.lblTitulo1.Location = new System.Drawing.Point(12, 6);
+            this.lblTitulo1.Name = "lblTitulo1";
+            this.lblTitulo1.Size = new System.Drawing.Size(220, 16);
+            this.lblTitulo1.TabIndex = 12;
+            this.lblTitulo1.Text = "Sincronización en unidad extraíble";
             // 
             // gdcCentral
             // 
@@ -581,6 +581,7 @@
             this.xtcHistoriales.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtpCentral,
             this.xtpReplica});
+            this.xtcHistoriales.SelectedPageChanged += new DevExpress.XtraTab.TabPageChangedEventHandler(this.xtcHistoriales_SelectedPageChanged);
             // 
             // xtpCentral
             // 
@@ -653,10 +654,10 @@
         private DevExpress.XtraEditors.PanelControl pnlOptions;
         private DevExpress.XtraEditors.PanelControl pnlLabels;
         private DevExpress.XtraEditors.ProgressBarControl pbcProgress;
-        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.LabelControl lblTitulo1;
         private DevExpress.XtraEditors.SimpleButton btnAvanzados;
         private DevExpress.XtraEditors.SimpleButton btnConfirmar;
-        private DevExpress.XtraEditors.LabelControl labelControl4;
+        private DevExpress.XtraEditors.LabelControl lblTitulo2;
         private DevExpress.XtraEditors.ComboBoxEdit cbxDispositivos;
         private DevExpress.XtraEditors.LabelControl lblAvance;
         private DevExpress.XtraGrid.GridControl gdcCentral;

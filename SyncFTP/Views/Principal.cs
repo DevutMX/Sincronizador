@@ -1482,13 +1482,25 @@ namespace SyncFTP.Views
                     //En caso de que sea combinado, verificar que este lleno al menos uno de los dos
                     if ((_settings.Remote.Server != "" && _secret.Decrypt(_settings.Remote.Combined) == "True") || (_settings.Local.Server != "" && _secret.Decrypt(_settings.Local.Combined) == "True"))
                     {
-                        gbcSincronizar.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+                        //gbcSincronizar.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+                        //btnIniciarCentral.Visible = true;
+                        //btnIniciarReplica.Visible = true;
+                        //xtcHistoriales.TabPages[0].PageVisible = true;
+                        //xtcHistoriales.TabPages[1].PageVisible = true;
+                        //gbcSincronizar.Location = new System.Drawing.Point(310, 9);
+                        //gbcSincronizar.Size = new System.Drawing.Size(162, 53);
+                        gbcSincronizar.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
                         btnIniciarCentral.Visible = true;
-                        btnIniciarReplica.Visible = true;
-                        xtcHistoriales.TabPages[0].PageVisible = true;
-                        xtcHistoriales.TabPages[1].PageVisible = true;
+                        btnIniciarReplica.Visible = false;
                         gbcSincronizar.Location = new System.Drawing.Point(310, 9);
-                        gbcSincronizar.Size = new System.Drawing.Size(162, 53);
+                        gbcSincronizar.Size = new System.Drawing.Size(95, 53);
+                        lblTitulo1.Text = "Sincronizar en unidad extraíble";
+                        lblTitulo2.Visible = true;
+                        btnRefrescar.Visible = true;
+                        cbxDispositivos.Visible = true;
+                        btnConfirmar.Visible = true;
+                        btnAvanzados.Visible = true;
+                        btnDesdeUSB.Visible = false;
                     }
                     
                     //Sino estan llenados o no son combinados
@@ -1504,6 +1516,13 @@ namespace SyncFTP.Views
                             xtcHistoriales.TabPages[1].PageVisible = false;
                             gbcSincronizar.Location = new System.Drawing.Point(310, 9);
                             gbcSincronizar.Size = new System.Drawing.Size(95, 53);
+                            lblTitulo1.Text = "Sincronizar en unidad extraíble";
+                            lblTitulo2.Visible = true;
+                            btnRefrescar.Visible = true;
+                            cbxDispositivos.Visible = true;
+                            btnConfirmar.Visible = true;
+                            btnAvanzados.Visible = true;
+                            btnDesdeUSB.Visible = false;
                         }
 
                         if (_settings.Local.Server != "" && _secret.Decrypt(_settings.Local.Combined) == "False")
@@ -1515,6 +1534,13 @@ namespace SyncFTP.Views
                             xtcHistoriales.TabPages[1].PageVisible = true;
                             gbcSincronizar.Location = new System.Drawing.Point(381, 9);
                             gbcSincronizar.Size = new System.Drawing.Size(88, 53);
+                            lblTitulo1.Text = "Sincronizar desde unidad extraíble";
+                            lblTitulo2.Visible = false;
+                            btnRefrescar.Visible = false;
+                            cbxDispositivos.Visible = false;
+                            btnConfirmar.Visible = false;
+                            btnAvanzados.Visible = false;
+                            btnDesdeUSB.Visible = true;
                         }
                     }
                 }
@@ -1560,6 +1586,48 @@ namespace SyncFTP.Views
                             _replica.ShowDialog();
                         }
                     }
+                }
+            }
+            catch (Exception)
+            {
+                
+            }
+        }
+
+        private void xtcHistoriales_SelectedPageChanged(object sender, TabPageChangedEventArgs e)
+        {
+            try
+            {
+                if (xtcHistoriales.SelectedTabPage.Equals(xtpCentral))
+                {
+                    gbcSincronizar.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+                    btnIniciarCentral.Visible = true;
+                    btnIniciarReplica.Visible = false;
+                    gbcSincronizar.Location = new System.Drawing.Point(310, 9);
+                    gbcSincronizar.Size = new System.Drawing.Size(95, 53);
+                    lblTitulo1.Text = "Sincronizar en unidad extraíble";
+                    lblTitulo2.Visible = true;
+                    btnRefrescar.Visible = true;
+                    cbxDispositivos.Visible = true;
+                    btnConfirmar.Visible = true;
+                    btnAvanzados.Visible = true;
+                    btnDesdeUSB.Visible = false;
+                }
+
+                else
+                {
+                    gbcSincronizar.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+                    btnIniciarCentral.Visible = false;
+                    btnIniciarReplica.Visible = true;
+                    gbcSincronizar.Location = new System.Drawing.Point(381, 9);
+                    gbcSincronizar.Size = new System.Drawing.Size(88, 53);
+                    lblTitulo1.Text = "Sincronizar desde unidad extraíble";
+                    lblTitulo2.Visible = false;
+                    btnRefrescar.Visible = false;
+                    cbxDispositivos.Visible = false;
+                    btnConfirmar.Visible = false;
+                    btnAvanzados.Visible = false;
+                    btnDesdeUSB.Visible = true;
                 }
             }
             catch (Exception)
