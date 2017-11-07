@@ -32,12 +32,13 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.petNo = new DevExpress.XtraEditors.PictureEdit();
             this.petSi = new DevExpress.XtraEditors.PictureEdit();
             this.pictureEdit3 = new DevExpress.XtraEditors.PictureEdit();
             this.pictureEdit2 = new DevExpress.XtraEditors.PictureEdit();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.petNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.petSi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).BeginInit();
@@ -81,23 +82,11 @@
             this.labelControl3.TabIndex = 5;
             this.labelControl3.Text = resources.GetString("labelControl3.Text");
             // 
-            // labelControl4
-            // 
-            this.labelControl4.AllowHtmlString = true;
-            this.labelControl4.AllowHtmlTextInToolTip = DevExpress.Utils.DefaultBoolean.True;
-            this.labelControl4.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Vertical;
-            this.labelControl4.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.labelControl4.Location = new System.Drawing.Point(246, 249);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(117, 13);
-            this.labelControl4.TabIndex = 6;
-            this.labelControl4.Text = "<b>¿Desea continuar?</b>";
-            // 
             // petNo
             // 
             this.petNo.Cursor = System.Windows.Forms.Cursors.Default;
             this.petNo.EditValue = global::SyncFTP.Properties.Resources.No;
-            this.petNo.Location = new System.Drawing.Point(486, 231);
+            this.petNo.Location = new System.Drawing.Point(414, 250);
             this.petNo.Name = "petNo";
             this.petNo.Properties.AllowFocused = false;
             this.petNo.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
@@ -116,7 +105,7 @@
             // 
             this.petSi.Cursor = System.Windows.Forms.Cursors.Default;
             this.petSi.EditValue = global::SyncFTP.Properties.Resources.Si;
-            this.petSi.Location = new System.Drawing.Point(390, 231);
+            this.petSi.Location = new System.Drawing.Point(330, 250);
             this.petSi.Name = "petSi";
             this.petSi.Properties.AllowFocused = false;
             this.petSi.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
@@ -179,6 +168,34 @@
             this.pictureEdit1.Size = new System.Drawing.Size(560, 2);
             this.pictureEdit1.TabIndex = 0;
             // 
+            // labelControl5
+            // 
+            this.labelControl5.AllowHtmlString = true;
+            this.labelControl5.AllowHtmlTextInToolTip = DevExpress.Utils.DefaultBoolean.True;
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 9F);
+            this.labelControl5.Appearance.Options.UseFont = true;
+            this.labelControl5.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Vertical;
+            this.labelControl5.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.labelControl5.Location = new System.Drawing.Point(234, 70);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(337, 126);
+            this.labelControl5.TabIndex = 9;
+            this.labelControl5.Text = resources.GetString("labelControl5.Text");
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.AllowHtmlString = true;
+            this.labelControl4.AllowHtmlTextInToolTip = DevExpress.Utils.DefaultBoolean.True;
+            this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.labelControl4.Appearance.Options.UseFont = true;
+            this.labelControl4.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Vertical;
+            this.labelControl4.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.labelControl4.Location = new System.Drawing.Point(341, 230);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(115, 14);
+            this.labelControl4.TabIndex = 10;
+            this.labelControl4.Text = "¿Desea continuar? ";
+            // 
             // Bienvenido
             // 
             this.Appearance.Options.UseTextOptions = true;
@@ -187,9 +204,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(584, 319);
+            this.Controls.Add(this.labelControl4);
+            this.Controls.Add(this.labelControl5);
             this.Controls.Add(this.petNo);
             this.Controls.Add(this.petSi);
-            this.Controls.Add(this.labelControl4);
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.pictureEdit3);
             this.Controls.Add(this.labelControl2);
@@ -221,8 +239,9 @@
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.PictureEdit pictureEdit3;
         private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.PictureEdit petSi;
         private DevExpress.XtraEditors.PictureEdit petNo;
+        private DevExpress.XtraEditors.LabelControl labelControl5;
+        private DevExpress.XtraEditors.LabelControl labelControl4;
     }
 }

@@ -120,6 +120,9 @@
   <data name="labelControl3.Text" xml:space="preserve">
     <value>&lt;b&gt;SyncFTP&lt;/b&gt; es una aplicación que te ofrece el servicio de &lt;b&gt;sincronizar información automaticamente&lt;/b&gt; del sistema 'BussinessManager', de este modo podrás tener información actualizada. &lt;br&gt;&lt;br&gt;&lt;b&gt;La información es bajada de un servidor central y podrá ser guardada en una unidad extraíble (Disco Duro o USB).&lt;/b&gt;</value>
   </data>
+  <data name="labelControl5.Text" xml:space="preserve">
+    <value>&lt;b&gt;SynFTP&lt;/b&gt; es una aplicación que &lt;b&gt;sincroniza información automáticamente&lt;/b&gt; del sistema utilizando la conexión a un servidor. &lt;/br&gt;&lt;/br&gt;Una vez completado este asistente, los datos de configuración se quedarán guardados con el fin de poder utilizarlos para la sincronización automática de los datos. Con SyncFTP podrás hacer los ajustes necesarios en tus configuraciones en caso de necesitarlo. &lt;b&gt;</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

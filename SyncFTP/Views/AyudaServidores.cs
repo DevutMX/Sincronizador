@@ -10,7 +10,7 @@ using DevExpress.XtraEditors;
 
 namespace SyncFTP.Views
 {
-    public partial class AyudaServidores : DevExpress.XtraEditors.XtraForm
+    public partial class AyudaServidores : XtraForm
     {
         public AyudaServidores()
         {
