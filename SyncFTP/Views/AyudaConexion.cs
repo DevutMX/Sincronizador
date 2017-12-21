@@ -17,8 +17,16 @@ namespace SyncFTP.Views
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Indica si el panel de ayuda esta desplegado
+        /// </summary>
         private bool expandido = false;
 
+        /// <summary>
+        /// Temporizador que determina el efecto de expansion y colapso
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tmpEfecto_Tick(object sender, EventArgs e)
         {
             if (expandido)
@@ -51,13 +59,23 @@ namespace SyncFTP.Views
             }
         }
 
+        /// <summary>
+        /// Evento que muestra la ayuda correspondiente al servidor
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnServidorFTP_Click(object sender, EventArgs e)
         {
             tmpEfecto.Enabled = true;
 
             Mostrar("Servidor");
         }
-        
+
+        /// <summary>
+        /// Evento que muestra la ayuda correspondiente al usuario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnUsuario_Click(object sender, EventArgs e)
         {
             tmpEfecto.Enabled = true;
@@ -65,6 +83,11 @@ namespace SyncFTP.Views
             Mostrar("Usuario");
         }
 
+        /// <summary>
+        /// Evento que muestra la ayuda correspondiente al puerto
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnPuerto_Click(object sender, EventArgs e)
         {
             tmpEfecto.Enabled = true;
@@ -72,6 +95,11 @@ namespace SyncFTP.Views
             Mostrar("Puerto");
         }
 
+        /// <summary>
+        /// Evento que muestra la ayuda correspondiente al directorio
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnDirectorio_Click(object sender, EventArgs e)
         {
             tmpEfecto.Enabled = true;
@@ -79,6 +107,11 @@ namespace SyncFTP.Views
             Mostrar("Directorio");
         }
 
+        /// <summary>
+        /// Evento que muestra la ayuda correspondiente a la encriptacion
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnEncriptacion_Click(object sender, EventArgs e)
         {
             tmpEfecto.Enabled = true;
@@ -86,6 +119,11 @@ namespace SyncFTP.Views
             Mostrar("Encriptacion");
         }
 
+        /// <summary>
+        /// Evento que muestra la ayuda correspondiente al modo activo/pasivo
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnModo_Click(object sender, EventArgs e)
         {
             tmpEfecto.Enabled = true;
@@ -93,6 +131,10 @@ namespace SyncFTP.Views
             Mostrar("Activo");
         }
 
+        /// <summary>
+        /// Determina que panel de ayuda mostrar
+        /// </summary>
+        /// <param name="grupo"></param>
         private void Mostrar(string grupo)
         {
             foreach (Control gbc in Controls)

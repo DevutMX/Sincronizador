@@ -23,6 +23,11 @@ namespace SyncFTP.Views
             Application.Exit();
         }
 
+        /// <summary>
+        /// Evento que evalua el tipo de seleccion de servidor, para que muestre los formularios de configuracion pertinentes.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnContinuar_Click(object sender, EventArgs e)
         {
             try

@@ -115,8 +115,6 @@ namespace SyncFTP.Controllers
             }
             catch (Exception)
             {
-                //XtraMessageBox.Show(UserLookAndFeel.Default, "Ocurrió un error al generar el archivo de configuraciones.\n\nError:\n" + ex.ToString(), "Error inesperado", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
                 return false;
             }
         }

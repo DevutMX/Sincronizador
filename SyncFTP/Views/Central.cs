@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Linq;
-using System.Windows.Forms;
+﻿using DevExpress.LookAndFeel;
 using DevExpress.XtraEditors;
-using DevExpress.LookAndFeel;
 using SyncFTP.Controllers;
+using System;
+using System.Windows.Forms;
 
 namespace SyncFTP.Views
 {
@@ -38,6 +32,11 @@ namespace SyncFTP.Views
         /// </summary>
         Servers _server = new Servers();
 
+        /// <summary>
+        /// Muetra la ventana de ayuda para la correcta configuracion del servidor
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAyuda_Click(object sender, EventArgs e)
         {
             AyudaConexion _ayudaConexion = new AyudaConexion();
@@ -45,23 +44,43 @@ namespace SyncFTP.Views
             _ayudaConexion.ShowDialog();
         }
 
+        /// <summary>
+        /// Se autoriza el poder ver sin cifrar, la contraseña del servidor FTP, cuando el boton del mouse este presionado
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void petVerPassword_MouseDown(object sender, MouseEventArgs e)
         {
             txtContrasena.Properties.PasswordChar = '\0';
             petVerPassword.Image = Properties.Resources.Bloquear;
         }
 
+        /// <summary>
+        /// Al dejar de presionar el boton del mouse, se vuelve a cifrar la contraseña para no ser observable
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void petVerPassword_MouseUp(object sender, MouseEventArgs e)
         {
             txtContrasena.Properties.PasswordChar = '•';
             petVerPassword.Image = Properties.Resources.Desbloquear;
         }
 
+        /// <summary>
+        /// Cierra la ventana, pero no el programa
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Close();
         }
         
+        /// <summary>
+        /// Detecta los cambios en cualquiera de los campos, para pedir de nuevo la autenticación de los mismos
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void txtServidor_TextChanged(object sender, EventArgs e)
         {
             btnContinuar.Visible = false;
@@ -111,6 +130,11 @@ namespace SyncFTP.Views
             }
         }
 
+        /// <summary>
+        /// Determina si se activo la casilla de anónimo
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void chkAnonimo_CheckedChanged(object sender, EventArgs e)
         {
             if (chkAnonimo.Checked)
@@ -132,6 +156,11 @@ namespace SyncFTP.Views
             btnContinuar.Visible = false;
         }
 
+        /// <summary>
+        /// Evento que establece conexion con el servidor que se desea configurar, si las configuraciones permiten establecer conexión estas se almacenarán.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnProbar_Click(object sender, EventArgs e)
         {
             try
@@ -187,6 +216,11 @@ namespace SyncFTP.Views
             }
         }
 
+        /// <summary>
+        /// Al ser correctas las configuraciones, este procede con la siguiente acción
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnContinuar_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.OK;

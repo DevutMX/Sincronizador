@@ -29,20 +29,37 @@ namespace SyncFTP.Views
         /// </summary>
         Secret _secret = new Secret();
 
+        /// <summary>
+        /// Evento que se ejecuta cuando se hace click en la opcion "Si"
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void petSi_Click(object sender, EventArgs e)
         {
+            //Se instancia el formulario Servidores
             Servidores _servidores = new Servidores();
-
+       
+            //Se oculta este formulario
             Hide();
 
+            //Se muestra el formulario servidores
             _servidores.ShowDialog();
         }
 
+        /// <summary>
+        /// Si se selecciona la opcion "No", se cierra el programa totalmente
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void petNo_Click(object sender, EventArgs e)
         {
+            //Cierra completamente el programa
             Application.Exit();
         }
 
+        /// <summary>
+        /// Evalua si es la primera vez que se ejecuta el asistente de configuracion, para definir si continua o procede al formulario principal
+        /// </summary>
         private void PromptSettings()
         {
             try
@@ -112,6 +129,11 @@ namespace SyncFTP.Views
             }
         }
 
+        /// <summary>
+        /// Detecta la situacion de SyncFTP, al cargar por primera vez la pantalla.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Bienvenido_Shown(object sender, EventArgs e)
         {
             Hide();
@@ -119,11 +141,21 @@ namespace SyncFTP.Views
             PromptSettings();
         }
 
+        /// <summary>
+        /// Continua con la configuracion
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void petSi_MouseEnter(object sender, EventArgs e)
         {
             Cursor = Cursors.Hand;
         }
 
+        /// <summary>
+        /// Cancela la configuracion y cierra por completo SyncFTP
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void petSi_MouseLeave(object sender, EventArgs e)
         {
             Cursor = Cursors.Default;

@@ -42,6 +42,11 @@ namespace SyncFTP.Views
         /// </summary>
         Servers _localServer;
 
+        /// <summary>
+        /// Cierra solo la ventana
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnFinalizar_Click(object sender, EventArgs e)
         {
             Close();
@@ -91,6 +96,11 @@ namespace SyncFTP.Views
             }
         }
 
+        /// <summary>
+        /// Permite distinguir que servidor se configuro para mostrar el mensaje de confirmación correspondiente
+        /// </summary>
+        /// <param name="remote"></param>
+        /// <param name="local"></param>
         private void Definir(string remote, string local)
         {
             if (!string.IsNullOrWhiteSpace(remote) && !string.IsNullOrWhiteSpace(local))
